@@ -7,7 +7,7 @@ title: Sobre Nosotros
 
 
 
-## [Sobre Nosotros](http://lacinka.org/?page_id=82 "Sobre Nosotros")
+## [Sobre Nosotros](https://lacinka.org/?page_id=82 "Sobre Nosotros")
 
 **Łacinka.org** es una asociación creado para popularizar y perfeccionar la
 escritura Latina de lengua belarusa (llamado “łacinka”) cómo una parte
@@ -29,10 +29,10 @@ En cuanto a el sostén, no hay el modelo particular. Todo depende de la
 situación concreta. Contamos con la base voluntaria y la actividad social de
 los partidarios de la łacinka sino de los grantos, par ejemplo.
 
-El objetivo de la web-site [Łacinka.org](http://lacinka.org) es informar sobre
+El objetivo de la web-site [Łacinka.org](https://lacinka.org) es informar sobre
 la “łacinka” y los actividad de la asociación.
 
-![Logo](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![Logo](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 ## La Verdad Sobre Nuestra Lengua
 
@@ -58,8 +58,8 @@ belaruso. Sin embargo ya ahora es racionalmente usarla para escribir los
 nombres belarusos en lenguas extranjeras, para estudiar la lengua belarusa más
 profundamente.
 
-[RSS feed](http://lacinka.org/?feed=rss2&p=82) | [Trackback
-URI](http://lacinka.org/wp-trackback.php?p=82)
+[RSS feed](https://lacinka.org/?feed=rss2&p=82) | [Trackback
+URI](https://lacinka.org/wp-trackback.php?p=82)
 
 [ Naciśni, kab skasavać „kamentar”. ](javascript:reRoot\(\))
 

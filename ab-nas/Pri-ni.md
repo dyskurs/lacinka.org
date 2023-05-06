@@ -7,7 +7,7 @@ title: Pri ni
 
 
 
-## [Pri ni kaj nia TTT](http://lacinka.org/?page_id=103 "Pri ni kaj nia TTT")
+## [Pri ni kaj nia TTT](https://lacinka.org/?page_id=103 "Pri ni kaj nia TTT")
 
 **Łacinka.org** estas socia unuiĝo, kiu strebas popularigi kaj evoluigi
 belarusan latinskribon kiel nedisigeblan parton de nacia kulturo de belarusoj.
@@ -25,7 +25,7 @@ ankaŭ ĉiujn kiuj ne estas indiferentaj al la sorto de la belarusa latinskribo.
 
 ## Vero pri nia lingvo
 
-![Logo](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![Logo](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 **Kio estas tiu ĉi subteno?**
 
@@ -33,11 +33,11 @@ Pri tio ne ekzistas unu sola modelo. Ĉiu dependas de konkreta okazo. Ni
 unuavice apogas sin je kunagado, komuna laborado, je socia aktivado de
 adeptoj, sed ekzemple ne je mondonacoj, monsubvencioj.
 
-La TTT-ejo [Lacinka.org](http://lacinka.org) celas unuavice informadon pri la
+La TTT-ejo [Lacinka.org](https://lacinka.org) celas unuavice informadon pri la
 latinskribo kaj agado de la organizaĵo.
 
-[RSS feed](http://lacinka.org/?feed=rss2&p=103) | [Trackback
-URI](http://lacinka.org/wp-trackback.php?p=103)
+[RSS feed](https://lacinka.org/?feed=rss2&p=103) | [Trackback
+URI](https://lacinka.org/wp-trackback.php?p=103)
 
 [ Naciśni, kab skasavać „kamentar”. ](javascript:reRoot\(\))
 

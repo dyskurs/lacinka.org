@@ -7,7 +7,7 @@ title: À propos de nous
 
 
 
-## [À propos de nous](http://lacinka.org/?page_id=81 "Sur Nous")
+## [À propos de nous](https://lacinka.org/?page_id=81 "Sur Nous")
 
 **Łacinka.org** est une association créée pour populariser et améliorer
 l’alphabet latin en langue bélarusse (un soi-disant “łacinka”) comme une
@@ -32,10 +32,10 @@ Quant au soutien, il n’y a pas de modèle particulier. Tout dépands de la
 situation concrète. Nous comptons sur la base volontaire et l’activité sociale
 des adhérents de la łacinka et non sur des versements, par exemple.
 
-Le but principal de la web-site [Lacinka.org](http://lacinka.org) est
+Le but principal de la web-site [Lacinka.org](https://lacinka.org) est
 d’informer sur la “łacinka” et les activités de l’association.
 
-![](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 ## La Vérité de Notre Langue
 
@@ -61,8 +61,8 @@ pour la translittération des noms bélarusiens aux langues étrangères. Il est
 désirable d’employer łacinka pour la translittération des noms et places aussi
 bien que dans les études bélarusiennes.
 
-[RSS feed](http://lacinka.org/?feed=rss2&p=81) | [Trackback
-URI](http://lacinka.org/wp-trackback.php?p=81)
+[RSS feed](https://lacinka.org/?feed=rss2&p=81) | [Trackback
+URI](https://lacinka.org/wp-trackback.php?p=81)
 
 [ Naciśni, kab skasavać „kamentar”. ](javascript:reRoot\(\))
 

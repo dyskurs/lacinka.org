@@ -7,10 +7,10 @@ title: Pra nas
 
 
 
-## [Pra nas](http://lacinka.org/?page_id=79 "Pra nas")
+## [Pra nas](https://lacinka.org/?page_id=79 "Pra nas")
 
 **Łacinka.org heta hramadzkaje abjadnańnie, jakoje imkniecca papularyzavać i
-raźvivać[biełaruskuju łacinku](http://lacinka.org/?page_id=45) jak
+raźvivać[biełaruskuju łacinku](https://lacinka.org/?page_id=45) jak
 nieadłučnuju častku nacyjanalnaj kultury biełarusaŭ.**
 
 My pierakananyja, što los biełaruskaj łacinki ŭ rukach jaje nośbitaŭ, jakija
@@ -19,7 +19,7 @@ admovy ad kirylicy. Heta ichniaja štodzionnaja aktyŭnaść i pazycyja harantuj
 zachavańnie bahaćcia j samabytnaści biełaruskaj kultury. My ŭ svajoj
 dziejnaści imkniemsia padtrymvać takich biełarusaŭ.
 
-![](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 **Lacinka.org** asabliva zasiarodžanaja na biełaruskim słovie: mastackaj
 litaratury, muzycy, internecie, kamputarnych prahramach. My padtrymvajem

@@ -7,48 +7,48 @@ title: index.php_.html
 
 
 
-## [Stvoranaja dyskusijnaja hrupa](http://lacinka.org/?p=118 "Stvoranaja
+## [Stvoranaja dyskusijnaja hrupa](https://lacinka.org/?p=118 "Stvoranaja
 dyskusijnaja hrupa")
 
 Paŭstała dyskusijnaja hrupa, pryśviečanaja pytańniam biełaruskaj łacinki.
 Achvotnych zaprašajem dałučacca.
 
-![Dyskusijnyja hrupy](http://groups.google.com/groups/img/3/groups_bar.gif)  
+![Dyskusijnyja hrupy](https://groups.google.com/groups/img/3/groups_bar.gif)  
 ---  
 **Padpišysia na hrupu Biełaruskaja łacinka**  
 E-mail:  
   
-[Naviedaj hrupu](http://groups.google.com/group/lacinka)  
+[Naviedaj hrupu](https://groups.google.com/group/lacinka)  
   
-[(0)Kamentaroŭ](http://lacinka.org/?p=118#respond "Kamentary da dopisu
+[(0)Kamentaroŭ](https://lacinka.org/?p=118#respond "Kamentary da dopisu
 Stvoranaja dyskusijnaja hrupa")
 
-## [Niama patreby refarmavać našuju łacinku](http://lacinka.org/?p=115 "Niama
+## [Niama patreby refarmavać našuju łacinku](https://lacinka.org/?p=115 "Niama
 patreby refarmavać našuju łacinku")
 
-![Zołak](http://lacinka.org/wp-content/uploads/2007/05/zolak.minijatura.jpg)U
+![Zołak](https://lacinka.org/wp-content/uploads/2007/05/zolak.minijatura.jpg)U
 našyja dni adbyvajecca, možna skazać, renesans biełaruskaj łacinki. Mnohija
 joju cikaviacca, dla niekatorych jaje jsnavańnie – niečakanaść.
 
 Surazmoŭca **Łacinki.org** dacent Katedry biełaruskaj filalohii Varšaŭskaha
 ŭniversytetu Nina Barščeŭskaja adkazvaje na častyja pytańni, źviazanyja ź
-biełaruskaj łacinkaj. [(bolej…)](http://lacinka.org/?p=115#more-115)
+biełaruskaj łacinkaj. [(bolej…)](https://lacinka.org/?p=115#more-115)
 
-[(0)Kamentaroŭ](http://lacinka.org/?p=115#respond "Kamentary da dopisu Niama
+[(0)Kamentaroŭ](https://lacinka.org/?p=115#respond "Kamentary da dopisu Niama
 patreby refarmavać našuju łacinku")
 
-## [Łacinka.org zarehistravanaja!](http://lacinka.org/?p=113 "Łacinka.org
+## [Łacinka.org zarehistravanaja!](https://lacinka.org/?p=113 "Łacinka.org
 zarehistravanaja!")
 
-![](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)  
+![](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)  
 Ciapier **Łacinka.org** -- aficyjna zarehistravanaja hramadzkaja arhanizacyja.
 Heta aznačaje, što ciapier my zmožam dziejničać bolš efektyŭna.
 
-[(0)Kamentaroŭ](http://lacinka.org/?p=113#respond "Kamentary da dopisu
+[(0)Kamentaroŭ](https://lacinka.org/?p=113#respond "Kamentary da dopisu
 Łacinka.org zarehistravanaja!")
 
 ## [Niekatoryja dasiahnieńni Łacinki.org u 2006
-hodzie](http://lacinka.org/?p=111 "Niekatoryja dasiahnieńni Łacinki.org u 2006
+hodzie](https://lacinka.org/?p=111 "Niekatoryja dasiahnieńni Łacinki.org u 2006
 hodzie")
 
   * My byli vykanaŭčym praducentam kancertu "Solidarni z Białorusią".
@@ -97,6 +97,6 @@ festivalaŭ:
   * Supolny muzyčny prajekt: "Dychać".
   * "Pahłybleńnie 1" hurtu Pete-Paff.
 
-[(4) Kamentaroŭ](http://lacinka.org/?p=111#comments "Kamentary da dopisu
+[(4) Kamentaroŭ](https://lacinka.org/?p=111#comments "Kamentary da dopisu
 Niekatoryja dasiahnieńni Łacinki.org u 2006 hodzie")
 

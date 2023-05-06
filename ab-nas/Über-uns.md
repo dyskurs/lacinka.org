@@ -7,7 +7,7 @@ title: Über uns
 
 
 
-## [Belarussische Lateinschrift](http://lacinka.org/?page_id=32 "Belarussische
+## [Belarussische Lateinschrift](https://lacinka.org/?page_id=32 "Belarussische
 Lateinschrift")
 
 **Łacinka.org** ist eine Organisation, deren Ziel die Verbreitung und
@@ -32,11 +32,11 @@ Hier gibt es kein einheitliches Modell. Alles kommt auf die Situation an. Wir
 setzen in erster Linie auf Freiwillige Beiträge, soziale Aktivität der
 Anhänger der Łacinka.
 
-Die Webseite [Łacinka.org](http://lacinka.org "Łacinka.org") hat den Ziel,
+Die Webseite [Łacinka.org](https://lacinka.org "Łacinka.org") hat den Ziel,
 Informationen über die Łacinka zur Verfügung zu stellen und über die Tätigkeit
 der Organisation zu berichten.
 
-![Łacinka.org](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![Łacinka.org](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 **Die belarussische (weißrussische) Lateinschrift** (Łacinka) ist seit dem 16.
 Jh. neben Kyrillisch das zweite Alphabet der belarussischen Sprache. Łacinka
@@ -61,8 +61,8 @@ heute schon sinnfoll, die Łacinka zur Transkribtion von belarussischen Namen
 in Fremdsprachen und als Mittel zum erlernen der belarussischen Sprache zu
 verwenden.
 
-[RSS feed](http://lacinka.org/?feed=rss2&p=32) | [Trackback
-URI](http://lacinka.org/wp-trackback.php?p=32)
+[RSS feed](https://lacinka.org/?feed=rss2&p=32) | [Trackback
+URI](https://lacinka.org/wp-trackback.php?p=32)
 
 [ Naciśni, kab skasavać „kamentar”. ](javascript:reRoot\(\))
 

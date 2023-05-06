@@ -7,7 +7,7 @@ title: O nas
 
 
 
-## [O nas i o łacince](http://lacinka.org/?page_id=29 "O nas i o łacince")
+## [O nas i o łacince](https://lacinka.org/?page_id=29 "O nas i o łacince")
 
 **Lacinka.org** jest stowarzyszeniem, popularyzującym tzw. łacinkę białoruską
 (czyli łacińską pisownię) jako nieodłączny element kultury narodowej
@@ -29,12 +29,12 @@ los łacinki białoruskiej nie jest obojętny.
 Tu nie ma reguły. Zależy od konkretnej sytuacji. Stawiamy raczej na szeroko
 pojętą samopomoc i aktywność społeczną zwolenników łacinki, niż na granty.
 
-Strona internetowa [www.lacinka.org](http://lacinka.org/www.lacinka.org
+Strona internetowa [www.lacinka.org](https://lacinka.org/www.lacinka.org
 "Łacinka.org") ma informować o łacince i działalności organizacji.
 
 Logo organizacji:
 
-![Logo](http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
+![Logo](https://lacinka.org/wp-content/uploads/2006/07/lahatyp.png)
 
 ## Prawda o naszym języku
 
@@ -56,8 +56,8 @@ Białorusinów, przede wszystkim przez internautów. Nie jest uznawana
 oficjalnie, jednak bez wątpienia powinna uzyskać taki status. Stanie się tak w
 momencie, gdy język białoruski wróci do łask w państwie białoruskim.
 
-[RSS feed](http://lacinka.org/?feed=rss2&p=29) | [Trackback
-URI](http://lacinka.org/wp-trackback.php?p=29)
+[RSS feed](https://lacinka.org/?feed=rss2&p=29) | [Trackback
+URI](https://lacinka.org/wp-trackback.php?p=29)
 
 [ Naciśni, kab skasavać „kamentar”. ](javascript:reRoot\(\))
 
