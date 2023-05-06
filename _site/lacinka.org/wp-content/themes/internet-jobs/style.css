@@ -1,0 +1,370 @@
+/* 
+Theme Name: Internet Jobs
+Theme URI: http://www.GFXedit.com
+Version: 1.0
+Description: A nice coporate like theme Luka Cvrk, <a href="http://www.solucija.com/">Solucija</a>. Ported for wordpress by <a href="http://www.sr-ultimate.com/">Sreejith</a>, <a href="http://www.gfxedit.com/">GFXedit.com</a>
+Author: Luka Cvrk
+Author URI: http://www.solucija.com/
+*/
+
+/*        font-family:  Arial, Tahoma, Sans-Serif;        font-size: 14px;
+font-family: Beatstream, Gentium, serif;
+*/
+
+
+
+body {
+	background: #FFFFFF url(images/header.gif) repeat-x top left;
+	color: #000000;
+      font-family: "Bitstream Vera Serif", "Times New Roman", Times,  serif;
+
+	font-size: 15px;line-height:15px;
+      margin: 0;
+      padding: 0;
+}
+
+
+a {
+
+	background-color: inherit;
+
+	color: #55617D;
+
+	}
+
+a:hover {
+
+	background-color: inherit;
+
+	color: #BD0909;
+
+	text-decoration: none;
+
+	}
+
+h1 {
+	font: 160% Arial, Sans-Serif;
+	font-weight: bold;
+	padding: 3px 0 0 0;
+	margin: 0;
+}
+
+h1 a {
+	color: #BF3E17;
+	background: inherit;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: #3C6491;
+	background: inherit;
+	text-decoration: none;
+}
+
+h2 {	
+        font: 160% Arial, Sans-Serif;
+margin: 8px 0 5px 0;
+	padding: 0;
+	font-size: 1.4em;
+	letter-spacing: -1px;
+	color: #808080;
+	background-color: inherit;
+}
+
+h2 a {
+	color: #000000;
+	text-decoration: none;
+	background-color: inherit;
+	background-image: url(images/h2bg.gif);
+	background-repeat: no-repeat;
+	background-position: center left;
+	
+	padding: 0 0 0 20px;
+}
+
+h2 a:hover {
+	background: url(images/h2bghover.gif) no-repeat center left;
+}
+
+
+
+img {
+	border: 0;
+}
+
+#header {
+	clear: both;
+	width: 750px;
+	height: 45px;
+	margin: 0 auto;
+}
+
+#logo {
+	float: left;
+	padding: 10px 0 0 0px;
+	color: #000000;
+	background: inherit;
+	width: 300px;
+}
+
+.slogan {
+	float: right;
+	border-left: 1px solid #CCCCCC;
+	padding: 0 0 0 20px;
+}
+
+#hmenu {
+	padding: 13px 0 5px 0;
+	float: right;
+}
+
+#hmenu a {
+	padding: 12px 13px 2px 11px;
+	text-decoration: none;
+	color: #414141;
+	background: #ccc url(images/hmenuarrow.gif) no-repeat top center;
+	margin: 0 0 3px 1px;
+	border-bottom: 4px solid #BCBCBC;
+}
+
+#hmenu a:hover {
+	background: #3C6491 url(images/hmenuarrowhover.gif) no-repeat top center;
+	color: #FFFFFF;
+	border-bottom: 4px solid #2F4A6C;
+}
+
+.main {
+	border-top: 1px solid #FEFEFE; 
+	background: #FFFFFF url(images/contentbg.gif) repeat-x left top;
+	color: #000000;
+}
+
+#content {
+	float: left;
+	width: 495px;
+	padding: 10px 20px 10px 0px;
+	border-right: 1px #CCCCCC solid;
+}
+
+#articles {
+	width: 740px;
+	padding: 3px 0 0 10px;
+	margin: 0 auto 10px auto;
+}
+
+#right {
+	float: left;
+	width: 220px;
+}
+
+#rightmenu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+#rightmenu a {
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#rightmenu ul {		margin-left: 0;
+			padding-left: 0;
+			width: 140px;
+			list-style-type: none;			
+			float: left;
+			padding-right:7px;
+			}
+#rightmenu li {
+	display: inline;
+}
+#rightmenu li a {
+	display: block;
+	background: #BF3E18 url(images/vmenuarrow.gif) no-repeat center left;
+	color: #FFFFFF;
+	padding: 5px 0 5px 19px;
+	margin: 0 0 1px 0;
+	text-decoration: none;
+	padding-left: 20px;
+}
+
+#rightmenu a:hover {
+	color: #FFFFFF;
+	background: #822C0F url(images/vmenuarrowhover.gif) no-repeat center left;
+}
+
+.rightarticle {
+	background: #EEEEEE;
+	color: #808080;
+	margin: 2px 0 2px 0;
+	padding: 8px;
+	line-height: 1.4em;
+}
+.rightarticle ul {
+	margin-left: -1px;
+}
+.rightarticle li {
+	background: url('images/li.gif') no-repeat 0 7px;
+	padding-left: 1.5em;
+	font-size: 12px;
+	list-style-type: none;
+}
+#footer {
+	clear: both;
+	width: 726px;
+	background-color: #FFFFFF;
+	color: #000000;
+	margin: 0 auto;
+	padding: 10px;
+	border-left: #666666 1px solid;
+	border-right: #666666 1px solid;	
+}
+
+#links {
+	clear: both;
+	margin: 0 auto;
+	width: 730px;
+	padding: 10px;
+	background: #3C6491 url(images/linksbg.gif) repeat-x top left;
+	color: #FFF;
+}
+
+#whiteline {
+	margin-top: 10px;
+	border-top: 3px solid #FFFFFF;
+}
+
+#footer p {
+	background: #FFFFFF;
+}
+
+#footer a {
+	color: #808080;
+	background: #FFFFFF;
+}
+
+form.search { padding: 0; margin: 0; }
+
+#searchform {
+	background: #808080;
+	color: #FFFFFF;
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+}
+
+input.text { margin: 0; padding: 0; width: 128px; border: 1px solid #eee; color: #000000; background: #d8d8d8; }
+input.text:hover { border: 1px solid #FFFFFF; background: #EEEEEE; color: #000000; }
+input.button { margin: 0; padding: 0 0 0 3px; font-size: 100%; font-family: Arial, Sans-Serif; border: none; background: none; color: #FFF; background: #808080; font-weight: bold; }
+.date { 
+border-bottom: #CCCCCC 1px dashed;
+margin: 5px 0 5px 0; 
+padding: 10px 5px 5px 0; 
+background: #FFFFFF; 
+color: #808080; 
+text-align: right; 
+}
+.date a { 
+background: url('images/comment.gif') no-repeat 0 7px;
+padding-left: 1.5em;
+color: #808080; 
+}
+.time {
+	background: url('images/timeicon.gif') no-repeat 4px 4px;
+	padding-left: 1.5em;
+}
+blockquote
+{
+	border: 1px solid #5c5656;
+	margin: 1em 0;
+	padding: 12px;
+	background: #f8f7f6 url(images/blq.gif);
+}
+
+#content .articleimg {
+	float:right;
+	padding:5px;
+	border:1px solid #eeeeee;
+	margin-left:10px;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+#content .articleimgleft {
+	float:left;
+	padding:5px;
+	border:1px solid #eeeeee;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+#content ul {
+	margin-left: 0;
+	padding-left: 15px;
+	list-style-type: none;
+}
+#content ul li {
+	background: url('images/li.gif') no-repeat 0 7px;
+	padding-left: 1.5em;
+}
+.entrymeta {
+padding: 3px;
+text-align: right;
+}
+code {
+font-family: "Courier New", Courier, mono;
+font-size: 11px;
+color: #339966;
+}
+/* COMMENT ELEMENTS */
+#commentlist li {
+margin-bottom: 1.5em;
+padding-bottom: 1em;
+border-bottom: 1px solid #700000;
+}
+
+#commentform {
+margin: 1em 0;
+background: #ffffff;
+width: 30em
+}
+
+#commentform textarea {
+background: #f8f7f6;
+border: 1px solid #d6d3d3;
+width: 490px;
+}
+#commentform textarea:hover {
+background: #FFFFFF;
+border: 1px solid #d6d3d3;
+}
+#commentform textarea:focus {
+background: #ffffff;
+border: 1px solid #939793;
+}
+
+#commentform #email, #commentform #author, #commentform #url {
+font-size: 1.1em;
+background: #f8f7f6;
+border: 1px solid #d6d3d3;
+width: 150px;
+}
+#commentform #email:hover, #commentform #author:hover, #commentform #url:hover {
+font-size: 1.1em;
+background: #ffffff;
+border: 1px solid #d6d3d3;
+}
+#commentform #email:focus, #commentform #author:focus, #commentform #url:focus {
+font-size: 1.1em;
+background: #ffffff;
+border: 1px solid #939793;
+width: 150px;
+}
+#commentform input{
+margin-bottom: 3px;
+}
+#wp-calendar {
+margin-left: 10px;
+}
+
+dl.image { width: 10px; padding: 6px; border: 1px solid #999; background-color: #EEE; color: inherit; text-align: center; display: table; table-layout: auto; } .left { float: left; margin: .5em 1em .5em 0; } .right { float: right; margin: .5em 0 .5em 1em; } dl.image dt { font-weight: bold; } dl.image dt img { border: 1px solid #666; } dl.image dd { margin: 0 auto; font-size: .8em; }
+
+a.extlink { color: pink; background: black; }

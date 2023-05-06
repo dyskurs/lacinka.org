@@ -1,0 +1,1113 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
+<title>Łacinka.org &raquo; Łacinizatary ŭ siecivie</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.0.5" /> <!-- leave this for stats -->
+<meta name="description" content="Biełaruskaja łacinka"/>
+<meta name="keywords" content="lacinka, unicode, mova, bielaruskaja"/>
+<style type="text/css" media="screen">
+@import url( http://lacinka.org/wp-content/themes/internet-jobs/style.css );
+</style>
+<meta name="copyright" content="Łacinka.org" />
+<meta name="Author" content="Zołak (zolak@slacinka.org)" />
+<meta name="wp-theme" content="Sreejith R - GFXedit.com" />
+<meta name="generator" content="WordPress 2.0.5" />
+<meta name="robots" content="index,follow" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://lacinka.org/?feed=rss2" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://lacinka.org/?feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://lacinka.org/?feed=atom" />
+<link rel="pingback" href="http://lacinka.org/xmlrpc.php" />
+	<link rel='archives' title='červień 2007' href='http://lacinka.org/?m=200706' />
+	<link rel='archives' title='travień 2007' href='http://lacinka.org/?m=200705' />
+	<link rel='archives' title='sakavik 2007' href='http://lacinka.org/?m=200703' />
+	<link rel='archives' title='studzień 2007' href='http://lacinka.org/?m=200701' />
+	<link rel='archives' title='śniežań 2006' href='http://lacinka.org/?m=200612' />
+	<link rel='archives' title='kastryčnik 2006' href='http://lacinka.org/?m=200610' />
+	<link rel='archives' title='lipień 2006' href='http://lacinka.org/?m=200607' />
+	<link rel='archives' title='luty 2006' href='http://lacinka.org/?m=200602' />
+	<link rel='archives' title='lipień 2005' href='http://lacinka.org/?m=200507' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lacinka.org/xmlrpc.php?rsd" />
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("content");
+			addComment.parentNode.removeChild(addComment);
+			content.appendChild(addComment);
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	width: 					100%;	
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+/*
+#addcomment small, #addcomment div
+{
+	padding:				3px;
+}
+*/
+#commentform textarea {
+	width: 97%;
+}
+</style>
+<style type="text/css" media="screen">
+div#shoppingcart{
+ float: right;
+/* height: 200px; */
+ width: 148px;
+ margin: 0px;
+ padding: 0px;
+ margin-left: 5px;
+/* margin-right: -100px; */
+ }
+ 
+div#shoppingcart img{
+ position: absolute; 
+ top: 5px;
+ left: 5px;
+ }
+ 
+div#shoppingcart div{
+ font-size: 9pt;
+ border: 1px solid #999999;
+ background-color: #efefef;
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#shoppingcart div strong{
+ font-size: 11pt;
+ }
+
+div#sideshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#sideshoppingcart div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+div#widgetshoppingcart{
+ }
+
+div#widgetshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ }
+ 
+div#widgetshoppingcarts div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+td{
+ font-size: 11pt;
+ vertical-align: top;
+ }
+
+table.productcart{
+ border: 1px solid #999999;
+ width: 100%;
+ margin-bottom: 10px;
+ }
+
+table.productcart tr td{
+ padding-bottom: 5px;
+ font-size: 8pt;
+ }
+
+table.productcart tr.firstrow td{
+ font-weight:bold;
+ background-color: #e5e5e5;
+ }
+
+table.productcart tr.oddrow td{
+ background-color: #f0f0f0;
+ }
+ 
+table.productcart tr td.firstcol{
+ width: 40%;
+ } 
+
+form.adjustform{
+ display: inline;
+ }
+
+
+
+
+table.productdisplay{
+/* margin-top: 10px; */
+ margin-bottom: 20px;
+ border-collapse: collapse;
+ }
+
+table.productdisplay tr td{
+ vertical-align: top;
+ padding-bottom: 5px;
+ }
+
+
+table.productdisplay tr td.imagecol{
+ padding-right: 5px;
+ margin-right: 5px;
+ border: 0px solid #ffffff;
+ }
+ 
+table.productdisplay tr td.imagecol img{
+/* width: 300px; */
+border: 0px solid #ffffff;
+ }
+
+table.productdisplay tr td.textcol{
+ padding: 0px;
+ padding-bottom: 10px;
+ margin: 0px;
+ }
+ 
+ 
+ 
+ 
+ul.tandclist li{
+ list-style-type:lower-alpha;
+ } 
+ 
+ul.tandclist li{
+ list-style-type: circle;
+ } 
+ 
+ul.linklist li{
+ font-weight:bold;
+ } 
+ 
+strong.special{
+ color: #DD0000;
+ }
+ 
+a.termsandconds
+ {
+ text-decoration: underline;
+ }
+
+span.miniarrow{
+ display: block;
+/* border: 1px solid black; */
+ vertical-align: top !important;
+ }
+
+img.miniarrow{
+/* position: relative; */
+/* border: 1px solid black; */
+ margin-right: 4px;
+ }
+
+img.catimage{
+ float:left;
+ position: relative;
+ top: -3px;
+ margin-right: 2pt;
+ }
+
+strong.cattitles{
+ display: block;
+ position: relative;
+/* margin-bottom: -15px; */
+ }
+
+strong.prodtitles{
+ display: block;
+ margin-bottom: -15px;
+ }
+
+table.mainpagetable{
+ margin-left: 0px;
+ }
+
+table.mainpagetable tr td{
+ padding-left: 0px;
+ }
+
+strong.title{
+ font-size: 12.5pt;
+ }
+
+div.producttext{
+ font-size: 10pt;
+ }
+
+a.categorylink{
+ font-size: 8pt;
+ /*border: 1px solid red;*/
+ }
+
+span.pricedisplay{
+ white-space: nowrap;
+ }
+ 
+td.totals{
+ vertical-align: bottom;
+ }
+ 
+table.cattable{
+ padding: 0px;
+ margin: 0px;
+ border-collapse: collapse;
+/* border: 1px solid black; */
+ }
+ 
+table.cattable tr td{
+ padding: 0px;
+/* border: 1px solid black; */
+ }
+ 
+ td.catfirstcol{
+ padding-right: 3px;
+ }
+
+form#specials{
+ display: inline;
+ }
+ 
+span.oldprice{
+ text-decoration: line-through;
+ }
+div#categorydisplay{
+ display: block;
+ }
+ 
+div#branddisplay{
+ display: none;
+ }
+ 
+span.additional_description{
+ display: none;
+ }
+ 
+a.additional_description_link{
+ display: inline;
+ }
+ 
+td.prodgroupmidline{
+ border-right: 1px solid black !important;
+ padding-right: 3px;
+ }
+ 
+#loadingindicator{
+ visibility: hidden; 
+ font-size: 7pt;
+ font-weight: normal;
+ }
+
+#loadingindicator img{
+ position: relative;
+ top: 3px;
+ margin-left: 6px;
+/*  visibility: hidden; */
+  border: none !important;
+ }
+ 
+/* e-commerce fix for K2 */
+table.productdisplay tr td img {
+ max-width: none;
+ }
+ 
+ 
+div.product_footer{
+ position: relative;
+ padding: 0px !important;
+ width: 100%;
+ border-top: 1px dashed #cccccc;
+/*  border-top: 1px dashed #cccccc; */
+ height: 35px;
+ }
+ 
+div.product_footer strong{
+ display: block;
+ font-size: 7pt;
+ font-weight: normal;
+ }
+ 
+div.product_average_vote{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 50%;
+ float: left;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+div.product_user_vote{
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ width: 30%;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+span.vote_total{
+ position: relative;
+ top: -3px;
+ left: 2px;
+ font-size: 7pt;
+ }
+ </style>
+ <link href='./wp-content/plugins/wp-shopping-cart/product_rater.css' rel="stylesheet" type="text/css" />
+<script language='JavaScript' type='text/javascript'>
+// Copyright (c) 2005 Timothy R. Morgan
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+// mini/ajax.js - http://timmorgan.org/mini
+
+function $(e){if(typeof e=='string')e=document.getElementById(e);return e};
+function collect(a,f){var n=[];for(var i=0;i<a.length;i++){var v=f(a[i]);if(v!=null)n.push(v)}return n};
+
+ajax={};
+ajax.x=function(){try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){return new XMLHttpRequest()}}};
+ajax.serialize=function(f){var g=function(n){return f.getElementsByTagName(n)};var nv=function(e){if(e.name)return encodeURIComponent(e.name)+'='+encodeURIComponent(e.value);else return ''};var i=collect(g('input'),function(i){if((i.type!='radio'&&i.type!='checkbox')||i.checked)return nv(i)});var s=collect(g('select'),nv);var t=collect(g('textarea'),nv);return i.concat(s).concat(t).join('&');};
+ajax.send=function(u,f,m,a){var x=ajax.x();x.open(m,u,true);x.onreadystatechange=function(){if(x.readyState==4)f(x.responseText)};if(m=='POST')x.setRequestHeader('Content-type','application/x-www-form-urlencoded');x.send(a)};
+ajax.get=function(url,func){ajax.send(url,func,'GET')};
+ajax.gets=function(url){var x=ajax.x();x.open('GET',url,false);x.send(null);return x.responseText};
+ajax.post=function(url,func,args){ajax.send(url,func,'POST',args)};
+ajax.update=function(url,elm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.get(url,f)};
+ajax.submit=function(url,elm,frm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.post(url,f,ajax.serialize(frm))};
+
+var testsuccess = 0;
+var lnid = new Array();
+function categorylist(url)
+  {
+  self.location = url;
+  }
+  
+var getresults=function(results)
+  {
+  document.getElementById('shoppingcartcontents').innerHTML = results;
+  document.getElementById('loadingindicator').style.visibility = 'hidden';
+  }
+
+function submitform(prodid)
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&prodid="+prodid+"");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function emptycart()
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&emptycart=true");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function show_additional_description(id)
+  {
+  currentstate = document.getElementById(id).style.display;
+  document.getElementById(id).style.display = 'inline';
+  if(currentstate != 'inline')
+    {
+    document.getElementById(id).style.display = 'inline';
+    }
+    else
+      {
+      document.getElementById(id).style.display = 'none';
+      }
+  return false;
+  }
+
+function prodgroupswitch(state)
+  {
+  if(state == 'brands')
+    {
+    document.getElementById('categorydisplay').style.display = 'none';
+    document.getElementById('branddisplay').style.display = 'block';
+    }
+    else if(state == 'categories')
+      {
+      document.getElementById('branddisplay').style.display = 'none';
+      document.getElementById('categorydisplay').style.display = 'block';
+      }
+  return false;
+  }
+  
+  
+var apply_rating=function(results)
+  {
+  outarr = results.split(",");
+  //alert(results);
+  for(i=1;i<=outarr[1];i++)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/gold-star.gif";
+    document.getElementById(id).style.background = "url(./wp-content/plugins/wp-shopping-cart/images/gold-star.gif)";
+    }
+    
+  for(i=5;i>outarr[1];i--)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/grey-star.gif";
+    document.getElementById(id).style.background = "#c4c4b8";
+    }
+  lnid[outarr[0]] = 1; 
+    
+  rating_id = 'rating_'+outarr[0]+'_text';
+  document.getElementById(rating_id).innerHTML = "Your Rating:";
+//   switch(votetext)
+//     {
+//     case "No Votes":
+//     votestr = "1 Vote";
+//     break;
+//     
+//     case "1 Vote":
+//     votestr = "2 Votes";
+//     break;
+//     
+//     default:
+//     votestr = (parseInt(votetext[0])+1) + " Votes";
+//     break;
+//     }
+//     
+//   element.innerHTML = votestr;
+  }
+  
+function rate_item(prodid,rating)
+  {
+  ajax.post("index.php",apply_rating,"ajax=true&rate_item=true&product_id="+prodid+"&rating="+rating+"");
+  }
+</script>
+	<style type="text/css" media="screen">
+	img.comvatar-default {
+		width: 16px;
+		height: 16px;
+	}
+	</style>
+
+<script language="JavaScript"><!--
+
+  function PseudotextToLacin(InputText)
+  {
+    // var InputText = InputElement.value;
+    var ResultText = InputText;
+
+    var ConvertionTable = new Array(
+      new Array("c'", String.fromCharCode(0x0107)),
+      new Array("cz", String.fromCharCode(0x010D)),
+      new Array("l/", String.fromCharCode(0x0142)),
+      new Array("n'", String.fromCharCode(0x0144)),
+      new Array("s'", String.fromCharCode(0x015B)),
+      new Array("sz", String.fromCharCode(0x0161)),
+      new Array("u/", String.fromCharCode(0x016D)),
+      new Array("z'", String.fromCharCode(0x017A)),
+      new Array("z^", String.fromCharCode(0x017E)),
+      new Array("z*", String.fromCharCode(0x017E)),
+
+      new Array("C'", String.fromCharCode(0x0106)),
+      new Array("Cz", String.fromCharCode(0x010C)),
+      new Array("L/", String.fromCharCode(0x0141)),
+      new Array("N'", String.fromCharCode(0x0143)),
+      new Array("S'", String.fromCharCode(0x015A)),
+      new Array("Sz", String.fromCharCode(0x0160)),
+      new Array("U/", String.fromCharCode(0x016C)),
+      new Array("Z'", String.fromCharCode(0x0179)),
+      new Array("Z^", String.fromCharCode(0x017D)),
+      new Array("Z*", String.fromCharCode(0x017D))
+    );
+
+    var i;
+
+    for (i = 0; i < ConvertionTable.length; i++)
+    {
+      while (ResultText.indexOf(ConvertionTable[i][0]) >= 0)
+      {
+        ResultText = ResultText.replace(ConvertionTable[i][0], ConvertionTable[i][1]);
+      }
+    }
+
+    // InputElement.value = ;
+    // return true;
+    return ResultText;
+  }
+
+  function ShowPreviewBox(Show)
+  {
+    if (Show)
+    {
+      PreviewBox.style.display = "block";
+    }
+    else
+    {
+      PreviewBox.style.display = "none";
+    }
+  }
+
+  function PlainTextToHTML(Text)
+  {
+    var HTMLText = Text;
+    while (HTMLText.indexOf(String.fromCharCode(0x0A)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0A), '<br>');
+    while (HTMLText.indexOf(String.fromCharCode(0x0D)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0D), '');
+
+    return HTMLText;
+  }
+
+  function UpdatePreviewBox(Text)
+  {
+    // PreviewText.innerText = PseudotextToLacin(Text);
+    PreviewText.innerHTML = PlainTextToHTML(PseudotextToLacin(Text));
+  }
+
+  function ReplaceEnteredText(Element)
+  {
+    Element.value = PseudotextToLacin(Element.value);
+  }
+
+//-->
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1268613-2";
+urchinTracker();
+</script>
+</head><body>
+	<div id="header">
+		<div id="hmenu">
+		<a href="index.php">Hałoŭnaja</a><a href="?page_id=49"><img src="http://lacinka.org/images/cd.png" alt="Krama" />Krama</a><a href="http://lacinka.org/?page_id=75">Našyja prajekty</a><a href="?page_id=79">Pra nas</a><a href="?page_id=46">Kantakt</a>		</div>
+		<div id="logo">
+                        <div style="float: left; margin: -2px 0 0 10px;">
+
+                                <h1 title="Łacinka.org"><a href="http://lacinka.org"><img src="http://lacinka.org/wp-content/themes/internet-jobs/logo_transparent_sized.gif" alt="Łacinka.org" width="140" height="30" border="0"></a></h1>
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="main">
+		<div id="articles">
+			<div id="content">
+				  
+	         <h2 id="post-14"><a href="http://lacinka.org/?p=14" rel="bookmark" title="Łacinizatary ŭ siecivie">Łacinizatary ŭ siecivie</a></h2>
+		
+			<p> Całkam zrazumiełym i lahičnym źjaŭlajecca imknieńnie čałavieka   spraścić sabie žyćcio. U svoj čas pragramisty darvalisia da łacinki i adrazu zrazumieli, što farmalna jana ad kirylicy adroźnivajecca chiba što tolki symbalami. Zrazumieli i adrazu stvaryli novuju prahramu — pieršy łacinizatar.  Skazać, jakaja mienavita prahrama była pieršaj, ciažka, bo ŭ lubym vypadku znojdziecca   aŭtar, jaki zakryčyć: «A ja jašče ŭ šaścidziasiatyja na   perfakartach łacinizatary muciŭ». Mahčyma, tamu nia budziem   vyśviatlać, chto byŭ pieršym, a zirniem na fakty, i paraŭnajem dastupnyja siońnia łacinizatary.<a id="more-14"></a></p>
+<p>Kanvertataraŭ z kirylicy ŭ łacinku zaraz raźviałosia stolki,         što vyłučyć adzin najlepšy z proćmy astatnich, nie pasprabavaŭšy         karystacca kožnym, nadzvyčaj ciažka. Heta i źjaviłasia padstavaj         dla praviadzieńnia adnosnaha paraŭnańnia łacinizataraŭ,         dastupnych siońnia karystalniku. Takim čynam, u siońniašnim         drive-teście udzieł biaruć: Biełazar v3.6.2.2015,         CyrLat-HTML v1.1, Cyr/Lat Converter v1.10, Cyr2Lat, kirlat,         Moŭny Kanvertar v2.3 i Kir2Lac v2.0.2. Akramia hetaha         makrasy dla Microsoft Word cyrlat i word2000, a taksama try         online-łacinizatary.</p>
+<p><strong>Pra abstalavańnie i praces testavańnia</strong></p>
+<p>Testavańnie pravodziłasia na angielskaj WinXP Pro z         vykarystańniem kodavaj tablicy windows-1251 dla nieunicodeavych         prahramaŭ. Kanvertavałasia apovieść V.Bykava         «Vaŭčynaja jama» (130Kb).        Rejtyng vyličaŭsia jak siaredniaja arytmetyčnaja punktaŭ,         atrymanych łacinizataram za interfejs, chutkaść pracy, jakaść         kanvertavańnia, najaŭnaść dadatkovych mahčymaściaŭ i         zručnaść karystańnia vynikam pracy prahramy. Punkty         adnosnyja i pryviedzienyja mienavita ŭ takoj paśladoŭnaści.         Aceńvałasia tolki častka prahramy, źviazanaja z łacinizavańniem         kiryličnaha tekstu.</p>
+<h3>Prahramy</h3>
+<p><strong>Biełazar</strong> v3.6.2.2015<br />
+Aŭtar: Aleh Azaroŭski<br />
+Staronka prahramy: <a href="http://belazar.belinter.net">belazar.belinter.net</a><br />
+Pamier: 1,9Mb (razam sa słoŭnikam)</p>
+<p><a href="http://lacinka.org/images/stories/prylady/belazar.gif"><img width="432" height="405" border="0" src="http://lacinka.org/images/stories/prylady/belazar.gif" /></a></p>
+<p>Taki svojeasablivy kambajn, pra jaki ŭžo chodziać lehiendy.         Niekatoryja ź jahonaj dapamohaj pišuć teksty svaich tvoraŭ, inšyja ž         prosta abmiažoŭvajucca funkcyjaj pierakładu. I choć pierakład hety        jašče nia vielmi daskanały, u apošnich versijach prahramy        źjaviłasia funkcyja ekspartu ŭ łacinku, a mienavita jana nas         jakraz i cikavić. prahrama moža zachoŭvać łacinku ŭ         kadyroŭcy cp-1257 i ŭ farmacie HTML Unicode. U pieršym         vypadku apovieść była kanvertavanaja ŭ łacinku za 1 sekundu,         u druhim vypadku — za 54 sekundy. Ale jakaść         kanvertavańnia vielmi nizkaja: słova «вераб&#8217;і»         kanvertujecca ŭ «vierab&#8217;i» u toj čas, kali apostrafa         ŭ łacincy ŭvohule nie isnuje, «у Балёньі» —         u «u Balońi», «Заслаўе»         pierajšło ŭ «Zasłaŭie».        Fajna, što słova «ЯНКА» było łacinizavanaje ŭ         «JANKA».        Litara «g» uźnikaje ŭ vynikovym tekście ŭ tych i         tolki tych vypadkach, kali prahrama sustrenie spałučeńnie litaraŭ         «зг», što vielmi drenna, bo bolšaja častka         «g» zastaniecca nieraspaznanaj, a taksama prahrama         naŭtykaje lišnich «g» u słovach, dzie druhaja litara ŭ         spałučeńni «зг» źjaŭlajecca frykatyŭnym hukam:         naprykład, u spałučeńniach korania z prystaŭkaj. prahrama całkam         ihnaruje litaru «ґ» i pieradaje jaje ŭ łacinku biez         anijakich źmienaŭ.        Było b dobra pry najaŭnaści ekspartu ŭ kadavańni HTML Unicode         zrabić mahčymaść aŭtamatyčnaj ustaŭki HTML-farmatavańnia,         prynamsi pieranosu na novy radok.        Nia moža pracavać biez ustaloŭki, što taksama nie źjaŭlajecca         plusam prahramy.<br />
+Rejtyng: 4.4 (8/2/2/5/5)</p>
+<p><strong>CyrLat-HTML</strong> v1.1<br />
+Aŭtar: Źm. Hulecki<br />
+Staronka prahramy: <a href="http://www.geocities.com/belarus_coins/cyrlat.html">www.geocities.com/belarus_coins/cyrlat.html</a><br />
+Pamier: 1,1Mb (542Kb va ŭstalovačnym archivie)</p>
+<p><img width="465" height="201" border="0" src="http://lacinka.org/images/stories/prylady/cyrlat-html.gif" /></p>
+<p>Prahrama, jak heta zrazumieła z nazvy pryznačanaja tolki dla         kanvertavańnia kirylicy ŭ łacinku i zachavańnia vyniku ŭ vyhladzie         HTML-staronki ŭ adpaviednym kadavańni. Moža kanvertavać tekst         jak sa źniešniaha fajłu, tak i z admysłovaha pola, kudy jaho treba         ŭvodzić. Apovieść z fajła kanvertavałasia krychu mienš za 3         sekundy, z ekranu — za 7. Adrazu kidajecca ŭ vočy, što         prahrama zamiest litary «ŭ» uparta         vykarystoŭvaje «ū»,         choć u biełaruskaj łacincy vykarystoŭvajecca pieršaja, a Unicode         dazvalaje vykarystoŭvać lubuju. Taksama nia vielmi spadabałasia,         što praces ekspartu tekstu z pola na ekranie prahrama robić         niapravilna z-za čaho ŭźnikajuć dadatkovyja pieranosy radkoŭ.         Pra HTML-tagi prahrama taksama ničoha nia viedaje. Aproč taho,         «вераб&#8217;і» byli pieratvoranyja ŭ «vierabi»,         «у Балёньі» — va «u Balońi»,         «зь Я.Чачотам» pieratvaryłasia ŭ         «ź JA. Čačotam» — prablemy z         registram litaraŭ. Cikava jašče toje, što słova         «функцыі» prahrama kanvertuje ŭ         «funkcyji», a «у Заслаўі» — u         «u Zasłaūi», choć praviła tut         adno i toje ž.<br />
+/* Tut varta zaznačyć, što zaraz suisnujuć dva najbolš         raspaŭsiudžanyja varyjanty klasyčnaj łacinki: taja, dzie huk [ji]         pieradajecca jak «i» i taja, dzie jon pieradajecca jak         «ji». Bolšaść łacinizataraŭ pabudavanyja pad pieršy         varyjant, a hety, vidać, — pad druhi. Uvohule, kali nie         skazana advarotnaha, treba ličyć, što kanvertatar vykarystoŭvaje         pieršy varyjant łacinki. */<br />
+Słova «ЯНКА» tut taksama kanvertujecca ŭ         «JANKA», što niesumnienna źjaŭlajecca plusam.<br />
+Rejtyng: 5.8 (8/9/4/1/7)</p>
+<p><strong>Cyr/Lat Converter</strong> v1.10<br />
+Aŭtar: Viktar Aŭtuška<br />
+Staronka prahramy: <a href="http://lng.belinter.net">lng.belinter.net</a><br />
+Pamier: 479Kb (228Kb va ŭstalovačnym archivie)</p>
+<p><img width="512" height="372" border="0" src="http://lacinka.org/images/stories/prylady/cyrlatconverter.gif" /></p>
+<p>Vakno prahramy padzielenaje na dźvie častki: u adnoj kiryličny         aryginał, u druhoj — vyniki łacinizavańnia. Prahrama maje         mahčymaść kanvertavańnia tekstu ŭ adno z troch kadavańniaŭ:         CE, Baltic, ASCII. Uvohule, algarytm pracuje pravilna, ale,         na žal, vynik vielmi zaležyć ad kadavańnia, pryčym karystacca         im ciažka (kali navat uvohule mahčyma) biez najaŭnaści         Baltic codepage, jakaja jość daloka nia ŭ kožnaha.         U kožnym z kadavańniaŭ «Jama» była łacinizavanaja za         kala 10 sekundaŭ.<br />
+Rejtyng: 5.4 (6/6/9/4/2)</p>
+<p><strong>Cyr2Lat</strong><br />
+Aŭtar: Marat Duchan<br />
+Spasyłka: <a href="http://dukhan.at.tut.by/latinka/Cyr2Lat.zip">dukhan.at.tut.by/latinka/Cyr2Lat.zip</a><br />
+Pamier: 14Kb (niepasredna biblijateka - 2Kb)</p>
+<p>Nasamreč heta nie samastojnaja prahrama, a tolki funkcyja         kanvertavańnia, dastupnaja ŭ farmacie lib i ŭ vyhladzie         dll-biblijateki. Tamu najbolš zručnaj jana budzie pry vykarystańni         ŭ inšych prahramach u jakaści, naprykład, jadra łacinizatara abo         funkcyi lakalizacyi interfejsu prahramy na łacinku ŭ         realnym časie. Funkcyja prymaje 3 parametry: tekst dla         kanveratvańnia, bufer dla vyniku i daŭžyniu buferu. Chutkaść         kanveratvańnia vielmi vysokaja: apovieść była apracavanaja za         ŭsiaho tolki 0,3 sekundy. Ale chiba z «u Balońi»         usio roŭna krychu sapsavała ahulnaje ŭražańnie.<br />
+Rejtyng: 5.25 (-/10/8/0/3)</p>
+<p><strong>Kirlat</strong><br />
+Aŭtar: Alexander Mikhailian<br />
+Spasyłka:<br />
+Pamier: kala 50Kb</p>
+<p><img border="0" src="http://lacinka.org/images/stories/prylady/kirlat.gif" /></p>
+<p>Roznyja versii hetaj prahramy chodziać pa internecie, ale znajści  sajt, na jakim by jany raźmiaščalisia, nie atrymałasia. Cikava taksama,         što versii nie numarujucca, ale čas ad času dapracoŭvajucca.       Raspaŭsiudžvajecca prahrama razam z zychodnym kodam, žyvie ŭ         systemnym trai i maje niekalki kirunkaŭ kanvertavańnia, siarod         jakich kanvertavańnie z kirylicy ŭ łacinku i nazad. Prahrama         pracuje praz bufer abmienu, kanvertujučy tekst, jaki tam znachodzicca,         i pierazapisvajučy jaho vynikam. Apovieść była łacinizavanaja za         11 sekundaŭ, ale vyniki kanvertavańnia nia vielmi ŭrazili:         «вераб&#8217;і» pieratvarylisia ŭ         «vierab&#8217;i», «у Балёньі» — va         «u Balońi», «Заслаўе» — u         «Zasłaŭie», ignarujecca litara         «ґ», niezrazumiełyja rečy adbyvajucca z adzinočnymi         jotavanymi litarami (naprykład, kali heta inicyjały), taksama pa         niezrazumiełych pryčynach jotavanyja litary ŭ niekatorych vypadkach         pieradajucca z «i» u toj čas, kali musiać z         «j».        Zručnaja prahramka dla chutkaha kanvertavańnia nievialikich tekstaŭ,         ale jana jašče musić być dapracavanaja.<br />
+Rejtyng: 5.0 (8/6/4/2/5)</p>
+<p><strong>Moŭny Kanvertar</strong> v2.3<br />
+Aŭtar: Juraś Michied<br />
+Staronka prahramy: <a href="http://www.juras14.net/open.php?r=5">www.juras14.net/open.php?r=5</a><br />
+Pamier: 43Kb (u archivie; mahčyma, spatrebicca dadatkovaja biblijateka: 58Kb u archivie)</p>
+<p><img width="450" height="315" border="0" src="http://lacinka.org/images/stories/prylady/mounykanvertar.gif" /></p>
+<p>Adna z najbolš daskanałych prahramak siońniašniaha ahladu. Maje         tekstavaje pole, jakoje, vidać, pracuje ŭ kadavańni Unicode, dzie,         ułasna, treba redagavać tekst i hladzieć na vyniki. Taksama         prysutničaje ručny vybar naboru symbalaŭ dla ŭvodu. Takaja         mahčymaść vielmi zručnaja pry adsutnaści kiryličnaj abo         łacinkavaj raskładki: prahrama pieratvaraje symbali klavijatury         ŭ symbali adpaviednaj raskładki i vyvodzić ich na ekran. Chacia         krychu naziralisia chiby, kali byŭ vybrany punkt         «systemnaja»: symbali, jakija źjaŭlalisia na ekranie nie         adpaviadali symbalam nacisnutych klavišaŭ u systemnaj raskładcy.         prahrama taksama maje zvyčku aŭtamatyčna pieraklučyć raskładku         na, jak joj zdajecca, najbolš relevantnuju, ale heta bolš         razdražniaje, bo pieraklučeńnie adbyvajecca ŭ bolšaści vypadkaŭ         tady, kali rabić heta nia treba.        Apovieść była łacinizavanaja za 2 chviliny 6 sekundaŭ. Davoli         doŭha. Taksama tut prysutničaje taja ž chiba ŭ         «u Balońi», ale «у Заслаўі»         kanvertavałasia ŭ «u Zasłaŭi», choć         vidavočna, što prahrama pieradaje huk [ji] praz         «ji».        Dalej karystalniku prapanujecca mahčymaść zachavać vynik u         adnym ź piaci farmataŭ, siarod jakich jość i Unicode. Symbali,         jakija nie prysutničajuć u kodavaj tablicy zachavańnia zachoŭvajucca         ŭ h.zv. «HTML-Unicode». Cikava, što kali vybrać         u meniu punkt «Zachoŭvać u Unicode (HTML)»,         niekatoryja symbali zamiest Unicode-kodaŭ zachoŭvajucca ŭ adnoj         z centralnaeŭrapiejskich kadyrovak, pryčym nie zrazumieła         jakaja kankretna heta kadyroŭka.        Aproč łacinizavańnia ŭ prahramie taksama prysutničajuć funkcyi         kirylizavańnia i prymityŭnaha taraškievizavańnia.<br />
+Rejtyng: 6.2 (8/0/7/6/10)</p>
+<p><strong>Kir2Lac</strong> v2.0.2<br />
+Aŭtar: j.Zedlik<br />
+Staronka prahramy: <a href="http://www.zedlik.com/prahramy/kir2lac/">www.zedlik.com/prahramy/kir2lac/</a><br />
+Pamier: 263Kb (ustalovačny archiŭ)</p>
+<p><img width="462" height="261" border="0" src="http://lacinka.org/images/stories/prylady/kir2lac.gif" /></p>
+<p>prahramka z prostym interfejsam na dva poli — zychodny fajł,         vychodny fajł — i pola, u jakoje vyvodziacca ŭsie         słužbovyja paviedamleńni adnosna kanveratvańnia padčas pracy         prahramy. Uvachodnymi źviestkami źjaŭlajecca plain text u         kadavańni cp-1251. Vynik prahrama moža zachavać jak taksama         plain text u adnym z čatyroch režymaŭ: łacinkavyja symbali,         jakija nie ŭvachodziać u kadavańnie ASCII zamianiajucca adpaviednymi         biaz hačykaŭ, zamianajucca na pseŭdałacinku z &#8216; i ^, zamianiajucca         na HTML kody i zamianiajucca na lubyja symbali, vyznačanyja         karystalnikam. Taksama prysutničaje mahčymaść ekspartu         fajłu ŭ HTML-staronku z zachavańniem farmatavańnia, škada         tolki, jano moža być vykananaje tolki razam z kanvertavańniem         u tekstavy fajł. Z dadatkovych mahčymaściaŭ prapanujecca         aŭtavyznačeńnie registru litaraŭ, jakija ŭ kirylicy pieradavalisia         adnym symbalem, a ŭ łacincy — dvuma. I varta zaznačyć,         jana navat krychu pracuje.        «Vaŭčynaja jama» była łacinizavanaja za 8, 9 i 11         sekundaŭ u pieršych troch z vyšejzhadanych režymaŭ adpaviedna.         Pamyłak kanvertavańnia nia vyjaŭlena. Vyrazy kštałtu         «яНКА» i «ЯНКА» kanvertujucca ŭ,         adpaviedna, «jANKA» i «JANKA».        Darečy, isnuje onlinevaja versija hetaha łacinizatara         (<a href="http://www.zedlik.com/prahramy/kir2lac-online/">www.zedlik.com/prahramy/kir2lac-online/</a>),         ale jon całkam adpaviadaje win32-prahramie, tamu jak asobny łacinizatar         nie razhladaŭsia.<br />
+Rejtyng: 7.8 (9/6/9/8/7)</p>
+<h3>Makrasy i online-łacinizatary</h3>
+<p>Makrasy dla Word i tym bolš online-łacinizatary — heta zusim inšaja         vahavaja katehoryja i nia mohuć paraŭnoŭvacca z kampilavanymi         binarnikami. Tamu ličby adnosna času kanvertavańnia pryviedzienyja         chutčej dla paraŭnańnia adpaviednych kanvertavalnikaŭ pamiž         saboj (to bok makrasaŭ z makrasami, a online-łacinizataraŭ —         z online-łacinizatarami). Ale heta nie vyzvalaje ich ad naležnaj         jakaści łacinizavańnia.</p>
+<p><strong>Cyrlat</strong><br />
+Aŭtar: Alaksiej Kazan<br />
+Staronka prahramy: <a href="http://www.geocities.com/alaksiej">www.geocities.com/alaksiej</a> (nie pracuje)<br />
+Pamier: 34Kb (ustalovačny archiŭ)</p>
+<p><img width="416" height="253" border="0" src="http://lacinka.org/images/stories/prylady/cyrlat.gif" /></p>
+<p>Uvohule, makrasami nia vielmi zručna kanvertavać vialikija teksty.         Mahčyma, značnuju rolu ŭ hetaj subjektyŭnaj acency hraje chutkaść         kanvertavańnia, jakaja adčuvalna našmat mienšaja. Časam zdarajucca         cikavyja rečy. Voś i pry łacinizavańni apovieści taksama         było. Nieviadoma, jakim čynam pracuje makras, ale, naprykład,         čverć «Jamy» — roŭna čaćviertaja častka —         była łacinizavanaja za 13 sekundaŭ, pałova — užo za 51,         a nie za 26, jak možna było b zdahadvacca. Całkam apovieść tak         i nie była łacinizavanaja navat za čatyry z pałovaj chviliny.         Pamyłka ź «vierab&#8217;i», z «u Balońi»,         «ґ» makrasu nie viadomaja, mahčymaść pieradačy dygrafaŭ         dvuma litarami ŭ vierchnim registry taksama nie realizavanaja.         Taki voś siaredniačok.<br />
+Rejtyng: 2.5 (-/0/6/0/4)</p>
+<p><strong>Word2000</strong><br />
+Aŭtar: chacieŭ zastacca ananimny<br />
+Staronka prahramy: nieviadomaja, jość na <a href="http://lacinka.org/fajly/word2000.zip">www.lacinka.org</a><br />
+Pamier: 40Kb (ustalovačny archiŭ)</p>
+<p><img width="290" height="180" border="0" src="http://lacinka.org/images/stories/prylady/word2000.gif" /></p>
+<p>Makras ź nia samym lepšym algarytmam pastupovaj zamieny         kožnaha symbala padčas šmatrazovaha prahladu ŭsiaho tekstu. Tym nia mienš,         apovieść łacinizavanaja za 98 sekundaŭ, u «vierabjach»         zastaŭsia apostraf, usie litary, jakija nie ŭvachodziać u kadyroŭku         ASCII, aproč «ŭ», pieradajucca ŭ niapravilnaj kadyroŭcy,         «ґ» ignarujecca, u niekatorych vypadkach jotavanyja         pieradavalisia z «i», kali nasamreč musili być         z «j».<br />
+Rejtyng: 2.75 (-/1/6/0/4)</p>
+<p><strong>Online-łacinizatar: <a href="http://www.knihi.com/lacinizatar/">www.knihi.com/lacinizatar/</a></strong></p>
+<p>Napeŭna, samy viadomy i samy papularny online-łacinizatar.         Moža łacinizavać nia tolki kavałki tekstu z fajłami, a navat         sajty ŭ režymie realnaha času. Ale tut kryjecca pastka:         łacinizatar „razumieje” tolki staronki ŭ kadavańni cp-1251.         Staronka ŭ kožnym inšym kadavańni budzie łacinizavanaja niapravilna.         Paśla zahruzki «Vaŭčynaj jamy» na server nazirałasia         zatrymka ŭ 5 sekundaŭ, paśla jakoj pačaŭ vyvodzicca vynik.         To bok apovieść była łacinizavanaja prykładna za čas, roŭny         času zatrymki. Zrešty, kali čas zahruzki samoha fajła i         atrymańnia vyniku našmat pieravyšaje čas kanvertavańnia,         apošni nia hraje značnaj roli. Pamyłki: «vierabi»,         «u Balońi». Łacinizatar sprabuje aŭtamatyčna         vyznačać registar dygrafaŭ, adpaviadajučych vialikim litaram, ale         praskokvajuć chiby z inicyjałami. «ґ» ignarujecca,         «ŭ» pieradajecca jak         «ú».<br />
+Rejtyng: 5.0 (4/7/6/4/4)</p>
+<p><strong>Online-łacinizatar: <a href="http://www.pravapis.org/latin.asp">www.pravapis.org/latin.asp</a></strong></p>
+<p>Hety łacinizatar pabudavany na regularnych vyrazach i kanvertuje         tekst šlacham šmatlikich prahladaŭ usiaho tekstu i zamieny pa adnoj         i toj ža litary na jejny łacinkavy adpaviednik. U archivach         <a href="http://www.livejournal.com">www.livejournal.com</a> možna         navat adšukać zychodny kod na ASP.        Apovieść łacinizatar kanvertavać admoviŭsia, skazaŭšy         «Request object error &#8216;ASP 0107 : 80004005&#8242;,         Stack Overflow». Maleńkija teksty łacinizujucca, ale         nia vielmi jakasna: «vierabi»,         «u Balońi». Nijakich dadatkovych mahčymaściaŭ,         na žal, nie praduhledžana.<br />
+Rejtyng: 3.0 (5/0/6/0/4)</p>
+<p><strong>Online-łacinizatar: <a href="http://slounik.pl">slounik.pl</a></strong></p>
+<p>Hety kanvertar moža apracoŭvać teksty ŭ niekalkich napramkach,         adzin ź jakich łacinizavańnie. Dadzienyja pačynajuć vyvodzicca adrazu         paśla skančeńnia zahruzki fajła. Chacia heta śviedčyć tolki pra         toje, što funkcyja łacinizavańnia vyvodzić vynik adrazu ŭ płyń         vychadu. Tamu padličyć čas kanvertavańnia možna tolki siedziačy         na kanale z chutkaściu ŭ nia mienš za 256 KB/sek. Było zaŭvažana,         što vialikaja kiryličnaja litara «Й» čamuści nie         apracoŭvajecca zusim. Mahčyma heta vyklikanaje mierkavańniem,         što ŭ zvyčajnym tekście jana nie sustrakajecca. Taksama         «вераб&#8217;і» kanvertavalisia ŭ «vierab&#8217;i»,         «у Балёньі» — va «u Balońi»,         «Заслаўе» — u «Zasłaŭie».         Litara «ґ» taksama ignarujecca.<br />
+Rejtyng: 4.0 (7/-/5/0/4)</p>
+<p><strong>Vyniki</strong></p>
+<p>Što ž, čas zrabić peŭnyja vysnovy. Takim čynam:      </p>
+<p>Biełazar v3.6.2.2015     <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+CyrLat-HTML v1.1       <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Cyr/Lat Converter v1.10     <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Cyr2Lat  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Kirlat  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Moŭny Kanvertar v2.3  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Kir2Lac v2.0.2  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Cyrlat   <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+Word2000  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+www.knihi.com/lacinizatar/  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+www.pravapis.org/latin.asp  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/><br />
+slounik.pl  <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> <img style="width: 12px; height: 17px;" alt="*" src="http://xn--zoak-11a.net/wp-includes/images/smilies/star.gif"/> </p>
+<p>Dobra, što prablema aŭtamatyčnaha kanvertavańnia kiryličnaha         tekstu ŭ łacinku vyrašajecca i srodki jaje vyrašeńnia ŭžo         jsnujuć. Dobra, što kožny moža lohka i prosta         atrymać łacinkavy tekst z kiryličnaha aryhinału.         Dobra, što karystalnik moža navat vybrać sabie         kanvertavalnik pavodla ŭłasnaha hustu.</p>
+<p>Razam z tym krychu žurbotna, što tolki adzinki         prachodziać prostyja testy. I navat hetyja adzinki nia mohuć         pakul zrabić z kirylicy łacinku takoj, jakoj jana         musić być nasamreč. Kanvertavalnikaŭ jašče čakaje doŭhi šlach         udaskanaleńnia, jaki jany abaviazkova projduć. Nia siońnia,         nia zaŭtra, ale chutka. Prahres bačny.<br />
+Dla <a href="http://www.lacinka.org">www.lacinka.org</a> j.Zedlik (<a target="_blank" href="http://www.zedlik.com">www.zedlik.com</a>)
+</p>
+			
+<div class="date"> </span></div>     
+
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://lacinka.org/?p=14"
+    dc:identifier="http://lacinka.org/?p=14"
+    dc:title="Łacinizatary ŭ siecivie"
+    trackback:ping="http://lacinka.org/wp-trackback.php?p=14" />
+</rdf:RDF>	-->
+	
+
+<!-- You can start editing here. -->
+
+<p><a href='http://lacinka.org/?feed=rss2&amp;p=14'><abbr title="Really Simple Syndication">RSS</abbr> feed</a> 
+| <a href="http://lacinka.org/wp-trackback.php?p=14">Trackback <acronym title=\"Uniform Resource Identifier\">URI</acronym></a>
+</p>
+
+
+<div class="#commentlist">
+</div>
+<div id="addcomment" class="comment">
+<a id="addcommentanchor" name="addcommentanchor"></a>
+<form action="http://lacinka.org/wp-comments-post.php" method="post" id="commentform">
+<div class="add">
+	<div id="reroot" style="display: none;">
+		<small><a href="javascript:reRoot()">
+			Naciśni, kab skasavać „kamentar”.
+		</a></small>
+	</div>
+	<small>
+		<b>Imia</b> (abaviazkova)	</small>
+	<div>
+		<input type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1" />
+	</div>
+	<small>
+		<b>E-mail</b> (Abaviazkova - nia budzie bačny inšym)	</small>
+	<div>
+		<input type="text" name="email" id="email" value="" size="28" tabindex="2" />
+	</div>
+	<small>
+		<b><acronym title="Uniform Resource Identifier">URI</acronym></b>	</small>
+	<div style="margin-bottom: 4px;">
+		<input type="text" name="url" id="url" value="" size="28" tabindex="3" />	
+	</div>
+
+	<small>
+		<b>Tvoj kamentar</b> (<a href="javascript:changeCommentSize(-80);">źmienš</a> | <a href="javascript:changeCommentSize(80)">pabolš</a>)
+	</small>
+<div style="margin: 4px 0px 4px 0px;"><small>
+  <input type="checkbox" value="" id="ShowPreview" onclick="ShowPreviewBox(this.checked)"><label for="ShowPreview">&nbsp;Kanvertuj u łacinku (<a href="#">Što heta takoje, i jak pracuje?</a>)</label></small>
+</div>
+	<div style="width: 80%;">
+		<textarea name="comment" id="comment" cols="45" rows="4" tabindex="4"
+onchange="UpdatePreviewBox(this.value)" onfocus="UpdatePreviewBox(this.value)" onkeyup="UpdatePreviewBox(this.value)" onkeypress="UpdatePreviewBox(this.value)"
+></textarea>
+	</div>
+	<div style="width: 80%; margin-bottom: 6px;"><small>
+		Dazvolenyja tagi: 
+		&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; 	</small></div>
+<div id="PreviewBox" style="display: none; width: 100%; margin: 0px 0px 4px 0px;">
+  <small>Papiaredni prahlad:
+  <div id="PreviewText" style="border: 1px solid #e8e8e8; background-color: #fcfcfc; padding: 3px 6px 4px 6px; margin: 4px 0px 8px 0px; color: #606060;">
+  </div></small>
+</div>
+
+	<div>
+		<input type="hidden" name="comment_post_ID" value="14" />
+		<input type="hidden" name="redirect_to" value="/?p=14" />
+		<input onclick="if(typeof(onAddComment) == 'function') { if (ShowPreview.checked) { ReplaceEnteredText(comment); } onAddComment(); } else { alert('ERROR:\nIt looks like the website administrator hasn\'t activated the Brians Threaded Comments plugin from the plugin page'); };" name="addcommentbutton" type="button" id="addcommentbutton" value="Naciśni mianie!" />
+	</div>
+</div>
+<input type='hidden' id='comment_reply_ID' name='comment_reply_ID' value='0' />
+
+	<p style="clear: both;" class="subscribe-to-comments">
+        <input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+        <label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+</form>
+</div>
+
+
+
+		
+<!--unutranaja reklama-->
+
+				<div class="center"></div>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+
+<table style="width: 100%; text-align: left;" border="0" cellpadding="2"
+cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<FONT SIZE="-1"><h2>Ludzi pra łacinku</h2><a href="http://lacinka.org/?p=10">Cichaje kanańnie kirylicy</a><br /><a href="http://lacinka.org/?p=25">Illa Hłyboŭski pra łacinku</a><br /><a href="http://lacinka.org/?p=24">Źmicier Saŭka pra łacinku</a><br /><a href="http://lacinka.org/?p=21">N.R.M. karystajecca łacinkaj</a><br /><a href="http://lacinka.org/?p=20">Nieabchodnaje urehulavańnie artahrafii</a><br /><a href="http://lacinka.org/?p=17">Pryhožy estetyčny eksperyment</a><br /><a href="http://lacinka.org/?p=23">Skažam łacincy — tak!</a><br /></font>
+</td>
+<td style="vertical-align: top;"><FONT SIZE="-1"><h2>Karystajemsia łacinkaj</h2>
+<a href="http://lacinka.org/?p=9">Jak lohka i prosta pisać łacinkaj</a><br /><a href="http://lacinka.org/?p=14">Łacinizatary ŭ siecivie</a><br /><a href="http://lacinka.org/?p=16">Moŭnyja tagi i biełaruskaja łacinka</a><br /><a href="http://lacinka.org/?p=31">Pišam łacinkaj z UniRedam</a><br /></font>
+<br>
+</td>
+</tr>
+</tbody>
+</table></font>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+	
+			
+				
+			</div></div>
+			
+			<div id="right">
+<div id="rightmenu"><li><a href="http://lacinka.org/?cat=25" title="Pabač usie dopisy ŭ katehoryi 'Abjavy'">Abjavy</a>
+</li>
+<li><a href="http://lacinka.org/?cat=5" title="Biełarusy pra łacinku">Biełarusy pra łacinku</a>
+</li>
+<li><a href="http://lacinka.org/?cat=2" title="Pra dziejnaść arhanizacyi">Padziei</a>
+</li>
+<li><a href="http://lacinka.org/?cat=4" title="Jak karystacca łacinkaj. Parady. Lakalizacyi. ">Praktykum</a>
+</li>
+<li><a href="http://lacinka.org/?cat=7" title="Usio što adbyvajecca ŭ łacincy i z łacinkaj siońnia. Łacinka i žyćcio.">Tendencyi</a>
+</li>
+</div>
+
+<div id="searchform"><form id="searchform" method="get"  class="search" action=""><p><input type="text" class="text" name="s" id="s" size="10" /><input type="submit" class="button"  name="submit" value="šukaj" />
+</p></form></div>
+				
+<div class="rightarticle">
+			
+<h2>Rekamendujem</h2>
+
+<ul>
+<li>Ese Mikałaja Pačkajeva <a href="?page_id=45">Biełaruskaja łacinka</a></li></ul>
+
+
+<div style="text-align: center;">
+
+<a href="http://lacinka.org/?page_id=103"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EO" src="http://lacinka.org/images/eo.png"></a> 
+
+<a href="http://lacinka.org/?page_id=82"><img style="border: 0px solid; width: 16px; height: 11px;" alt="ES" src="http://lacinka.org/images/es.png"></a> 
+
+<a href="http://lacinka.org/?page_id=32"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="DE" src="http://lacinka.org/images/de.png"></a> 
+
+<a href="http://lacinka.org/?page_id=81"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="FR" src="http://lacinka.org/images/fr.png"></a>
+
+<a href="http://lacinka.org/?page_id=30"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EN" src="http://lacinka.org/images/gb.png"></a>
+
+<a href="http://lacinka.org/?page_id=29"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="PL" src="http://lacinka.org/images/pl.png"></a>
+
+<a href="http://lacinka.org/?page_id=28"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="RU" src="http://lacinka.org/images/ru.png"></a>
+
+<a href="http://lacinka.org/?page_id=26"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="UA" src="http://lacinka.org/images/ua.png"></a>
+
+</div>
+
+
+<h2>Tendencyi</h2>
+<ul><a href="http://lacinka.org/?p=102">I karystacca niazručna, i vykinuć škada</a><br /><a href="http://lacinka.org/?p=36">Mapa Biełarusi</a><br /><a href="http://lacinka.org/?p=115">Niama patreby refarmavać našuju łacinku</a><br /><a href="http://lacinka.org/?p=37">Pisati po-svojomu</a><br /> </ul>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>		
+
+<h2></h2>
+<ul><a href="http://lacinka.org/?page_id=112" title="Staronka z banerami sajtu dla raźmiaščeńnia">Banery Łacinki</a> Staronka z banerami sajtu dla raźmiaščeńnia<br />
+<a href="http://community.livejournal.com/lacinka/" rel="me" title="Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal">Łacinka ŭ Livejournal</a> Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal<br />
+ </ul>
+
+		</div><p style="border-top: #CCCCCC 1px dashed"></p>			
+				
+			</div>
+		</div>	
+		<div id="links">
+			<p></p>		
+
+	</div></div></div>
+
+	<div id="footer">Copyright &copy; 2007 <strong><a href="http://lacinka.org">Łacinka.org</a></strong> | <a href="http://lacinka.org/?feed=rss2">RSS Feed</a> | Powered by <a href="http://wordpress.org/" title="Staronka stvoranaja pry dapamozie semantyčnaj persanalnaj platformy dla publikacyjaŭ u siecivie WordPress."><abbr title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</abbr></a> | Design: <a href="http://www.solucija.com/">Solucija</a>, Ported by <a href="http://www.gfxedit.com/" title="Theme by GFXedit.com"><abbr title="Theme by GFXedit.com">GFXedit.com</abbr></a>
+</div>
+</body>	
+</html>

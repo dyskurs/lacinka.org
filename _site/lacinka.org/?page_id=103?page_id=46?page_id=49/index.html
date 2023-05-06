@@ -1,0 +1,1020 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
+<title>Łacinka.org &raquo; Pri ni kaj nia TTT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.0.5" /> <!-- leave this for stats -->
+<meta name="description" content="Biełaruskaja łacinka"/>
+<meta name="keywords" content="lacinka, unicode, mova, bielaruskaja"/>
+<style type="text/css" media="screen">
+@import url( http://lacinka.org/wp-content/themes/internet-jobs/style.css );
+</style>
+<meta name="copyright" content="Łacinka.org" />
+<meta name="Author" content="Zołak (zolak@slacinka.org)" />
+<meta name="wp-theme" content="Sreejith R - GFXedit.com" />
+<meta name="generator" content="WordPress 2.0.5" />
+<meta name="robots" content="index,follow" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://lacinka.org/?feed=rss2" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://lacinka.org/?feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://lacinka.org/?feed=atom" />
+<link rel="pingback" href="http://lacinka.org/xmlrpc.php" />
+	<link rel='archives' title='sakavik 2007' href='http://lacinka.org/?m=200703' />
+	<link rel='archives' title='studzień 2007' href='http://lacinka.org/?m=200701' />
+	<link rel='archives' title='śniežań 2006' href='http://lacinka.org/?m=200612' />
+	<link rel='archives' title='kastryčnik 2006' href='http://lacinka.org/?m=200610' />
+	<link rel='archives' title='lipień 2006' href='http://lacinka.org/?m=200607' />
+	<link rel='archives' title='luty 2006' href='http://lacinka.org/?m=200602' />
+	<link rel='archives' title='lipień 2005' href='http://lacinka.org/?m=200507' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lacinka.org/xmlrpc.php?rsd" />
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("content");
+			addComment.parentNode.removeChild(addComment);
+			content.appendChild(addComment);
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	width: 					100%;	
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+/*
+#addcomment small, #addcomment div
+{
+	padding:				3px;
+}
+*/
+#commentform textarea {
+	width: 97%;
+}
+</style>
+<style type="text/css" media="screen">
+div#shoppingcart{
+ float: right;
+/* height: 200px; */
+ width: 148px;
+ margin: 0px;
+ padding: 0px;
+ margin-left: 5px;
+/* margin-right: -100px; */
+ }
+ 
+div#shoppingcart img{
+ position: absolute; 
+ top: 5px;
+ left: 5px;
+ }
+ 
+div#shoppingcart div{
+ font-size: 9pt;
+ border: 1px solid #999999;
+ background-color: #efefef;
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#shoppingcart div strong{
+ font-size: 11pt;
+ }
+
+div#sideshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#sideshoppingcart div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+div#widgetshoppingcart{
+ }
+
+div#widgetshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ }
+ 
+div#widgetshoppingcarts div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+td{
+ font-size: 11pt;
+ vertical-align: top;
+ }
+
+table.productcart{
+ border: 1px solid #999999;
+ width: 100%;
+ margin-bottom: 10px;
+ }
+
+table.productcart tr td{
+ padding-bottom: 5px;
+ font-size: 8pt;
+ }
+
+table.productcart tr.firstrow td{
+ font-weight:bold;
+ background-color: #e5e5e5;
+ }
+
+table.productcart tr.oddrow td{
+ background-color: #f0f0f0;
+ }
+ 
+table.productcart tr td.firstcol{
+ width: 40%;
+ } 
+
+form.adjustform{
+ display: inline;
+ }
+
+
+
+
+table.productdisplay{
+/* margin-top: 10px; */
+ margin-bottom: 20px;
+ border-collapse: collapse;
+ }
+
+table.productdisplay tr td{
+ vertical-align: top;
+ padding-bottom: 5px;
+ }
+
+
+table.productdisplay tr td.imagecol{
+ padding-right: 5px;
+ margin-right: 5px;
+ border: 0px solid #ffffff;
+ }
+ 
+table.productdisplay tr td.imagecol img{
+/* width: 300px; */
+border: 0px solid #ffffff;
+ }
+
+table.productdisplay tr td.textcol{
+ padding: 0px;
+ padding-bottom: 10px;
+ margin: 0px;
+ }
+ 
+ 
+ 
+ 
+ul.tandclist li{
+ list-style-type:lower-alpha;
+ } 
+ 
+ul.tandclist li{
+ list-style-type: circle;
+ } 
+ 
+ul.linklist li{
+ font-weight:bold;
+ } 
+ 
+strong.special{
+ color: #DD0000;
+ }
+ 
+a.termsandconds
+ {
+ text-decoration: underline;
+ }
+
+span.miniarrow{
+ display: block;
+/* border: 1px solid black; */
+ vertical-align: top !important;
+ }
+
+img.miniarrow{
+/* position: relative; */
+/* border: 1px solid black; */
+ margin-right: 4px;
+ }
+
+img.catimage{
+ float:left;
+ position: relative;
+ top: -3px;
+ margin-right: 2pt;
+ }
+
+strong.cattitles{
+ display: block;
+ position: relative;
+/* margin-bottom: -15px; */
+ }
+
+strong.prodtitles{
+ display: block;
+ margin-bottom: -15px;
+ }
+
+table.mainpagetable{
+ margin-left: 0px;
+ }
+
+table.mainpagetable tr td{
+ padding-left: 0px;
+ }
+
+strong.title{
+ font-size: 12.5pt;
+ }
+
+div.producttext{
+ font-size: 10pt;
+ }
+
+a.categorylink{
+ font-size: 8pt;
+ /*border: 1px solid red;*/
+ }
+
+span.pricedisplay{
+ white-space: nowrap;
+ }
+ 
+td.totals{
+ vertical-align: bottom;
+ }
+ 
+table.cattable{
+ padding: 0px;
+ margin: 0px;
+ border-collapse: collapse;
+/* border: 1px solid black; */
+ }
+ 
+table.cattable tr td{
+ padding: 0px;
+/* border: 1px solid black; */
+ }
+ 
+ td.catfirstcol{
+ padding-right: 3px;
+ }
+
+form#specials{
+ display: inline;
+ }
+ 
+span.oldprice{
+ text-decoration: line-through;
+ }
+div#categorydisplay{
+ display: block;
+ }
+ 
+div#branddisplay{
+ display: none;
+ }
+ 
+span.additional_description{
+ display: none;
+ }
+ 
+a.additional_description_link{
+ display: inline;
+ }
+ 
+td.prodgroupmidline{
+ border-right: 1px solid black !important;
+ padding-right: 3px;
+ }
+ 
+#loadingindicator{
+ visibility: hidden; 
+ font-size: 7pt;
+ font-weight: normal;
+ }
+
+#loadingindicator img{
+ position: relative;
+ top: 3px;
+ margin-left: 6px;
+/*  visibility: hidden; */
+  border: none !important;
+ }
+ 
+/* e-commerce fix for K2 */
+table.productdisplay tr td img {
+ max-width: none;
+ }
+ 
+ 
+div.product_footer{
+ position: relative;
+ padding: 0px !important;
+ width: 100%;
+ border-top: 1px dashed #cccccc;
+/*  border-top: 1px dashed #cccccc; */
+ height: 35px;
+ }
+ 
+div.product_footer strong{
+ display: block;
+ font-size: 7pt;
+ font-weight: normal;
+ }
+ 
+div.product_average_vote{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 50%;
+ float: left;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+div.product_user_vote{
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ width: 30%;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+span.vote_total{
+ position: relative;
+ top: -3px;
+ left: 2px;
+ font-size: 7pt;
+ }
+ </style>
+ <link href='./wp-content/plugins/wp-shopping-cart/product_rater.css' rel="stylesheet" type="text/css" />
+<script language='JavaScript' type='text/javascript'>
+// Copyright (c) 2005 Timothy R. Morgan
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+// mini/ajax.js - http://timmorgan.org/mini
+
+function $(e){if(typeof e=='string')e=document.getElementById(e);return e};
+function collect(a,f){var n=[];for(var i=0;i<a.length;i++){var v=f(a[i]);if(v!=null)n.push(v)}return n};
+
+ajax={};
+ajax.x=function(){try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){return new XMLHttpRequest()}}};
+ajax.serialize=function(f){var g=function(n){return f.getElementsByTagName(n)};var nv=function(e){if(e.name)return encodeURIComponent(e.name)+'='+encodeURIComponent(e.value);else return ''};var i=collect(g('input'),function(i){if((i.type!='radio'&&i.type!='checkbox')||i.checked)return nv(i)});var s=collect(g('select'),nv);var t=collect(g('textarea'),nv);return i.concat(s).concat(t).join('&');};
+ajax.send=function(u,f,m,a){var x=ajax.x();x.open(m,u,true);x.onreadystatechange=function(){if(x.readyState==4)f(x.responseText)};if(m=='POST')x.setRequestHeader('Content-type','application/x-www-form-urlencoded');x.send(a)};
+ajax.get=function(url,func){ajax.send(url,func,'GET')};
+ajax.gets=function(url){var x=ajax.x();x.open('GET',url,false);x.send(null);return x.responseText};
+ajax.post=function(url,func,args){ajax.send(url,func,'POST',args)};
+ajax.update=function(url,elm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.get(url,f)};
+ajax.submit=function(url,elm,frm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.post(url,f,ajax.serialize(frm))};
+
+var testsuccess = 0;
+var lnid = new Array();
+function categorylist(url)
+  {
+  self.location = url;
+  }
+  
+var getresults=function(results)
+  {
+  document.getElementById('shoppingcartcontents').innerHTML = results;
+  document.getElementById('loadingindicator').style.visibility = 'hidden';
+  }
+
+function submitform(prodid)
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&prodid="+prodid+"");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function emptycart()
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&emptycart=true");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function show_additional_description(id)
+  {
+  currentstate = document.getElementById(id).style.display;
+  document.getElementById(id).style.display = 'inline';
+  if(currentstate != 'inline')
+    {
+    document.getElementById(id).style.display = 'inline';
+    }
+    else
+      {
+      document.getElementById(id).style.display = 'none';
+      }
+  return false;
+  }
+
+function prodgroupswitch(state)
+  {
+  if(state == 'brands')
+    {
+    document.getElementById('categorydisplay').style.display = 'none';
+    document.getElementById('branddisplay').style.display = 'block';
+    }
+    else if(state == 'categories')
+      {
+      document.getElementById('branddisplay').style.display = 'none';
+      document.getElementById('categorydisplay').style.display = 'block';
+      }
+  return false;
+  }
+  
+  
+var apply_rating=function(results)
+  {
+  outarr = results.split(",");
+  //alert(results);
+  for(i=1;i<=outarr[1];i++)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/gold-star.gif";
+    document.getElementById(id).style.background = "url(./wp-content/plugins/wp-shopping-cart/images/gold-star.gif)";
+    }
+    
+  for(i=5;i>outarr[1];i--)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/grey-star.gif";
+    document.getElementById(id).style.background = "#c4c4b8";
+    }
+  lnid[outarr[0]] = 1; 
+    
+  rating_id = 'rating_'+outarr[0]+'_text';
+  document.getElementById(rating_id).innerHTML = "Your Rating:";
+//   switch(votetext)
+//     {
+//     case "No Votes":
+//     votestr = "1 Vote";
+//     break;
+//     
+//     case "1 Vote":
+//     votestr = "2 Votes";
+//     break;
+//     
+//     default:
+//     votestr = (parseInt(votetext[0])+1) + " Votes";
+//     break;
+//     }
+//     
+//   element.innerHTML = votestr;
+  }
+  
+function rate_item(prodid,rating)
+  {
+  ajax.post("index.php",apply_rating,"ajax=true&rate_item=true&product_id="+prodid+"&rating="+rating+"");
+  }
+</script>
+	<style type="text/css" media="screen">
+	img.comvatar-default {
+		width: 16px;
+		height: 16px;
+	}
+	</style>
+
+<script language="JavaScript"><!--
+
+  function PseudotextToLacin(InputText)
+  {
+    // var InputText = InputElement.value;
+    var ResultText = InputText;
+
+    var ConvertionTable = new Array(
+      new Array("c'", String.fromCharCode(0x0107)),
+      new Array("cz", String.fromCharCode(0x010D)),
+      new Array("l/", String.fromCharCode(0x0142)),
+      new Array("n'", String.fromCharCode(0x0144)),
+      new Array("s'", String.fromCharCode(0x015B)),
+      new Array("sz", String.fromCharCode(0x0161)),
+      new Array("u/", String.fromCharCode(0x016D)),
+      new Array("z'", String.fromCharCode(0x017A)),
+      new Array("z^", String.fromCharCode(0x017E)),
+      new Array("z*", String.fromCharCode(0x017E)),
+
+      new Array("C'", String.fromCharCode(0x0106)),
+      new Array("Cz", String.fromCharCode(0x010C)),
+      new Array("L/", String.fromCharCode(0x0141)),
+      new Array("N'", String.fromCharCode(0x0143)),
+      new Array("S'", String.fromCharCode(0x015A)),
+      new Array("Sz", String.fromCharCode(0x0160)),
+      new Array("U/", String.fromCharCode(0x016C)),
+      new Array("Z'", String.fromCharCode(0x0179)),
+      new Array("Z^", String.fromCharCode(0x017D)),
+      new Array("Z*", String.fromCharCode(0x017D))
+    );
+
+    var i;
+
+    for (i = 0; i < ConvertionTable.length; i++)
+    {
+      while (ResultText.indexOf(ConvertionTable[i][0]) >= 0)
+      {
+        ResultText = ResultText.replace(ConvertionTable[i][0], ConvertionTable[i][1]);
+      }
+    }
+
+    // InputElement.value = ;
+    // return true;
+    return ResultText;
+  }
+
+  function ShowPreviewBox(Show)
+  {
+    if (Show)
+    {
+      PreviewBox.style.display = "block";
+    }
+    else
+    {
+      PreviewBox.style.display = "none";
+    }
+  }
+
+  function PlainTextToHTML(Text)
+  {
+    var HTMLText = Text;
+    while (HTMLText.indexOf(String.fromCharCode(0x0A)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0A), '<br>');
+    while (HTMLText.indexOf(String.fromCharCode(0x0D)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0D), '');
+
+    return HTMLText;
+  }
+
+  function UpdatePreviewBox(Text)
+  {
+    // PreviewText.innerText = PseudotextToLacin(Text);
+    PreviewText.innerHTML = PlainTextToHTML(PseudotextToLacin(Text));
+  }
+
+  function ReplaceEnteredText(Element)
+  {
+    Element.value = PseudotextToLacin(Element.value);
+  }
+
+//-->
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1268613-2";
+urchinTracker();
+</script>
+</head><body>
+	<div id="header">
+		<div id="hmenu">
+		<a href="index.php">Hałoŭnaja</a><a href="?page_id=49">Krama</a><a href="http://lacinka.org/?page_id=75">Našyja prajekty</a><a href="?page_id=79">Pra nas</a><a href="?page_id=46">Kantakt</a>		</div>
+		<div id="logo">
+                        <div style="float: left; margin: -2px 0 0 10px;">
+
+                                <h1 title="Łacinka.org"><a href="http://lacinka.org"><img src="http://lacinka.org/wp-content/themes/internet-jobs/logo_transparent_sized.gif" alt="Łacinka.org" width="140" height="30" border="0"></a></h1>
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="main">
+		<div id="articles">
+			<div id="content">
+				  
+	         <h2 id="post-103"><a href="http://lacinka.org/?page_id=103" rel="bookmark" title="Pri ni kaj nia TTT">Pri ni kaj nia TTT</a></h2>
+		
+			<p> <strong>Łacinka.org</strong> estas socia unuiĝo, kiu strebas popularigi kaj evoluigi belarusan latinskribon kiel nedisigeblan parton de nacia kulturo de belarusoj. </p>
+<p>Ni certas, ke la sorto de belarusa latinskribo estas en manoj de ĝiaj uzantoj, kiuj konsideras tiun ĉi skribsistemon pli alloga kaj konscie faras malfacilan paŝon: rifuzo uzi cirilan alfabeton. Tiuj iliaj ĉiutaga aktivado kaj sinteno garantias savon de riĉeco kaj originalecon de belarusa kulturo. Ni per nia agado strebas subteni tiajn belarusojn. </p>
+<p><strong>Lacinka.org</strong> estas precipe dediĉita al belarusa vorto: belarta literaturo, muziko, interreto, komputilaj programoj. Ni subtenas belarusajn literaturistojn, muzikistojn, programistojn, ret-dizajnistojn, blogistojn, kaj ankaŭ ĉiujn kiuj ne estas indiferentaj al la sorto de la belarusa latinskribo. </p>
+<h2>Vero pri nia lingvo</h2>
+<p><img title="Logo" alt="Logo" src="http://lacinka.org/wp-content/uploads/2006/07/lahatyp.png" /></p>
+<p><strong>Kio estas tiu ĉi subteno?</strong></p>
+<p>Pri tio ne ekzistas unu sola modelo. Ĉiu dependas de konkreta okazo. Ni unuavice apogas sin je kunagado, komuna laborado, je socia aktivado de adeptoj, sed ekzemple ne je mondonacoj, monsubvencioj. </p>
+<p>La TTT-ejo <a href="http://lacinka.org">Lacinka.org</a> celas unuavice informadon pri la latinskribo kaj agado de la organizaĵo.
+</p>
+			
+<div class="date"> </span></div>     
+
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://lacinka.org/?page_id=103"
+    dc:identifier="http://lacinka.org/?page_id=103"
+    dc:title="Pri ni kaj nia TTT"
+    trackback:ping="http://lacinka.org/wp-trackback.php?p=103" />
+</rdf:RDF>	-->
+	
+
+<!-- You can start editing here. -->
+
+<p><a href='http://lacinka.org/?feed=rss2&amp;p=103'><abbr title="Really Simple Syndication">RSS</abbr> feed</a> 
+| <a href="http://lacinka.org/wp-trackback.php?p=103">Trackback <acronym title=\"Uniform Resource Identifier\">URI</acronym></a>
+</p>
+
+
+<div class="#commentlist">
+</div>
+<div id="addcomment" class="comment">
+<a id="addcommentanchor" name="addcommentanchor"></a>
+<form action="http://lacinka.org/wp-comments-post.php" method="post" id="commentform">
+<div class="add">
+	<div id="reroot" style="display: none;">
+		<small><a href="javascript:reRoot()">
+			Naciśni, kab skasavać „kamentar”.
+		</a></small>
+	</div>
+	<small>
+		<b>Imia</b> (abaviazkova)	</small>
+	<div>
+		<input type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1" />
+	</div>
+	<small>
+		<b>E-mail</b> (Abaviazkova - nia budzie bačny inšym)	</small>
+	<div>
+		<input type="text" name="email" id="email" value="" size="28" tabindex="2" />
+	</div>
+	<small>
+		<b><acronym title="Uniform Resource Identifier">URI</acronym></b>	</small>
+	<div style="margin-bottom: 4px;">
+		<input type="text" name="url" id="url" value="" size="28" tabindex="3" />	
+	</div>
+
+	<small>
+		<b>Tvoj kamentar</b> (<a href="javascript:changeCommentSize(-80);">źmienš</a> | <a href="javascript:changeCommentSize(80)">pabolš</a>)
+	</small>
+<div style="margin: 4px 0px 4px 0px;"><small>
+  <input type="checkbox" value="" id="ShowPreview" onclick="ShowPreviewBox(this.checked)"><label for="ShowPreview">&nbsp;Kanvertuj u łacinku (<a href="#">Što heta takoje, i jak pracuje?</a>)</label></small>
+</div>
+	<div style="width: 80%;">
+		<textarea name="comment" id="comment" cols="45" rows="4" tabindex="4"
+onchange="UpdatePreviewBox(this.value)" onfocus="UpdatePreviewBox(this.value)" onkeyup="UpdatePreviewBox(this.value)" onkeypress="UpdatePreviewBox(this.value)"
+></textarea>
+	</div>
+	<div style="width: 80%; margin-bottom: 6px;"><small>
+		Dazvolenyja tagi: 
+		&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; 	</small></div>
+<div id="PreviewBox" style="display: none; width: 100%; margin: 0px 0px 4px 0px;">
+  <small>Papiaredni prahlad:
+  <div id="PreviewText" style="border: 1px solid #e8e8e8; background-color: #fcfcfc; padding: 3px 6px 4px 6px; margin: 4px 0px 8px 0px; color: #606060;">
+  </div></small>
+</div>
+
+	<div>
+		<input type="hidden" name="comment_post_ID" value="103" />
+		<input type="hidden" name="redirect_to" value="/?page_id=103?page_id=46?page_id=49" />
+		<input onclick="if(typeof(onAddComment) == 'function') { if (ShowPreview.checked) { ReplaceEnteredText(comment); } onAddComment(); } else { alert('ERROR:\nIt looks like the website administrator hasn\'t activated the Brians Threaded Comments plugin from the plugin page'); };" name="addcommentbutton" type="button" id="addcommentbutton" value="Naciśni mianie!" />
+	</div>
+</div>
+<input type='hidden' id='comment_reply_ID' name='comment_reply_ID' value='0' />
+
+	<p style="clear: both;" class="subscribe-to-comments">
+        <input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+        <label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+</form>
+</div>
+
+
+
+		
+<!--unutranaja reklama-->
+
+				<div class="center"></div>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+
+<table style="width: 100%; text-align: left;" border="0" cellpadding="2"
+cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<FONT SIZE="-1"><h2>Ludzi pra łacinku</h2><a href="http://lacinka.org/?p=10">Cichaje kanańnie kirylicy</a><br /><a href="http://lacinka.org/?p=25">Illa Hłyboŭski pra łacinku</a><br /><a href="http://lacinka.org/?p=24">Źmicier Saŭka pra łacinku</a><br /><a href="http://lacinka.org/?p=21">N.R.M. karystajecca łacinkaj</a><br /><a href="http://lacinka.org/?p=20">Nieabchodnaje urehulavańnie artahrafii</a><br /><a href="http://lacinka.org/?p=17">Pryhožy estetyčny eksperyment</a><br /><a href="http://lacinka.org/?p=23">Skažam łacincy — tak!</a><br /></font>
+</td>
+<td style="vertical-align: top;"><FONT SIZE="-1"><h2>Karystajemsia łacinkaj</h2>
+<a href="http://lacinka.org/?p=9">Jak lohka i prosta pisać łacinkaj</a><br /><a href="http://lacinka.org/?p=14">Łacinizatary ŭ siecivie</a><br /><a href="http://lacinka.org/?p=16">Moŭnyja tagi i biełaruskaja łacinka</a><br /><a href="http://lacinka.org/?p=31">Pišam łacinkaj z UniRedam</a><br /></font>
+<br>
+</td>
+</tr>
+</tbody>
+</table></font>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+	
+			
+				
+			</div></div>
+			
+			<div id="right">
+<div id="rightmenu"><li><a href="http://lacinka.org/?cat=5" title="Biełarusy pra łacinku">Biełarusy pra łacinku</a>
+</li>
+<li><a href="http://lacinka.org/?cat=2" title="Pra dziejnaść arhanizacyi">Padziei</a>
+</li>
+<li><a href="http://lacinka.org/?cat=4" title="Jak karystacca łacinkaj. Parady. Lakalizacyi. ">Praktykum</a>
+</li>
+<li><a href="http://lacinka.org/?cat=7" title="Usio što adbyvajecca ŭ łacincy i z łacinkaj siońnia. Łacinka i žyćcio.">Tendencyi</a>
+</li>
+</div>
+
+<div id="searchform"><form id="searchform" method="get"  class="search" action=""><p><input type="text" class="text" name="s" id="s" size="10" /><input type="submit" class="button"  name="submit" value="šukaj" />
+</p></form></div>
+				
+<div class="rightarticle">
+			
+<h2>Rekamendujem</h2>
+
+<ul>
+<li>Ese Mikałaja Pačkajeva <a href="?page_id=45">Biełaruskaja łacinka</a></li></ul>
+
+
+<div style="text-align: center;">
+
+<a href="http://lacinka.org/?page_id=103"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EO" src="http://lacinka.org/images/eo.png"></a> 
+
+<a href="http://lacinka.org/?page_id=82"><img style="border: 0px solid; width: 16px; height: 11px;" alt="ES" src="http://lacinka.org/images/es.png"></a> 
+
+<a href="http://lacinka.org/?page_id=32"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="DE" src="http://lacinka.org/images/de.png"></a> 
+
+<a href="http://lacinka.org/?page_id=81"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="FR" src="http://lacinka.org/images/fr.png"></a>
+
+<a href="http://lacinka.org/?page_id=30"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EN" src="http://lacinka.org/images/gb.png"></a>
+
+<a href="http://lacinka.org/?page_id=29"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="PL" src="http://lacinka.org/images/pl.png"></a>
+
+<a href="http://lacinka.org/?page_id=28"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="RU" src="http://lacinka.org/images/ru.png"></a>
+
+<a href="http://lacinka.org/?page_id=26"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="UA" src="http://lacinka.org/images/ua.png"></a>
+
+</div>
+
+
+<h2>Tendencyi</h2>
+<ul><a href="http://lacinka.org/?p=102">I karystacca niazručna, i vykinuć škada</a><br /><a href="http://lacinka.org/?p=36">Mapa Biełarusi</a><br /><a href="http://lacinka.org/?p=37">Pisati po-svojomu</a><br /> </ul>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>		
+
+<h2></h2>
+<ul><a href="http://lacinka.org/?page_id=112" title="Staronka z banerami sajtu dla raźmiaščeńnia">Banery Łacinki</a> Staronka z banerami sajtu dla raźmiaščeńnia<br />
+<a href="http://community.livejournal.com/lacinka/" rel="me" title="Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal">Łacinka ŭ Livejournal</a> Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal<br />
+ </ul>
+
+		</div><p style="border-top: #CCCCCC 1px dashed"></p>			
+				
+			</div>
+		</div>	
+		<div id="links">
+			<p></p>		
+
+	</div></div></div>
+
+	<div id="footer">Copyright &copy; 2007 <strong><a href="http://lacinka.org">Łacinka.org</a></strong> | <a href="http://lacinka.org/?feed=rss2">RSS Feed</a> | Powered by <a href="http://wordpress.org/" title="Staronka stvoranaja pry dapamozie semantyčnaj persanalnaj platformy dla publikacyjaŭ u siecivie WordPress."><abbr title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</abbr></a> | Design: <a href="http://www.solucija.com/">Solucija</a>, Ported by <a href="http://www.gfxedit.com/" title="Theme by GFXedit.com"><abbr title="Theme by GFXedit.com">GFXedit.com</abbr></a>
+</div>
+</body>	
+</html>

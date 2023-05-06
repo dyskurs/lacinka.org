@@ -1,0 +1,1106 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
+<title>Łacinka.org &raquo; Biełaruskaja łacinka</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.0.5" /> <!-- leave this for stats -->
+<meta name="description" content="Biełaruskaja łacinka"/>
+<meta name="keywords" content="lacinka, unicode, mova, bielaruskaja"/>
+<style type="text/css" media="screen">
+@import url( http://lacinka.org/wp-content/themes/internet-jobs/style.css );
+</style>
+<meta name="copyright" content="Łacinka.org" />
+<meta name="Author" content="Zołak (zolak@slacinka.org)" />
+<meta name="wp-theme" content="Sreejith R - GFXedit.com" />
+<meta name="generator" content="WordPress 2.0.5" />
+<meta name="robots" content="index,follow" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://lacinka.org/?feed=rss2" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://lacinka.org/?feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://lacinka.org/?feed=atom" />
+<link rel="pingback" href="http://lacinka.org/xmlrpc.php" />
+	<link rel='archives' title='sakavik 2007' href='http://lacinka.org/?m=200703' />
+	<link rel='archives' title='studzień 2007' href='http://lacinka.org/?m=200701' />
+	<link rel='archives' title='śniežań 2006' href='http://lacinka.org/?m=200612' />
+	<link rel='archives' title='kastryčnik 2006' href='http://lacinka.org/?m=200610' />
+	<link rel='archives' title='lipień 2006' href='http://lacinka.org/?m=200607' />
+	<link rel='archives' title='luty 2006' href='http://lacinka.org/?m=200602' />
+	<link rel='archives' title='lipień 2005' href='http://lacinka.org/?m=200507' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lacinka.org/xmlrpc.php?rsd" />
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("content");
+			addComment.parentNode.removeChild(addComment);
+			content.appendChild(addComment);
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	width: 					100%;	
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+/*
+#addcomment small, #addcomment div
+{
+	padding:				3px;
+}
+*/
+#commentform textarea {
+	width: 97%;
+}
+</style>
+<style type="text/css" media="screen">
+div#shoppingcart{
+ float: right;
+/* height: 200px; */
+ width: 148px;
+ margin: 0px;
+ padding: 0px;
+ margin-left: 5px;
+/* margin-right: -100px; */
+ }
+ 
+div#shoppingcart img{
+ position: absolute; 
+ top: 5px;
+ left: 5px;
+ }
+ 
+div#shoppingcart div{
+ font-size: 9pt;
+ border: 1px solid #999999;
+ background-color: #efefef;
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#shoppingcart div strong{
+ font-size: 11pt;
+ }
+
+div#sideshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#sideshoppingcart div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+div#widgetshoppingcart{
+ }
+
+div#widgetshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ }
+ 
+div#widgetshoppingcarts div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+td{
+ font-size: 11pt;
+ vertical-align: top;
+ }
+
+table.productcart{
+ border: 1px solid #999999;
+ width: 100%;
+ margin-bottom: 10px;
+ }
+
+table.productcart tr td{
+ padding-bottom: 5px;
+ font-size: 8pt;
+ }
+
+table.productcart tr.firstrow td{
+ font-weight:bold;
+ background-color: #e5e5e5;
+ }
+
+table.productcart tr.oddrow td{
+ background-color: #f0f0f0;
+ }
+ 
+table.productcart tr td.firstcol{
+ width: 40%;
+ } 
+
+form.adjustform{
+ display: inline;
+ }
+
+
+
+
+table.productdisplay{
+/* margin-top: 10px; */
+ margin-bottom: 20px;
+ border-collapse: collapse;
+ }
+
+table.productdisplay tr td{
+ vertical-align: top;
+ padding-bottom: 5px;
+ }
+
+
+table.productdisplay tr td.imagecol{
+ padding-right: 5px;
+ margin-right: 5px;
+ border: 0px solid #ffffff;
+ }
+ 
+table.productdisplay tr td.imagecol img{
+/* width: 300px; */
+border: 0px solid #ffffff;
+ }
+
+table.productdisplay tr td.textcol{
+ padding: 0px;
+ padding-bottom: 10px;
+ margin: 0px;
+ }
+ 
+ 
+ 
+ 
+ul.tandclist li{
+ list-style-type:lower-alpha;
+ } 
+ 
+ul.tandclist li{
+ list-style-type: circle;
+ } 
+ 
+ul.linklist li{
+ font-weight:bold;
+ } 
+ 
+strong.special{
+ color: #DD0000;
+ }
+ 
+a.termsandconds
+ {
+ text-decoration: underline;
+ }
+
+span.miniarrow{
+ display: block;
+/* border: 1px solid black; */
+ vertical-align: top !important;
+ }
+
+img.miniarrow{
+/* position: relative; */
+/* border: 1px solid black; */
+ margin-right: 4px;
+ }
+
+img.catimage{
+ float:left;
+ position: relative;
+ top: -3px;
+ margin-right: 2pt;
+ }
+
+strong.cattitles{
+ display: block;
+ position: relative;
+/* margin-bottom: -15px; */
+ }
+
+strong.prodtitles{
+ display: block;
+ margin-bottom: -15px;
+ }
+
+table.mainpagetable{
+ margin-left: 0px;
+ }
+
+table.mainpagetable tr td{
+ padding-left: 0px;
+ }
+
+strong.title{
+ font-size: 12.5pt;
+ }
+
+div.producttext{
+ font-size: 10pt;
+ }
+
+a.categorylink{
+ font-size: 8pt;
+ /*border: 1px solid red;*/
+ }
+
+span.pricedisplay{
+ white-space: nowrap;
+ }
+ 
+td.totals{
+ vertical-align: bottom;
+ }
+ 
+table.cattable{
+ padding: 0px;
+ margin: 0px;
+ border-collapse: collapse;
+/* border: 1px solid black; */
+ }
+ 
+table.cattable tr td{
+ padding: 0px;
+/* border: 1px solid black; */
+ }
+ 
+ td.catfirstcol{
+ padding-right: 3px;
+ }
+
+form#specials{
+ display: inline;
+ }
+ 
+span.oldprice{
+ text-decoration: line-through;
+ }
+div#categorydisplay{
+ display: block;
+ }
+ 
+div#branddisplay{
+ display: none;
+ }
+ 
+span.additional_description{
+ display: none;
+ }
+ 
+a.additional_description_link{
+ display: inline;
+ }
+ 
+td.prodgroupmidline{
+ border-right: 1px solid black !important;
+ padding-right: 3px;
+ }
+ 
+#loadingindicator{
+ visibility: hidden; 
+ font-size: 7pt;
+ font-weight: normal;
+ }
+
+#loadingindicator img{
+ position: relative;
+ top: 3px;
+ margin-left: 6px;
+/*  visibility: hidden; */
+  border: none !important;
+ }
+ 
+/* e-commerce fix for K2 */
+table.productdisplay tr td img {
+ max-width: none;
+ }
+ 
+ 
+div.product_footer{
+ position: relative;
+ padding: 0px !important;
+ width: 100%;
+ border-top: 1px dashed #cccccc;
+/*  border-top: 1px dashed #cccccc; */
+ height: 35px;
+ }
+ 
+div.product_footer strong{
+ display: block;
+ font-size: 7pt;
+ font-weight: normal;
+ }
+ 
+div.product_average_vote{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 50%;
+ float: left;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+div.product_user_vote{
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ width: 30%;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+span.vote_total{
+ position: relative;
+ top: -3px;
+ left: 2px;
+ font-size: 7pt;
+ }
+ </style>
+ <link href='./wp-content/plugins/wp-shopping-cart/product_rater.css' rel="stylesheet" type="text/css" />
+<script language='JavaScript' type='text/javascript'>
+// Copyright (c) 2005 Timothy R. Morgan
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+// mini/ajax.js - http://timmorgan.org/mini
+
+function $(e){if(typeof e=='string')e=document.getElementById(e);return e};
+function collect(a,f){var n=[];for(var i=0;i<a.length;i++){var v=f(a[i]);if(v!=null)n.push(v)}return n};
+
+ajax={};
+ajax.x=function(){try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){return new XMLHttpRequest()}}};
+ajax.serialize=function(f){var g=function(n){return f.getElementsByTagName(n)};var nv=function(e){if(e.name)return encodeURIComponent(e.name)+'='+encodeURIComponent(e.value);else return ''};var i=collect(g('input'),function(i){if((i.type!='radio'&&i.type!='checkbox')||i.checked)return nv(i)});var s=collect(g('select'),nv);var t=collect(g('textarea'),nv);return i.concat(s).concat(t).join('&');};
+ajax.send=function(u,f,m,a){var x=ajax.x();x.open(m,u,true);x.onreadystatechange=function(){if(x.readyState==4)f(x.responseText)};if(m=='POST')x.setRequestHeader('Content-type','application/x-www-form-urlencoded');x.send(a)};
+ajax.get=function(url,func){ajax.send(url,func,'GET')};
+ajax.gets=function(url){var x=ajax.x();x.open('GET',url,false);x.send(null);return x.responseText};
+ajax.post=function(url,func,args){ajax.send(url,func,'POST',args)};
+ajax.update=function(url,elm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.get(url,f)};
+ajax.submit=function(url,elm,frm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.post(url,f,ajax.serialize(frm))};
+
+var testsuccess = 0;
+var lnid = new Array();
+function categorylist(url)
+  {
+  self.location = url;
+  }
+  
+var getresults=function(results)
+  {
+  document.getElementById('shoppingcartcontents').innerHTML = results;
+  document.getElementById('loadingindicator').style.visibility = 'hidden';
+  }
+
+function submitform(prodid)
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&prodid="+prodid+"");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function emptycart()
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&emptycart=true");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function show_additional_description(id)
+  {
+  currentstate = document.getElementById(id).style.display;
+  document.getElementById(id).style.display = 'inline';
+  if(currentstate != 'inline')
+    {
+    document.getElementById(id).style.display = 'inline';
+    }
+    else
+      {
+      document.getElementById(id).style.display = 'none';
+      }
+  return false;
+  }
+
+function prodgroupswitch(state)
+  {
+  if(state == 'brands')
+    {
+    document.getElementById('categorydisplay').style.display = 'none';
+    document.getElementById('branddisplay').style.display = 'block';
+    }
+    else if(state == 'categories')
+      {
+      document.getElementById('branddisplay').style.display = 'none';
+      document.getElementById('categorydisplay').style.display = 'block';
+      }
+  return false;
+  }
+  
+  
+var apply_rating=function(results)
+  {
+  outarr = results.split(",");
+  //alert(results);
+  for(i=1;i<=outarr[1];i++)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/gold-star.gif";
+    document.getElementById(id).style.background = "url(./wp-content/plugins/wp-shopping-cart/images/gold-star.gif)";
+    }
+    
+  for(i=5;i>outarr[1];i--)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/grey-star.gif";
+    document.getElementById(id).style.background = "#c4c4b8";
+    }
+  lnid[outarr[0]] = 1; 
+    
+  rating_id = 'rating_'+outarr[0]+'_text';
+  document.getElementById(rating_id).innerHTML = "Your Rating:";
+//   switch(votetext)
+//     {
+//     case "No Votes":
+//     votestr = "1 Vote";
+//     break;
+//     
+//     case "1 Vote":
+//     votestr = "2 Votes";
+//     break;
+//     
+//     default:
+//     votestr = (parseInt(votetext[0])+1) + " Votes";
+//     break;
+//     }
+//     
+//   element.innerHTML = votestr;
+  }
+  
+function rate_item(prodid,rating)
+  {
+  ajax.post("index.php",apply_rating,"ajax=true&rate_item=true&product_id="+prodid+"&rating="+rating+"");
+  }
+</script>
+	<style type="text/css" media="screen">
+	img.comvatar-default {
+		width: 16px;
+		height: 16px;
+	}
+	</style>
+
+<script language="JavaScript"><!--
+
+  function PseudotextToLacin(InputText)
+  {
+    // var InputText = InputElement.value;
+    var ResultText = InputText;
+
+    var ConvertionTable = new Array(
+      new Array("c'", String.fromCharCode(0x0107)),
+      new Array("cz", String.fromCharCode(0x010D)),
+      new Array("l/", String.fromCharCode(0x0142)),
+      new Array("n'", String.fromCharCode(0x0144)),
+      new Array("s'", String.fromCharCode(0x015B)),
+      new Array("sz", String.fromCharCode(0x0161)),
+      new Array("u/", String.fromCharCode(0x016D)),
+      new Array("z'", String.fromCharCode(0x017A)),
+      new Array("z^", String.fromCharCode(0x017E)),
+      new Array("z*", String.fromCharCode(0x017E)),
+
+      new Array("C'", String.fromCharCode(0x0106)),
+      new Array("Cz", String.fromCharCode(0x010C)),
+      new Array("L/", String.fromCharCode(0x0141)),
+      new Array("N'", String.fromCharCode(0x0143)),
+      new Array("S'", String.fromCharCode(0x015A)),
+      new Array("Sz", String.fromCharCode(0x0160)),
+      new Array("U/", String.fromCharCode(0x016C)),
+      new Array("Z'", String.fromCharCode(0x0179)),
+      new Array("Z^", String.fromCharCode(0x017D)),
+      new Array("Z*", String.fromCharCode(0x017D))
+    );
+
+    var i;
+
+    for (i = 0; i < ConvertionTable.length; i++)
+    {
+      while (ResultText.indexOf(ConvertionTable[i][0]) >= 0)
+      {
+        ResultText = ResultText.replace(ConvertionTable[i][0], ConvertionTable[i][1]);
+      }
+    }
+
+    // InputElement.value = ;
+    // return true;
+    return ResultText;
+  }
+
+  function ShowPreviewBox(Show)
+  {
+    if (Show)
+    {
+      PreviewBox.style.display = "block";
+    }
+    else
+    {
+      PreviewBox.style.display = "none";
+    }
+  }
+
+  function PlainTextToHTML(Text)
+  {
+    var HTMLText = Text;
+    while (HTMLText.indexOf(String.fromCharCode(0x0A)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0A), '<br>');
+    while (HTMLText.indexOf(String.fromCharCode(0x0D)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0D), '');
+
+    return HTMLText;
+  }
+
+  function UpdatePreviewBox(Text)
+  {
+    // PreviewText.innerText = PseudotextToLacin(Text);
+    PreviewText.innerHTML = PlainTextToHTML(PseudotextToLacin(Text));
+  }
+
+  function ReplaceEnteredText(Element)
+  {
+    Element.value = PseudotextToLacin(Element.value);
+  }
+
+//-->
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1268613-2";
+urchinTracker();
+</script>
+</head><body>
+	<div id="header">
+		<div id="hmenu">
+		<a href="index.php">Hałoŭnaja</a><a href="?page_id=49">Krama</a><a href="http://lacinka.org/?page_id=75">Našyja prajekty</a><a href="?page_id=79">Pra nas</a><a href="?page_id=46">Kantakt</a>		</div>
+		<div id="logo">
+                        <div style="float: left; margin: -2px 0 0 10px;">
+
+                                <h1 title="Łacinka.org"><a href="http://lacinka.org"><img src="http://lacinka.org/wp-content/themes/internet-jobs/logo_transparent_sized.gif" alt="Łacinka.org" width="140" height="30" border="0"></a></h1>
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="main">
+		<div id="articles">
+			<div id="content">
+				  
+	         <h2 id="post-45"><a href="http://lacinka.org/?page_id=45" rel="bookmark" title="Biełaruskaja łacinka">Biełaruskaja łacinka</a></h2>
+		
+			<p> Sučasnaja biełaruskaja litaraturnaja mova, “nova-biełaruskaja” piśmovaść, litaratura j knihadrukavańnie, niesumnienna ŭźnikli j raźvivalisia ciaham pieršych 50 hadoŭ svajho jsnavańnia ŭ formie mienavita łacinskaha alfabetu — miarkuje aŭtar hetaha artykułu, Mikoła Pačkajeŭ. <a id="more-45"></a></p>
+<p><strong>Łacinka</strong> (zvanaja časam taksama &#8220;łacinicaj&#8221; albo biełaruskaj abecedaj) - heta nazva biełaruskaha piśma łacinskim alfabetam. Chacia najstarejšaje dakumentalnaje śviedčańnie pra łacinskuju knižnaść u Biełarusi datujecca ХІ st., a łacinskaja piśmovaść u Biełarusi była charakternaja ludziam adukavanym ad časoŭ siarednieviečča i da ХІХ stahodździa (hl. napr. Мikoła Husoŭski), adnak, nakolki viadoma, biełaruskaja (nie-łacinamoŭnaja) piśmovaść da XVI stahodździa jsnavała adno ŭ formie kiryličnaj hrafiki. Peravaha pravasłaŭnaj tradycyi chryścijanstva na bolšaj častcy terytoryi krainy da siaredziny XVI st. abumoŭlivała toje, što piśmovy standart &#8220;stara-biełaruskaj&#8221; movy (aficyjnaj movy Vialikaha Kniastva Litoŭskaha) doŭhi čas zastavaŭsia pad mocnym upłyvam carkoŭna-słavianskaj movy - śviatoj movy Biblii i litruhii ŭ słavianskim pravasłaŭi.</p>
+<p>Adnak u siaredzinie XVI stahodździa na biełaruskich ziemlach chutka raźvivajucca kultura renesansu j pracesy Refarmacyi. Refarmacyja, kontrrefarmacyja, i raspaŭsiudžvańnie aśviety ŭ eŭrapiejskim styli, jakija hetym pracesam spadarožničali - usio heta było siarod najvažniejšych čyńnikaŭ, jakija pad kaniec XVI stahodździa značna “ačyścili” archaičnuju biełaruskuju piśmovuju movu ad rysaŭ carkoŭna-słavianskaj. Pačynajučy ad hetaj epoki, štoraz čaściej sustrakajucca j biełaruskija teksty, vykananyja łacinskaj hrafikaj.</p>
+<p><img width="131" hspace="6" height="200" align="left" alt="Zygmunt.jpg" src="http://lacinka.org/images/stories/lacinka/Zygmunt.jpg" />U ekspazycyi Nacyjanalnaha histaryčnaha muzeju ŭ Miensku možna pabačyć naprykład <a href="http://lacinka.org/index.php?option=com_content&amp;task=view&amp;id=31&amp;Itemid=2">Pryvilej karala j vialikaha kniazia Žygimonta III Vazy</a> (u Polščy viadomaha jak Sigismundus, Zygmunt III Waza), <a href="http://lacinka.org/index.php?option=com_content&amp;task=view&amp;id=31&amp;Itemid=2">dadzieny horadu Viciebsku na &#8220;Magdeburskaje prava&#8221; (h.zn. prava haradzkoha samakiravańnia), 1597 hodu.</a> Hety dakument ujaŭlaje saboj prykład archaičnaj, abo “stara-biełaruskaj” łacinki. Biełaruskaja łacinnka XVI-XVII st. šmat u čym nahadvała zachodnie-słavianskija (h.zn. stara-českuju dy stara-polskuju) systemy piśma: napr. jana vykarystoŭvała “cz” dla pieradačy [č], “sz” dla [š], “ż” dla [ž], “w” dla [v], a taksama “y” dziela pieradačy jak [y] tak i [j] (h.zn. napr. “moj” było b napisana jak “moy”).</p>
+<p>Z druhoha boku, u adroźnieńni ad napr. polskaj movy, zvyčajna nie rabili roźnicy pamiž litarami &#8220;Ł&#8221; dy “L”, tak što kožnaje “L” ličyłasia takim samym ćviordym hukam, jak i (zredčas užyvanaje) “Ł”: napr. u zhadanym <u><a href="http://lacinka.org/index.php?option=com_content&amp;task=view&amp;id=31&amp;Itemid=2">Pryvilei</a></u> napisana &#8220;Inf<strong>lia</strong>nski&#8221; a nie &#8220;Inf<strong>la</strong>nski&#8221;. Dalej, u adroźnieńni ad polskaj, miakkaje [t&#8217;] pieradavałasia jak “t” - a nie jak “c”: napr. &#8220;wolnosti&#8221; a nie &#8220;wolnosci&#8221;. Padobnym ža čynam, miakkaje [d’] pisałasia как “d” - a nie “dz” (napr. “di” a nie “dzi”, &#8220;<strong>de</strong>dyczny&#8221; a nie &#8220;<strong>dzie</strong>dyczny&#8221;). Akramia taho, “stara-biełaruskaja” łacinka nie ŭžyvała litary “g”, a tolki “h” (i tut padabienstva da českaj piśmovaści). Kali ž była patreba adznačyć mienavita huk [g], jaho časta pieradavali na piśmie jak “kh”: napr. &#8220;<strong>Kh</strong>otski&#8221; (pa-polsku pisałasia &#8220;<strong>G</strong>otski&#8221;) - idučy vierahodna za prykładam starabiełaruskaj kirylicy, dzie huk “g” j sapraŭdy adlustroŭvaŭsia jak “кг”: “кгродски”, “Кготски”, “Жыкгимонт”, “кгвалт”, i h.d. Paźniej, niekatoryja časta ŭžyvanyja zamiežnyja imiony, nazvy j terminy, jakija mieli ŭ sabie hety huk, pačali pisacca ź litaraj “g”, napr. &#8220;Ży<strong>g</strong>imont&#8221;, &#8220;prawa Ma<strong>g</strong>deburska<strong>h</strong>o&#8221;. U toj ža čas, šmatlikija kančatki, napr. takija jak. “ij” (“iy”) ŭ prymietnikach, iduć za carkoŭna-słavianskimi ŭzorami, chacia i ŭžyvajucca ŭ tyja časy ŭžo niepaśladoŭna. Litara “E” aznačaje jak [e] hetak i [je]. Naohuł, słušnaj zdajecca vysnova, što archaičnaja biełaruskaja łacinka pieršapačatkova farmavałasia čmat u čym jak svojeasablivaja transliteracyja z tahačasnaj systemy starabiełaruskaj kirylicy (hl. napr. takija elementy, jak užyvańnie “-ti-” dy “-kh-”).</p>
+<p>{mospagebreak title=Zachavanyja prykłady}<img width="170" hspace="6" height="170" align="left" alt="Zvon1583.jpg" src="http://lacinka.org/images/stories/lacinka/Zvon1583.jpg" />Bolšaść zachavanych najstarejšych uzoraŭ archaičnaj biełaruskaj łacinki – heta jurydyčnyja dakumenty. Adnak varta adznačyć, što ŭžo na hetaj rańniaj stadyi svajho raźvićcia, starabiełaruskaja piśmovaść łacinskim alfabetam nie była abmiežavanaja adno da dakumentaŭ na papiery albo perhamencie, ale vykarystoŭvałasia taksama dziela šyrokaha spektru inšych aficyjnych i publičnych funkcyjaŭ. U jakaści prykładu možna pryvieści redki nadpis starabiełaruskaj łacinkaj z 1583 h., (na ilustracyi) zrobleny na zvanie, jaki naležyć carkvie ŭ vioscy Moładava, vystaŭlenym ciapier u Muzei Starabiełaruskaj kultury pry Akademii Navuk Biełarusi ŭ Miensku.</p>
+<p><img width="281" hspace="6" height="110" align="right" alt="Bychaviec.gif" src="http://lacinka.org/images/stories/lacinka/Bychaviec.gif" />Nie zvažajučy na pieravahu „kirylič- naj spadčyny”, u toj ža peryjad XVI-XVII st., kali mova (stara-) biełarus-kich dakumentaŭ štoraz vyraźniej prypadabniajecca da žyvoj biełaruskaj movy, mova hetaja ŭsio čaściej pryjmaje łacinkavuju pisanuju formu. Aprača šmatlikich jurydyčnych dakumentaŭ, dokazy hetaha možna znajści naprykład na „lehiendach” piačatkaŭ niekatorych biełaruskich haradoŭ. Toje samaje možna skazać i pra litaraturnuju movu, jak naprykład u „Kronicy Bychaŭca”, napisanaj taksama archaičnaj biełaruskaj łacinkaj (hl. ilustracyju). U toj čas, kali najstarejšy prykład „stara-biełaruskaha” knihadrukavańnia kirylicaj datujuć na 1517 h., vierahodna najraniejšy drukavanmy tekst starabiełaruskaj łacinkaj znachodzicca ŭ publikacyi 1642 h. pad zahałoŭkam <em>„Witanie na Pierwszy Wiazd z Krolowca do Kadlubka Saskiego Wilenskiego”</em> [Wilno] (jezuicki dy anty-luteranski pamflet).</p>
+<p>Jak viadoma, dziesiacihadovy rasiejski napad u 1654-1667 hh. spustašyŭ biełaruskija harady, straty dasiahali 80% haradzkoha j 50% usiaho nasielnictva; za hetym išła (Druhaja) Paŭnočnaja vajna, jakaja pryniesła straty da 25% nasielnictva; tamu na pierałomie XVII-XVIII st. (stara-) biełaruskaja kurturnaja tradycyja akazałasia ŭ značnaj stupieni prosta fizyčna padarvanaj. Chacia da 1719 h. ad &#8220;stara-biełaruskaj&#8221; movy, u jakaści &#8220;movy sudovaj&#8221; paŭsiudna admovilisia na karyść polskaj, usio ž nielha śćviardžać, što biełaruskaja piśmovaja tradycyja ciaham jakoha-niebudź peryjadu była sucelna spynienaja. Zachavalisia šmatlikija dakumenty, napisanyja albo pierapisanyja pa-biełarusku (łacinkaj) i ŭ XVIII st., a vunijackaja Carkva drukavała niekatoryja svaje vydańni, naprykład zborniki himnaŭ pa-biełarusku łacinkaj. Havorka tut napr. pra takija publikacyi, jak zbornik biełaruskich himnaŭ “Wzory Doskonałości Panieńskiey…” (Supraśl, 1772) i niekalki biełaruskich vypuskaŭ hzv. &#8220;Kantyčak&#8221; łacinkaj u 1770-ch h. (vydadziena tamsama); a taksama “Kantyczka, abo nabożne pieśni w narzeczu Połockim” vydańnia Soc. Jes. u Połacku ŭ 1774 h. Malitvy, nadrukavanyja archaičnaj biełaruskaj łacinkaj, byli źmieščanyja napr. u knizie &#8220;Nauka Dobrey śmierci .. w kościele Societatis Jesu &#8230; w Wilnie&#8221;, 1754 h.. Cikavym faktam źjaŭlajecca j toje, što &#8220;stara-biełaruskaj&#8221; łacinkaj drukavali navat <strong>hatyčnym</strong> šryftam, napr. Symbol Viery ŭ &#8220;Wiara Prawosławna Pismem Świętym &#8230;&#8221; Wilno, 1704 &amp; 1747, star. 9-14. Hl. taksama (ilustracyja sprava) prykład kalendara-Paschalii (uschodniaha abradu) za 1780 h., na sumiesi carkoŭna-słavianskaj i &#8220;stara-biełaruskaj&#8221; movaŭ, nadrukavanaha staroj biełaruskaj łacinkaj. Akramia taho, zachavałasia niekalki rukapisaŭ dramatyčnaha j paetyčnaha źmiestu, XVIII i pačatku XIX st., hl napr. (źleva) častku, napisanuju stara-biełaruskaj łacinkaj, z rukapisnaha zbornika (dramy) Marašeŭskaha (1770-ja - 1780-ja hh.). Miž tym, toje ž zakanadaŭstva, jakoje pad kaniec XVII st. zrabiła polskuju movu (aprača łaciny) aficyjnaj movaj usiaje Rečy Paspalitaj (pryniata kab abaranić spravavodztva Rečy Paspalitaj ad hiermanizacyi, u suviazi z abrańniem niemca (saksonca) polskim karalom i vialikim kniaziem litoŭskim), paćvierdziła adnak i jurydyčnuju moc usich raniejšych dakumentaŭ - na movie aryhinału. Takim čynam, u XVIII st. aficyjnaja kopija luboha dakumentu vydavałasia pa-biełarusku (naturalna, łacinkaj) - kali heta była mova aryhinału. Nižej hl. dva prykłady takoha rodu, sa zboraŭ Biełaruskaj Biblijateki j Muzeju imia F. Skaryny ŭ Londanie.</p>
+<table width="53%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="center" style="width: 50%"><img width="234" height="236" border="1" src="http://lacinka.org/images/stories/lacinka/1741a.jpg" /><br />
+Dakument, napisany &#8220;stara-biełaruskaj&#8221; łacinkaj, kopija 1741 h., adnosna majontkaŭ, pieradadzienych u spadčynu kniaziami Mienskaha kniastva.</td>
+<td valign="top" align="center" style="width: 50%"><img width="227" height="236" border="1" src="http://lacinka.org/images/stories/lacinka/1785a.jpg" /><br />
+Dakument, datyčny nieruchomaści, pieradadzienaj u spadčynu ad macieja Puškina, napisany “stara-biełaruskaj” łacinkaj, kopija 1785 h.</td>
+</tr>
+</table>
+<p>Kažučy pra biełaruskuju piśmovaść, zvyčajna pryniata zasiarodžvacca tolki na prykładach rukapisnych i drukavanych tekstaŭ. Adnak isnujuć i źviestki, što jašče daloka da aficyjnaha prniaćcia polskaj movy ŭ jakaści adzinaj jurydyčnaj (aprača łaciny), stara-biełaruskaja piśmovaść faktyčna <img width="250" hspace="5" height="152" border="1" style="float: left" src="http://lacinka.org/images/stories/lacinka/ihnatkawa.jpg" />zastavałasia ŭ svojeasablivym paŭaficyjnym užytku - h.zn. dziela inšych farmalnych patrebaŭ, čym jurydyčnyja - uklučna da apošniaha padziełu Rečy Paspalitaj abodvuch narodaŭ. U jakaści ilustracyi možna zhadać nahrobnyja nadpisy kanca XVIII st. Naprykład, hl. fotazymak nahrobka z (raniej pieravažna vunijackaha) miastečka ŭ centralna-uschodniaj Biełarusi. Na kamiani vysiečana: “1794 […] IHNATKAWA”. Vierahodna, što pa-polsku pavinna było b być &#8220;I<strong>G</strong>NATK<strong>O</strong>WA&#8221;. Pradbaču, što niekatoryja ŭsio ž buduć nastojvać, što heta &#8220;polski&#8221; nadpis - “adno” ź dźvuma pamyłkami. Adnak ujaŭlajecca, što, tym bolej pry vykanańni hetaha dosyć hruntoŭnaha, nie aby-jakoha nahrobka (adzinaha tam z XVIII st.), było b naturanla spadziavacca, što majstry trymalisia b takoha varyjantu, jaki byŭ by pryniaty, i razhladaŭsia b jak słušny ŭ tych vakolicach u tuju epoku, <img width="184" hspace="5" height="147" border="1" style="float: right" src="http://lacinka.org/images/stories/lacinka/damilych.jpg" />tamu naŭrad ci takoje napisańnie možna było b adrazu &#8220;śpisać&#8221; na zvyčajnuju niepiśmiennaść. Akramia taho hety &#8220;niapravilny polski&#8221; nadpis na dziva adpaviadaje tamu, jak pavinien vyhladać pravilny nadpis biełaruskaj łacinkaj. Tamu, bieručy taksama pad uvahu paznačanaje vyšej ab užyvańni &#8220;stara-biełaruskaha&#8221; piśma ŭ XVIII st., zdajecca, što varta pryznać hety nadpis u jakaści prykładu biełaruskaj łacinki. (Chacia ŭ toj čas nie było b nazvanym &#8220;biełaruskim&#8221; - hl. &#8220;Nazoŭ Biełarusi&#8221; u seńsie historyi ŭžyvańnia nazvy). Na žal, na siońnia niama hruntoŭnych daśledvańniaŭ takich &#8220;napaŭaficyjnych&#8221; nadpisaŭ u Biełarusi hetaj epoki.</p>
+<p>{mospagebreak title=Zabaronienaja mova} Važnaj transfarmacyjaj u systemie biełaruskaj piśmovaści na pierałomie XVIII - XIX st. (h.zn. u peryjad, kali biełaruskaja mova nia mieła aficyjnaha ŭžytku), byŭ pierachod ad etymalahičnaha da fanetyčnaha pryncypy ŭ napisańni. Fanetyčny pryncyp štoraz šyrej raspaŭsiudžvaŭsia siarod aŭtaraŭ, jakija pisali pa-biełarusku ŭ pieršaj pałovie XIX st. - asabliva tamu, što bolšaść biełaruskamoŭnych materyjałaŭ z taje epoki maje falklorny charaktar, albo pad falklor stylizavany. Tak, artahrafija ŭ biełaruskich vieršach <u><a href="http://www.cus.cam.ac.uk/%7Enp214/cacot.htm">Jana Čačota</a></u>, nadrukavanych u Vilni ŭ 1840-ch hh. užo vyrazna hruntujecca na fanetyčnym pryncypie (hl. ilustracyju, &#8220;Da miłych&#8230;&#8221;).</p>
+<p><img width="197" hspace="5" height="142" border="1" style="float: right" src="http://lacinka.org/images/stories/lacinka/list_zpad_sybienicy.jpg" />Inšym prykładam biełaruskaha piśma (łacinkaj) abapiertym pieravažna na fanetyčny pryncyp, źjaŭlajecca &#8220;Mužyckaja praŭda (hl. ilustacyju), drukavanaja ŭ 1863-64 hh. padčas antyrasiejskaha paŭstańnia, vydavańnie jakoj źviazvajecca ź imiem <u><a href="http://www.belarus-misc.org/writer/kalinouski.htm">Kastusia Kalinoŭskaha</a></u>. Tuju ž systemu znachodzim i ŭ rukapisie &#8220;Lista z-pad šybienicy&#8221; Kalinoŭskaha (hl. ilustracyju).</p>
+<p>Nie zvažajučy na niemahčymaśść lehalna drukavać u Rasiejskaj imperyi pa-biełarusku (lubym šryftam, a tym bolš łacinskim), mienavita łacincy addavali pieravahu pieršyja biełaruskija litaratary ŭ svajoj tvorčaści j sprobach danieści jaje da čytača - i zusim nia tolki z pryčyny blizkaha znajomstva z polskaj kulturaj. Pa-pieršaje, ułasnabiełaruskaj kiryličnaj systemy piśma na toj čas užo nie jsnavała (&#8221;starabiełaruskaja&#8221; kirylica daŭno skončyłasia). <img width="229" vspace="3" hspace="5" height="355" border="0" style="float: left" src="http://lacinka.org/images/stories/lacinka/knizki.jpg" /> Pa-druhoje, naležyć pamiatać, što adzinym rodam šyroka dastupnych narodu publikacyjaŭ pa-biełarusku ŭ tyja časy byli staryja vunijackija zborniki biełaruskich relihijnych himnaŭ (hzv. &#8220;Kantyčki&#8221;) jašče z kanca XVIII st. (u niekatorych addalenych miascovaściach Biełarusi viadomyja až da kanca XX st.); hetyja &#8220;Kantyčki&#8221; mahli być tady adzinaj krynicaj ułasnabiełaruskaj piśmiennaści ŭ narodzie. Tamu nie ździŭlaje, što, kali Vincent Dunin-Marcinkievič u kancy 1850-ch hadoŭ źviarnuŭsia da rasiejskich cenzurnych uładaŭ pa dazvoł na publikacyju svaich pracaŭ pa-biełarusku (łacinkaj), jon spasyłaŭsia na ahulnaviadomy ŭ tyja časy fakt, što bolšaść piśmiennych ludziej siarod prostaha ludu Biełarusi byli piśmiennyja mienavita ŭ sensie łacinskaha alfabetu - asabliva sialanie. Chacia Dunin-Marcinkievič dazvołu nie atrymaŭ (dy j rukapisaŭ jamu, zdajecca, nie viarnuli), u niekalkich vypadkach jamu ŭdałosia abyjści cenzuru, i nadrukavać u Miensku svaje tvory pa-biełarusku - ale pad polskimi zahałoŭkami, napr. “Dudarz Białoruski”, “Hapon” (hl. ilustracyi). Tym časam, biełaruski druk raźvivaŭsia hałoŭnym čynam u emihracyi; a polskamoŭnyja vokładki (i pradmovy) da biełaruskich tvoraŭ sustrakajucca i ŭ emihranckich publikacyjach, napr. Rypiński Alexander (1811-1900), &#8220;Niaczyścik. Ballada białoruska.&#8221; Poznań 1853. 2-je vyd. s.l. 1853. 3-ja vyd., 1853., bo bolšaść čytačoŭ mieła pačatkovuju polskuju adukacyju.</p>
+<p><img width="115" vspace="1" hspace="5" height="200" border="1" style="float: left" src="http://lacinka.org/images/stories/lacinka/dudka_bielaruskaja_malaja.gif" />Biełaruskaja łacinka siaredziny XIX st. zachavała tradycyjnyja rysy, jakija łučyli jaje z polskaj piśmovaściu. Adnak u druhoj pałovie XIX st., kali &#8220;ajcy zasnavalniki&#8221; biełaruskaj litaraturnaj movy dy litaratury publikavali svaje pracy, łacinka ŭžo štoraz bolš nabližałasia da svajho sučasnaha standartu. <img width="162" vspace="5" hspace="5" height="209" border="o" style="float: right" src="http://lacinka.org/images/stories/lacinka/bahuszewicz.jpg" />Važnym punktam na hetym šlachu stalisia knihi, vydadzienyja ŭ Krakavie Franciškam Bahuševičam (hl. <u><a href="http://www.cus.cam.ac.uk/%7Enp214/bahusz.htm">bolej pra jahonuju knižku “Dudka Białaruskaja”</a></u>1891 h.), dzie (ŭśled za niekatorymi raniejšymi prykładami ŭ publikacyjach Jana Čačota j Dunina-Marcinkieviča) u biełaruskim piśmovym užytku było zamacavanaje &#8220;u-nieskładovaje&#8221; - litara “ŭ” (jakoje paźniej pierajšło ŭ kirylicu jak “ў”). Aprača hetaj novaj litary, tadycyjnyja hrafičnyja rysy, uklučajučy “cz”, “sz”, “ż”, zachavalisia da reformy 1900-ch hh; naturalna, “ć”, “ś”, “ź”, “ń” vykarystoŭvalisia dziela pieradačy miakkich “t”, “s”, “z” i “n” adpaviedna.</p>
+<p>Ahułam, 38 nazvaŭ knih było vydadziena pa-biełarusku (łacinkaj, naturalna) ciaham XIX st. (paraŭn. da 191 u 1900-1916 hh.), pieravažna za miežami Rasiejskaj imperyi. Siarod hetych publikacyjaŭ byli:<br />
+- Staraja pryzkazka. Lwów 1887.<br />
+- Bahuszewicz F. Dudka białaruskaja Macieja Buraczka. Kraków 1891. 2-je vydańnie: Kraków 1896.<br />
+- Bahuszewicz F. Smyk biełaruski, Poznań 1894.<br />
+- Bahuszewicz F. Tralalonaczka. Kraków 1892.<br />
+- Hutarka staroha dzieda. Poznań (?), 1861. Paris, 1862.<br />
+- Dziadźka Anton, abo hutarka&#8230; Wilno (nasamreč, Tilzit), 1892.<br />
+- Pieśni nabožnyja. [Warszawa?] 1861.<br />
+- Pczycki F. Kryuda i prauda. Hutarka biełaruskaja. S.l. 1863.<br />
+- Krótkie zebranie nauki Chrześcijańskiej. Wilno, 1835.<br />
+- Pan Tadeusz. Dwanatcac szlacheckich bylic napisau Adam Mickiewicz. Pierawiarnuu na biełaruskuju haworku Wincenty Dunun-Marcinkiewicz. Wilno, 1859.<br />
+- Pan Tadeusz, poemat. Pierałażyu z polskaho na biełaruski jazyk A. Jelski. Lwów, 1893.</p>
+<p>Rabilisia ŭ XIX st. taksama sproby vydavańnia biełaruskich peryjadyčnych vydańniaŭ (łacinkaj):<br />
+- Hutarka dwoch susiedou. Białystok, 1861-1862. (Vyjšłi 4 numary).<br />
+- Hutorka. Białystok, 1862-3. (Aŭtar i vydaviec. Kastuś Kalinoŭski).<br />
+- Mużyckaja Prauda. Białystok. 1862-3 (Kastuś Kalinoŭski, vyjšła 7 numaroŭ).<br />
+- Zmowa-kupis-susistarimas-hromadzki zhowor (abjava). Zurich. 1870. (Vyjšaŭ No.1, 15 lipienia 1870 h., pa-biełarusku, letuvisku j polsku).</p>
+<p>Akramia hetaha, u 1893 h. u Krakavie drukavałasia ŭlotka-pamflet biełaruskaj łacinkaj, jakaja pačynałasia słovami &#8220;Haspadary, da was piszym heta apawiadańnie&#8230;&#8221;</p>
+<p><em>Takim čynam, kali kazać pra sučasnuju biełaruskuju litaraturnuju movu, “nova-biełaruskuju” piśmovaść, litaraturu j knihadrukavańnie, to jany niesumnienna ŭźnikli j raźvivalisia ciaham pieršych 50 hadoŭ svajho jsnavańnia ŭ formie mienavita łacinskaha alfabetu.</em></p>
+<p>Knihadrukavańnie pa-biełarusku było faktyčna zabaronienaja ŭ Rasiejskaj Imperyi, tym bolš paśla [paŭstańnia] 1863 h., aprača vuzkaha spektru navukovych metaŭ u halinie etnahrafii. Janka Stankievič zhadvaje tolki adzin vypadak, kali niechta abyjšoŭ hetuju zabaronu, nadrukavaŭšy zbornik biełaruskich pieśniaŭ u Sankt-Pieciarburzie ŭ 1890-ch hh., łacinkaj, zajaŭlajučy, adnak, što heta „baŭharskija” pieśni. Pad vyhladam „etnahrafičnaj” nadrukavaŭ rasiejskaj kirylicaj svaju vieršavanuju brašuru ŭ Pieciarburzie i Alaksandar Jelski (1895, hl. nižej). Hetki stan rečaŭ doŭžyŭsia da liberalizacyi rasiejskich zakonaŭ ab presie (paśla revalucyi 1905 h.), kali pajaviłasia mahčymaść zasnavać šerah biełaruskich vydaviectvaŭ.</p>
+<p>Važnym momantam dla biełaruskaj łacinki stałasia ŭ 1907 h. apublikavańnie vydavieckaj kampanijaj „&#8221;Zahlanie słonca i w nasze wakienca&#8221; (u S-Pieciarburzie) novaj abecedy łacinkaj novaha lemantara (łacinkaj), u jakim aŭtary faktyčna ździejśnili madernizacyju biełaruskaj łacinskaj hrafiki. Tak, idučy ŭśled za padobnaj (značna raniejšaj) reformaj u českaj dy słavackaj piśmovaściach – aŭtary ŭviali litaru „č” zamiest raniejšaj „cz”, a taksama litary „š” i „ž” zamiest „sz” i „ż”. Zachavalisia litary „ł” dy „w” (apošniaja užyvałasia dziela pieradačy huku [v]). Adnak reforma hetaja była čysta hrafičnaj, tak što sama systema biełaruskaj łacinki zastałasia calkam zhodnaj z tradycyjaj, zamacavanaj Bahuševičam (1891).</p>
+<p><img width="335" height="28" style="border: medium none " src="http://lacinka.org/images/stories/lacinka/Kryn2.jpg" /></p>
+<p>Inšyja biełaruskija vydaviectvy, ŭ Vilni, Miensku, i S-Pieciarburzie, taksama pajšli ŭśled za hetaj reformaj. Nižej pakazanyja niekatoryja prykłady publikacyjaŭ biełaruskaj łacinkaj 1906-1914 hh.</p>
+<p><img width="367" height="378" style="border: medium none " src="http://lacinka.org/images/stories/lacinka/ksiazki.jpg" /></p>
+<p>Jak vynik hetaj dastatkova ŭdałaj madernizacyi, hetkaja „abnoŭlenaja” łacinka składałasia ź mienšaj kolkaści litaraŭ, chacia j bolšaj kolkaści <a href="/">dyjakrytyčnych znakaŭ</a>. <img width="147" vspace="2" hspace="5" height="71" border="0" style="float: left" src="http://lacinka.org/images/stories/lacinka/Nn.jpg" />Nieŭzabavie jana stałasia praktyčna ahulnapryniatym standartam druku, viadomym jak „<a href="/">Naša-Niŭskaja łacinka</a>” (bo jana stałasia papularnaj u tym liku dziakujučy vykarystańniu jaje gazetaj „Naša Niva”). Bolš za toje, nieŭzabavie ŭsie zaryjentavalisia, što pieravažnaja bolšaść usich dastupnych naohuł publikacyjaŭ biełaruskaj łacinkaj byli ŭžo nadrukavanyja mienavita hetak, i tamu „dyjakrytyčnaja” <img width="227" vspace="2" hspace="5" height="84" border="1" style="float: right" src="http://lacinka.org/images/stories/lacinka/Kupala.jpg" />systema łacinki nia tolki zamacavałasia ŭ druku, ale j pačała pieravažać u pryvatnych listavańniach, asabistych natatkach, užyvacca dziela ŭsich inšych patrebaŭ (hl. Aŭtohraf Janki Kupały, „Epihrama” 1910 h.) – uklučajučy taksama kamercyjnuju reklamu. (hl. Nižej prykład reklamy biełaruskaj łacinkaj z 1912 h.). Naohuł, hetaja systema dastatkova dobra słužyła patrebam biełaruskaj movy, i vykarystoŭvajecca dahetul ź minimalnymi papraŭkami (hl. nižej). <img width="304" vspace="2" hspace="5" height="85" border="1" style="float: left" src="http://lacinka.org/images/stories/lacinka/Nn-rekl.jpg" />Starym sposabam (z „cz” dy „sz”) praciahvali vydavać tyja, chto nia mieŭ techničnaj mahčymaści drukavać zhodna z novym standartam. Reformu, jakaja ŭviała dyjakrytyčnyja znaki, nasamreč nie pryniali adno niekatoryja klerykalnyja vydaŭcy, takija, jak <a href="/">Balasłaŭ Pačobka</a> i inšyja z kołaŭ katalickaj gazety „Biełarus”. Hl. nižej prykład hetkaj pradukcyi.</p>
+<p><img width="198" vspace="2" hspace="5" height="160" border="0" style="float: left" src="http://lacinka.org/images/stories/lacinka/Bohzna15.jpg" /> U hetuju ž epoku kanca XIX – pačatku XX st., biełaruskija aŭtary j vydaŭcy pačali eksperymentavać z kiryličnaj piśmovaściu dla biełaruskaj movy. Viedańnie rasiejskaj movy da taho času ŭžo istotna pašyryłasia ŭ Biełarusi (tym bolš, što i alternatyvaŭ nie było) – a vydaŭcy byli pieradusim zacikaŭlenyja tym, kab bielaruskija publikacyi dajšli da jak najšyrejšaha koła čytačoŭ. Tamu niekatoryja biełaruskija dziejačy bačyli nieabchodnaść stvareńnia biełaruskaj piśmovaści taksama j rasiejskim „гражданским” alfabetam – hzv. &#8220;гражданкой&#8221;. Pieršyja prykłady druku biełaruskich tekstaŭ rasiejskimi litarami (naprykład vieršy Janki Łučyny ŭ rasiejskich gazetach) zvyčajna sucelna jšli ŭsled za rasiejskaj (etymalahičnaj) artahrafijaj praktyčna va ŭsim – uklučajučy navat charakternuju litaru &#8220;ять&#8221;. Inšym svojeasablivym rańnim varyjantam dla biełaruskaj kirylicy stalisia try brašury, vydadzienyja ŭ 1902-3 hh. ŭ Londanie &#8220;Polskaj sacyjalistyčnaj partyjaj u Litvie&#8221;. Adnak u hetych brašurach biełaruskija słovy pieradadzienyja tak, jak kali b ich spačatku napisać zhodna z polskaj etymalohijaj a potym prosta pierapisać rasiejskimi litarami. Nivodzin z takich sposabaŭ pieradačy biełaruskich tekstaŭ kirylicaj nia moža być pryznanym ułasna biełaruskaj kirylicaj. Inšyja raniejšyja prykłady nova-biełaruskaj piśmovaści krylicaj, takija, jak brašura &#8220;Сынок&#8221; A. Jelskaha (1895), zbornik vieršaŭ J. Łučyny (SPb, 1903), dy kiryličnaja versija gazety &#8220;Naša Dola&#8221; (&#8221;Наша Доля&#8221;)(1906), taksama paśladoŭna prytrymlivajucca rasiejskaha &#8220;hramadzianskaha&#8221; alfabetu - chacia ŭ samoj struktury pieradačy słovaŭ užo pajaŭlajecca vyrazny ŭpłyŭ systemy tahačasnaj biełaruskaj łacinki. Hetak, jašče ŭ 1895 h. u S-Piecierburzie vyjšła (stylizavanaja pad falklor) vieršavanaja brašura A.J. [Alaksandar Jelski], &#8220;&#8216;Сынокъ!&#8221; Pазсказъ зъ праўдзиваго здарэння&#8230; 1895 року&#8221;. U hetym vydańni znachodzim charakternyja dla rasiejskaj artahrafii &#8220;ятьи&#8221; dy &#8220;еры&#8221;, a taksama litary &#8220;щ&#8221; dy &#8220;и&#8221;, adnak va ŭsim astatnim vyrazna zaŭvažny ŭpłyu łacinki, i jość užo litara &#8220;ў&#8221;. U paśmiarotnym vydańni Janki Łučyny (Niesłuchoŭskaha) &#8220;Вязанка&#8221; SPb &#8220;1903 року&#8221;, &#8220;ять&#8221;-aŭ užo niama, ale jość &#8220;ер&#8221;-y, &#8220;щ&#8221;, &#8220;и&#8221;; chacia jość i biełaruskaja &#8220;ў&#8221;. Naohuł, nie zvažajučy na nastolki razroźnienyja dośviedy z roznaha rodu prystasoŭvańniem rasiejskaha alfabetu da bielaruskaj movy, bielaruskaja kirylica ŭźnikła jak systema kala 1907 h., kali zhadanyja vyšej vydavieckija kampanii pačali drukavać (taksama) kirylicaj akreślenaha vyhladu. Adziny standart biełaruskaj kirylicy nadalej ciaham peŭnaha času zastavaŭsia prablemaj: adny ŭžyvali litaru &#8220;и&#8221; dla huku, inšyja karystalisia łacinskaj litaraj &#8220;i&#8221;, a va ŭsim astatnim karystalisia tahačasnym rasiejskim alfabetam. Urešcie, da kanca 1900-ch hh. zamacavałasia svojeasablivaja źmiašanaja (ci možna navat skazać niepaśladoŭnaja) systema bielaruskaj kiryličnaj hrafiki, u jakoj hałosnaja &#8220;i&#8221; pišacca jak łacinskaja, a ŭ toj ža čas zyčny huk &#8220;j&#8221; pišacca rasiejskaj litaraj &#8220;и-краткое&#8221;; zamacavałasia ŭrešcie j rasiejskaja litara &#8220;ё&#8221;, jakaja vyklikała šmatlikija sprečki. Hetaja systema jsnuje pa siońnia.</p>
+<p>Varta padkreślić pry hetym, što kštałtavańnie hetaj biełaruskaj kirylicy praktyčna paŭtaryła historyju z uźniknieńniem &#8220;stara-biełaruskaj&#8221; łacinki - tolki naadvarot. <img width="142" vspace="2" hspace="5" height="221" border="1" style="float: right" src="http://lacinka.org/images/stories/lacinka/Kalen10.jpg" /> Jak niekali archaičnaja biełaruskaja łacinka ŭźnikła šmat u čym jak transliteracyja sa &#8220;stara-biełaruskaha&#8221; kiryličnaha piśma, - hetak i &#8220;nova-bielaruskaja&#8221; kirylica na dobry ład skłałasia jak transliteracyja z systemy (&#8221;nova-&#8221;) biełaruskaj łacinki - atrymaŭšy pry hetym u spadčynu ŭsie charakternyja dla jaje rysy.</p>
+<p>Heta stajecca całkam zrazumiełym pry paraŭnańni naprykład taho, jak hetyja dźvie systemy pieradajuć miakkaść &#8220;d&#8221; i &#8220;t&#8221;. Miakkaść ichnaja pieradajecca jnakš, čym miakkaść usich inšych hukaŭ - pryčym identyčna ŭ bielaruskaj łacincy i (idučy za joj uśled) u bielaruskaj kirylicy. A mienavita, u bielaruskaj łacincy XIX st. miakkaje &#8220;d&#8221; na piśmie pieradavałasia, padobna jak u polskaj movie, jak &#8220;dz&#8221; (dź). A ŭ (&#8221;nova-&#8221;) biełaruskaj kirylicy heta było prosta translitaravana z łacinki, pieradajučy kožnuju miakkuju &#8220;д&#8221; jak &#8220;дз&#8221; (дзь) - i nikoli jak &#8220;дь&#8221;. Padobnym čynam taksama napisańnie ŭ biełaruskaj łacincy miakkaha &#8220;t&#8221; paznačajecca praz &#8220;ć&#8221;, i biełaruskaja kirylica zapazyčaje hetuju strukturu z łacinki, paznačajučy kožnaje miakkaje &#8220;т&#8221; jak &#8220;ць&#8221;, i nikoli jak &#8220;ть&#8221;. Sama nazva &#8220;łacinki&#8221; pišacca praź miakkuju &#8220;c&#8221;, jakaja ŭ biełaruskaj kirylicy adpaviedna adlustroŭvajecca jak &#8220;ц&#8221;: &#8220;лацінка&#8221;. Dalej, (&#8221;nova-&#8221;) biełaruskaja kirylica zapazyčyła &#8220;bahuševičavuju&#8221; &#8220;ŭ&#8221;: adlustravańnie jakoj u bielaruskaj kirylicy vyhladaje jak &#8220;ў&#8221;, što j stałasia, takim čynam, charakternaj rysaj biełaruskaj kirylicy (hetaj litary niama ŭ inšych systemach kirylicy, što j nie ździŭlaje). Aprača taho, u niekatorych raniejšych biełaruskich vydańniach kirylicaj nie vykarystoŭvali rasiejskaj &#8220;ё&#8221; (hetaj litary niama ŭ łacincy), a litara &#8220;o&#8221; jotujecca z &#8220;i&#8221; jak u łacincy. Śpisać naprykład hetyja &#8220;дзь&#8221;, &#8220;ць&#8221; ci &#8220;ў&#8221; tolki na &#8220;fanetyčny pryncyp&#8221;, hzn. na &#8220;dz-ekańnie&#8221;, &#8220;c-ekańnie&#8221; dy &#8220;ŭ-kańnie&#8221; ŭ biełaruskim vymaŭleńni, niemahčyma: &#8220;klasyčnaja&#8221; biełaruskaja kirylica idzie ŭśled za &#8220;fanetyčnym pryncypam&#8221; tam, dzie hetkaja źjava nazirałasia ŭ łacincy, i adychodzić ad jaho tam, dzie ad jaho adychodziła łacinka; savieckaja biełaruskaja kirylica (1933 h.) pajšła, praŭda, krychu svajoj ściažynaj.</p>
+<p><u>Tak, što možna navat śćviardžać, što biełarusy pišuć, u sensie systemy, nadalej łacinkaj - navat kali jany karystajucca kiryličnymi litarami.</u></p>
+<p><img width="192" vspace="2" hspace="5" height="98" border="1" style="float: right" src="http://lacinka.org/images/stories/lacinka/Kryvic.jpg" />Ciaham dvuch pieršych dzie- siacihodździaŭ XX st. łacinka j kirylica jsnavali ŭ biełaruskaj piśmovaści adnačasova. Šmatli- kija knihi navat drukavalisia ŭ dvuch varyjantach - častka nak- ładu łacinkaj, a častka kirylicaj.</p>
+<p>Abiedźvie systemy vykarystoŭvalisia ŭ peryjadyčnych vydańniach. Zhadanyja vyšej &#8220;Naša Dola&#8221; j &#8220;Naša Niva&#8221; vydavali častku nakładu kožnaha numaru łacinkaj i častku kirylicaj. U 1910 h. ŭ suviazi z finansavymi ciažkaściami &#8220;Naša Niva&#8221; upieršyniu razhladała pytańnie ab pierachodzie na adzin z varyjantaŭ. Redakcyja praviała apytańnie padpiščykaŭ pa pytańni šryftu, da jakoha jany bolš schilnyja. Vyjaviłasia, što bolšaść padpiščykaŭ addała pieravahu kirylicy, chacia prychilnikaŭ łacinki było tolki nie niašmat mieniej. Akramia taho apytańnie pakazała, što mnohija z tych, chto addavaŭ pieravahu łacincy, byli schilnyja čytać &#8220;Našu Nivu&#8221; navat i ŭ tym vypadku, kali b jana drukavałasia tolki kirylicaj; adnak siarod prychilnikaŭ kirylicy apynułasia zusim niašmat tych, chto byu by schilny čytać byełaruskuju gazetu tolki łacinkaj. &#8220;Naša Niva&#8221; praciahvała vydavacca ŭ dvuch varyjantach jašče da listapada 1912 h., kali novy finansavy kryzys prymusiŭ zrabić vybar. Redakcyja abvieściła, što jana vymušanaja albo začynić gazetu, albo drukavać tolki adzin varyjant, bo, maŭlaŭ, kožny numar mieŭ padvojny košt. Bieručy pad uvahu vyniki apytańnia 1910 h., vybar byŭ zrobleny na karyść kirylicy. Adnak kalandary j dadatki da &#8220;Našaj Nivy&#8221; nadalej drukavali łacinkaj i kirylicaj.</p>
+<p><img width="166" hspace="6" height="221" border="1" align="left" alt="Svajak.jpg" src="http://lacinka.org/images/stories/lacinka/Svajak.jpg" />Raspaŭsiudžanaje mierkavańnie, što vybar na karyść kirylicy albo łacinki - pry roŭnych astatnich momantach - hruntavaŭsia na relihijnaj prynaležnaści, hzn. rymskija kataliki schilalisia da łacinki, a pravasłaŭnyja da kirylicy. U niekatorych vypadkach heta mahło mieć uskosnaje značeńnie, bo pieršapačatkovaja piśmiennaść čytačoŭ mižvoli bazavała na polskaj albo rasiejskaj movie, i, kali piśmiennyja kataliki ŭ Biełarusi na pačatku XX st. praktyčna ŭsie byli znajomyja z kirylicaj, siarod piśmiennych pravasłaŭnych było značna mienšaje viedańnie łacinskaha alfabetu. Adnak zdajecca, što našmat bolšy ŭpłyu za vieravyznańnie mieła ahulnaja kulturnaja aryjentacyja: łacinka ž užyvałasia i ŭ niekatorych pravasłaŭnych publikacyjach, naprykład &#8220;Pieršyje malitwy i paznańnie chryścijanskaj prawasłaunaj wiery&#8221;, vyd. 1918 h. (hl ilustracyju nižej.)</p>
+<p>Aprača knih, niekalki biełaruskich peryjadyčnych vydańniaŭ taksama vydavałasia łacinkaj - albo łacinkaj drukavałasia adna z versijaŭ:</p>
+<p>- Biełarus. Tydniowaja katalickaja hazeta. Vilnia, 1913-1915: tolki łacinkaj.<br />
+- Homan. Biełaruska-Wilenski czasopis. Vilnia, 1916-1918: tolki łacinkaj.<br />
+- Kołas biełaruskaj niwy. Horadnia, 1913: tolki łacinkaj, nievialikim nakładam.<br />
+- Krynica. Biełaruskaja hazeta. No. 1-6, 1917: tolki łacinkaj.<br />
+- Nasza Dola. Vilnia. 6 numaroŭ u 1906 h. Vychodziła ŭ łacinkavym i kiryličnym varyjantach. Naprykład pieršy numar vyjšaŭ 6000 as. kirylicaj i 4000 łacinkaj.<br />
+- Naša Niwa. Vilnia. Łacinkavaja j kiryličnaja versii vychodzili ad  1906 da 18/31<br />
+kastryčnika 1912 h.; tolki kiryličnaja versija praciahvała vychodzić da zniŭnia 1915 h. - Świetač. Biełaruskaja štotydniowaja hazeta. Pietrahrad, No. 1-7, 1916 - łacinkaj.</p>
+<p><img width="200" hspace="6" height="310" border="1" align="right" alt="hinden.jpg" src="http://lacinka.org/images/stories/lacinka/hinden.jpg" />Nie zvažajučy na supolnaje jsnavańnie kirylicy j łacinki ŭ tahačasnaj biełaruskaj piśmovaści, zdajecca, łacinskaja tradycyja razhladałasia ŭ tuju epoku jak bolš &#8220;lehitymnaja&#8221; (vierahodna ŭ jakaści pieršasnaj dla sučasnaj biełaruskaj movy). Naprykład, kali ŭ 1915 h., zaniaŭšy Vilniu feldmaršał Paul von Hindenburg pryznaŭ ad imia niamieckich imperatarskich uzbrojenych siłaŭ, aficyjny ststus za biełaruskaj movaj (upieršyniu paśla bolš jak 200-hadovaha pierapynku!) - jon pryznaŭ hety ststus mienavita za łacinkavaj versijaj biełaruskaj piśmovaści. Tamu, kali pryśpieje čas pastavić za heta pomnik feldmaršału ŭ Biełarusi, spraviadliva było b napisać jahonaje imia mienavita łacinskimi litarami (žart). Padobnym čynam, adzin z pieršych (kali nia pieršy) mižnarodny słoŭnik, u jakim była j biełaruskaja mova - &#8220;Sieben-Sprachen Wörtbuch: Deutsch / Polnisch / Russisch / Weißruthenisch / Litauisch / Lettisch / Juddisch. Herausgeben in Auftrage des Oberbefehlshabers Ost. Verlag: Presseabteilung Oberbefehlshabers Ost&#8221; [1918] - taksama vyjaŭlaŭ biełaruskija słovy ŭ ich łacinkavym vyhladzie.Adsutnaść kiryličnych šryftoŭ ci nia viedańnie niemcami kirylicy nia moža tut być tłumačeńniem, bo rasiejskija słovy ŭ tym samym słoŭniku nadrukavanyja naturalna kirylicaj.</p>
+<p>Va ŭschodniaj častcy Biełarusi, jakaja ŭ 1921 h. adyjšła da SSSR, łacinka nikoli nie ŭžyvałasia va ŭsiakim razie aficyjna ci adkryta. Adnak aŭtaru nie viadoma pra jakuju-niebudź farmalnuju zabaronu łacinki ŭ pad-savieckaj Biełarusi. Bolš za toje, pytańnie taho, katoraja ź dźviuch systemaŭ bolš pasuje nadalej abmiarkoŭvałasia ŭ presie ŭ 1920-ja hady, i na jaho była źviernutaja značnaja ŭvaha na Akademičnaj Kanferencyi pa biełaruskaj movie ŭ Miensku ŭ 1926 h. Prychilnikam łacinki ŭ BSSR byŭ, miž inšym pieršy staršynia Saŭnarkamu BSSR Žyłunovič (Ciška Hartny). &#8220;Kančatkovym&#8221; ža arhumentam prychilnikaŭ kirylicy było toje, što kali Rasieja źjaŭlajecca lidaram usiaśvietnaj praletarskaj revalucyi, dyk i rasiejski kiryličny alfabet jość hruntam dziela piśmovaści ŭsiaśvietnaj pralatarskaj kultury budučyni, nia kažučy ŭžo pra bielarusaŭ. U toj čas, jak prychilniki łacinki ŭ BSSR spasyłalisia naprykład na linhvistyčnuju metazhodnaść, jaje praciŭniki pryvodzili dokazy hałoŭnym čynam z haliny &#8220;klasavaj baraćby&#8221; dy kamunistyčnaj idealohii - tamu sprečka była sapraŭdy niaroŭnaja&#8230;</p>
+<p>&#8220;Pieradusim nieabchodna vyrašyć, chto bolš zacikaŭleny reformaj alfabetaŭ na padstavie łacinki - praletaryjat ci buržuazija?&#8230;&#8221; - pytaŭsia, naprykład, viadomy tahačasny biełaruski litaratar i publicyst Uładzimier Duboŭka ŭ svajoj brašury 1926 h. &#8220;Kirylica ci łacinka?&#8221; Jon impetna vystupaŭ suprać łacinki ŭ biełaruskaj movie, i byŭ pierakanany, što łacinka - heta niešta &#8220;buržuaznaje&#8221; dy &#8220;imperyjalistyčnaje&#8221;, nieŭłaścivaje pralatarskaj kultury. I naohuł, poŭnaja niepatrebnaść łacinki dla biełarusaŭ, śćviardžaŭ Dubboŭka, nahetulki ž vidavočnaja, jak i nieabchodnaść metro (jakoje tady tolki prajektavałasia) Maskvie. U toj ža čas jon vykazvaŭsia za madernizacyju biełaruskaj kirylicy, uvodziačy novyja litary dziela pieradačy hukaŭ, paznačanych siońnia jak &#8220;дзь&#8221; dy &#8220;дж&#8221;.</p>
+<p>Adnak padobnyja debaty (hetakža jak i vynachodžvańnie novych &#8220;niaruskich&#8221; značkoŭ u kirylicy) razhladalisia savieckim kamunistyčnym kiraŭnictvam naohuł jak dyversyjnaja dziejnaść, tamu jany nie mahli praciahvacca ŭ časy, kali razmachu nabiraŭ stalinski teror. Publikacyi ŭ pad-savieckaj Biełarusi paśla 1933 h. užo kateharyčna śćviardžali, što łacinka ŭjaŭlaje saboj ni što inšaje, jak najvyšejšaja stupień kontr-revalucyi, h.zn.:</p>
+<p><img width="425" hspace="6" height="44" align="left" alt="cytata.jpg" src="http://lacinka.org/images/stories/lacinka/cytata.jpg" /> &#8230; ihd. Ad pačatku 1930-ch hadoŭ udzielniki zhadanaj užo Akademičnaj kanferencyi byli represavanyja, i da 1938 h. byli praktyčna ŭsie rasstralanyja. A Ŭładzimir Duboŭka apynuŭsia ŭ stalinskich kataržnych lahierach u Sibiry, dzie pravioŭ dziesiać hadoŭ.</p>
+<p><img width="174" hspace="6" height="132" align="right" alt="Kalos.jpg" src="http://lacinka.org/images/stories/lacinka/Kalos.jpg" />U zachodniaj ža Biełarusi, jakaja ad 1921 h. stałasia častkaj Polščy, abodva alfabety praciahvali svabodna sujsnavać. Polskija ŭłady stavilisia da biełaruskaj kulturnaj dziejnaści biez spahady, i nie prajaŭlali zacikaŭleńnia biełaruskimi debatami pra alfabet. Pieršaje vydańnie Biełaruskaj Hramatyki dla Škoł Branisłava Taraškieviča (jašče ŭ 1918 h.) było vydadzienaje ŭ dvuch varyjantach - kirylicaj i łacinkaj. U &#8220;klasyčnym&#8221; vydańni Hramatyki (Vilnia 1929 h.), jakaja kadyfikavała hramatyku biełaruskaj litaraturnaj movy na toj momant, pradstaŭlenyja jak &#8220;беларускі альфабэт&#8221; tak i &#8220;biełaruskaja abeceda&#8221;, chacia asnoŭnym šryftam dadzienaha vydańnia źjaŭlajecca kirylica.</p>
+<p>Prablematyka dvuch alfabetaŭ abmiarkoŭvałasia taksama ŭ zachodnie-biełaruskaj presie. Adnak, u adroźnieńni ad BSSR z arhumentami pra &#8220;klasavuju baraćbu&#8221;, jakija tam daminavali, zachodnie-biełaruskija debaty pa hetym pytańni zasiarodžvalisia hałoŭnym čynam na pytańniach vybaru pamiž metazhodnaściu vykarystańnia łacinki - jak alfabetu, jakim karystajecca Eŭropa i ŭvieś zachodni śviet, i žadańniem zachavać kirylicu jak rysu, jakaja dadatkova padkreślivaje adroźnieńnie biełaruskaj movy ad aficyjnaj polskaj. Hetak, niekatoryja aŭtary, napr. Kanstancyja Skirmunt (u brašury Fascynacja nazwy i potęga litery, Wilno 1928) akcentavali, pa-pieršaje, što biełaruski narod naŭrad ci zmoža sucelna dałučycca da sučasnaj eŭrapiejskaj/zachodniaj cyvilizacyi i karystacca jaje dasiahnieńniami, kali pieradusim nia vyrviecca z hetaj rasiejska-eŭraazijskaj zony ŭpłyvaŭ (tym bolš kamunistyčnaj). Pa-druhoje, biełaruski narod naŭrad ci zdoleje vyzvalicca z-pad hetych upłyvaŭ, kali śpiarša nie admovicca ad błytaniny &#8220;dvuch-alfabetnaści&#8221; i nia pryjmie dla siabie łacinki ŭ jakaści asnoŭnaj systemy svajoj piśmovaści. Tamu, pisała Kanstancyja Skirmunt, dla biełaruskaha narodu sam kiryličny alfabet jak taki źjaŭlajecca ŭ hetym sensie &#8220;varožym dla jahonaj svabody&#8221;&#8230; Adnak asabliva naprykancy 30-ch hadoŭ - jak reakcyja na polskuju asymilacyjnuju rytoryku dy &#8220;endeckuju&#8221; palityku &#8220;sanacyi&#8221; - šmatlikija biełarusy ŭ pieradvajennaj Polščy pačali sapraŭdy razhladać kirylicu ŭ jakaści lepšaha alfabetu, i da pačatku II ŭsiaśvietnaj vajny (1939 h.) mienavita kiryličnaj piśmovaści pačali addavać palityčnuju pieravahu ŭ kołach zachodniebiełaruskaj intelihiencyi.<br />
+<img align="left" alt="Chrdum2.jpg" title="Chrdum2.jpg" src="http://lacinka.org/images/stories/lacinka/Chrdum2.jpg" />Hetkim čynam, značnaja kolkaść roznych publikacyjaŭ u Zachodniaj Biełarusi praciahvała vychodzić biełaruskaj łacinkaj. Zasłuha ŭ hetym pieradusim naležyć namahańniam lideraŭ ruchu Biełaruskaj Chryścijanskaj Demakratyi, takich, jak ksiondz Adam Stankievič, ks. V. Hadleŭski i inš. Najbolš značnymi peryjadyčnymi vydańniami hetkaha rodu byli &#8220;Krynica&#8221; dy &#8220;Chryścijanskaja dumka&#8221;. Abodva vydańni pieršapačatkova byli zasnavanyja jak katalickija publikacyi, ale ŭ 1930-ch byli vymušanyja transfarmavacca ŭ farmalna savieckija, pad naciskam peŭnych (niepryjazna nastaŭlenych) polskich kaścielnych uładaŭ. (Novaj rysaj biełaruskich peryjadyčnych publikacyjaŭ stałasia toje, što materyjały jak kirylicaj, hetak i łacinkaj čaściakom źmiaščalisia adny pobač druhich u adnym numary vydańnia (u adroźnieńni ad raniejšaj praktyki vydavańnia dvuch varyjantaŭ adnaho numaru): napr. &#8220;Krynica&#8221;, &#8220;Šlach moładzi&#8221;). Hl. prykłady (abjavy z &#8220;Chryścijanskaj Dumki&#8221;) na ilustracyjach:<img hspace="6" align="left" alt="Knizki.jpg" style="width: 264px; height: 414px" src="http://lacinka.org/images/stories/lacinka/Knizki.jpg" /></p>
+<p>Taksama značnaja kolkaść knih z pieradvajennaj Zachodniaj Biełarusi drukavałasia biełaruskaj łacinkaj, hałoŭnym čynam u Vilni (akramia taho, takija vydańni vydavalisia napr. u Prazie). Jak vynikaje z statystyki, pryviedzienaj J. Turonkam &#8220;Książka białoruska w Drugiej RP&#8221; (Warszawa 2000) siarod usich biełaruskich knižnych tytułaŭ, vydadzienych u 1921-1939 hh. łacinkaj było vydadziena 35,5%. Znoŭ ža treba pryznać zasłuhu ŭ hetym Biełaruskaj Chryścijanskaj Demakratyi, jakaja zasnavała biełaruskaje vydaviectva imia Franciška Skaryny ŭ Vilni. U siviazi z tym, što takija aŭtary, jak ks. Adam Stankievič byli śviatarami, im nieabchodny byŭ dazvoł kaścielnych uładaŭ dziela publikavańnia šmatlikich svaich pracaŭ relihijnaha charaktaru; dazvoły im lahčej było atrymać u Lvovie, čym u Vilni, <img width="272" hspace="6" height="382" align="right" alt="A-stank.jpg" src="http://lacinka.org/images/stories/lacinka/A-stank.jpg" /> i tamu ŭ niekatorych vypadkach Lvoŭ byŭ paznačany ŭ jakaści miesca publikacyi. Faktyčna ž Vilnia źjaŭlałasia miescam druku vierahodna ŭsich padobnych vydańniaŭ.</p>
+<p>Było b adnak niasłušna mierkavać, što łacinkaj karystalisia ŭ Zachodniaj Biełarusi adno rymskija kataliki, ci što kataliki pisali pa-biełarusku tolki łacinkaj. Pa-pieršaje, sami kataliki stavilisia da łacinki biez fanatyzmu. U 1929 h., naprykład, prablematyka šryftu abmiarkoŭvałasia na staronkach &#8220;Biełaruskaj Krynicy&#8221; (aficyjnaje vydańnie partyi Biełaruskaj Chryścijanskaj Demakratyi), i ad taho času bublikacyi BChD vydavalisia jak łacinkaj, hetak i kirylicaj (hl. pra heta ŭ А. Stankievič. Biełaruski Chryścijanski Ruch). Pa-druhoje, łacinkaj praciahvali drukavać šmatlikija pracy litaraturnaha dy inšaha źmiestu, jakija zusim nia mieli nijakaj relihijnaj skiravanaści. Urešcie, biełaruskaj łacinkaj, akramia rymska-katalickich vydańniaŭ, drukavalisia taksama vunijackija (naprykład časopis &#8220;Złučeńnie&#8221;, 1938), pratestanckija i navat pravasłaŭnyja publikacyi - hl ilustracyi:</p>
+<div style="text-align: center"><img width="474" height="222" alt="kanfesii.jpg" src="http://lacinka.org/images/stories/lacinka/kanfesii.jpg" /></div>
+<p>Pravasłaŭnaje (1918), metadysckaje (1925) i katalickaje (1927) vydańni biełaruskaj łacinkaj.<br />
+<img width="173" hspace="6" height="156" align="left" alt="Kryn1.jpg" src="http://lacinka.org/images/stories/lacinka/Kryn1.jpg" />Naprykancy 1930-ch hadoŭ adbyłasia apošniaja hrafičnaja transfarmacyja ŭ biełaruskaj łacincy, źviazanaja z tym, što niekatoryja vydaŭcy, vierahodna imknučysia paźbiehčy davoli nienavisnych u tyja časy dla niekatorych biełarusaŭ prykmietaŭ &#8220;polskaści&#8221;, pačali admaŭlacca ad histaryčnaha &#8220;w&#8221; na karyśc &#8220;v&#8221; što j stałasia pieravažnaj praktykaj u druhoj pałovie 1930-ch hh. Hety praces farmalna zavieršyŭsia, kali, užo ŭ časy Druhoj Usiaśvietnaj vajny, u łacinkavaj versii novaha padručnika arfahrafii (Biełaruski Pravapis) Jazepa Losika (Miensk, 1943; paźniej vydadzieny ŭ ZŠA) litara &#8220;w&#8221; užo całkam adsutničała.</p>
+<p>Aŭtaru nieviadomyja jakija-niebudź biełaruskija publikacyi paślavajennaha peryjadu, dzie b &#8220;w&#8221; užyvałasia ŭ jakaści &#8220;v&#8221;. A što datyčyć biełaruskich publikacyjaŭ paślavajennaha peryjadu, dyk pieravažnaja ich častka napisanaja kirylicaj, chacia j da łacinki stavilisia tady dosyć talerantna. Užyvańnie łacinki ŭ Biełarusi asabliva skaraciłasia ad 1943 h, bo ŭpłyvovaja ultra-pravasłaŭnaja hrupa siarod palityčnaha aktyvu imknułasia pierakanać niemcaŭ, što łacinka. - heta &#8220;polskaja intryha&#8221;.</p>
+<p>Adnak hl abjavu, nadrukavanuju łacinkaj u 1944 h. u sucelna kirylicznaj (na toj čas) gazecie &#8220;Ranica&#8221; (biełaruskaja gazeta ŭ Berlinie).</p>
+<p>Ad siaredziny 1940-ch hh. i da pačatku novaha biełaruskaha adradžeńnia naprykancy 1980-ch, druk biełaruskaj łacinkaj praciahvaŭsia tolki ŭ emihracyi. U šmatlikich sytuacyjach pryčynaj hetaha była adno adsutnaść techničnaj mahčymaści vydavańnia kirylicaj, adnak u niekatorych vypadkach, zdajecca, heta ŭsio ž było j pryncypovym pytańniem (napr. publikacyi Vacłava Panuceviča ŭ Čykaha). Značnaje biełaruskaje knihavydavańnie łacinkaj było razhornutaje ŭ Rymie ŭ 1940-ch hh., hałoŭnym čynam namahańniami ks. d-ra Piatra Tatarynoviča, dyrektara Biełaruskaj Słužby Radyjo Vatykana. Ad 1750 da 1975 hh. jon vydaŭ 120 numaroŭ biełaruskaha časopisu &#8220;Źnič&#8221;. Siarod jahonych publikacyjaŭ biełaruskaj łacinkaj - akramia niekalkich pierakładaŭ Śv. Pisańnia, liturhičnych i tealahičnych publikacyjaŭ - byli taksama biełaruski pierakład &#8220;Quo Vadis?&#8221; Hienryka Sienkieviča (1956) (na ilustracyi) i paema &#8220;Kałychanka&#8221; Ryhora Krušyny (1963). Siarod publikacyjaŭ niakatorych inšych biełaruskich vydańniaŭ tych časoŭ taksama byli knihi jak całkam łacinkavyja, hetak i častkova kiryličnyja, napr. niekalki vydańniaŭ &#8220;Zaranka&#8221; u Niu Jorku (1960-70 hh., hl ilustr. &#8220;Krajovy słoŭnik Łahojščyny&#8221;, vyšej).<br />
+U paślavajennym SSSR užyvańnie biełaruskaj łacinki razhladałasia b jak niešta vielmi pravakacyjnaje, nacyjanalistyčnaje, hłyboka antysavieckaje. Tolki prybałtam zachavali hetki pryvilej. Tym nia mienš, cikavym źjaŭlajecca fakt, što časam biełaruskaja łacinka vykarystoŭvałasia i ŭ savieckaj Biełarusi. Ź viadomych aŭtaru paźniejšych nadpisaŭ źjaŭlajecca nadpis biełaruskaj łacinkaj na nahrobku ŭ vioscy Kluščany Astravieckaha r-nu, zroblenaja ŭ siaredzinie 1970-ch hh. (!)</p>
+<p>Ad času adnaŭleńnia niezaležnaści Biełarusi ŭ 1991 h., niekatoryja zachady rabilisia taksama dziela adradžeńnia łacinki - hetaj pieršasnaj formy piśmovaści sučasnaj biełaruskaj movy. Naprykład, adrodžanaja gazeta &#8220;Naša Niva&#8221; vydała ŭ 1993 h. adzin numar sucelna łacinkaj (na ilustracyi nižej) - dzie łacinkaj byli nadrukavanyja nia tolki artykuły, ale navat całkam kamercyjnyja abviestki (na ilustracyi). Asobnyja artykuły łacinkaj pajaŭlalisia ŭ &#8220;Našaj Nivie&#8221; j paźniej. Try vydańni adrodžanaha časopisu &#8220;Chryścijanskaja Dumka&#8221; (na ilustracyi) taksama drukavali niekatoryja artykuły łacinkaj.</p>
+<p>Na pačatku 1990-ch hh. kala dziasiatka brašuraŭ (łacinkaj) byli faksymilna pieradrukavanyja z vydańniaŭ 1920-ch - 1930-ch hh. Adnak adradžeńnie łacinki istotna zamarudziłasia paśla 1995 h., kali režym Łukašenki viarnuŭ rasiejskuju movu ŭ jakaści aficyjnaj i pačaŭ praktyčna vyciaśniać bielaruskuju movu u kožnaj jaje formie z usich halinaŭ dziaržaŭnaha j hramadzkaha žyćcia Biełarusi. Nie zvažajučy na heta, užo ŭ 1998-99 hh. niekalki artykułaŭ było nadrukavana łacinkaj u časopisie &#8220;Spadčyna&#8221; (na ilustracyi). Peŭnuja materyjały drukavalisia łacinkaj u časopisach &#8220;Arche&#8221; i &#8220;Arche-Skaryna&#8221;. Łacinkaj ža drukavaŭsia šerah nierehularnych i małanakładnych vydańniaŭ (naprykład gazeta &#8220;Litva&#8221;). Inšym cikavym prykładam źjaŭlajucca raznastajnyja pryvatnyja abviestki łacinkaj, jakija pajaŭlalisia amal u kožnym numary &#8220;Našaj Nivy&#8221; (u 2000-2001). Urešcie, čaściakom možna sustreć publikacyi biełaruskaj łacinkaj u internecie. Pajaviłasia niekalki ahulnadastupnych onlineavych prahrama dla <a href="http://my.opera.com/lacinka/blog/show.dml/index.php?option=com_content&amp;task=view&amp;id=18&amp;Itemid=2">kanvertavańnia biełaruskich tekstaŭ i internetnych sajtaŭ</a> z kirylicy ŭ łacinku.</p>
+<p>{mospagebreak title= Sproby vynajści rovar} Łacinkavaja piśmovaść, ci prynamsi hetki navyk, pastupova stajecca svojeasablivaj prykmietaj &#8220;dobraha hustu&#8221; ŭ asiarodździ maładych biełaruskich intelektuałaŭ. Adnak niekalki dziesiacihodździaŭ nieŭžyvańnia łacinki ŭ Biełarusi pryviali da taho, što prablemaj na sučasny momant stałasia j toje, jakoj łacinkaj karystacca. Supiarečnaści pa hetym pytańni akazalisia vielmi škodnyja. Naprykład, padčas arhanizacyjnaha źjezdu Maładoha Frontu (na toj čas moładzievaj arhanizacyi Biełaruskaha Narodnaha Frontu) u vieraśni 1997 h. było prapanavana pryniać łacinku ŭ jakaści adzinaj aficyjnaj hrafiki hetaj arhanizacyi. Prapanova była adchilenaja, miž inšym, z pryčyny sprečkaŭ na temu taho, jak pavinna vyhladać sučasnaja biełaruskaja łacinka.</p>
+<p>Pa-pieršaje, zastajucca staryja roznahałośsi na temu pravapisu &#8220;i&#8221; paśla hałosnych. Tradycyjnaj artfahrafijaj źjaŭlajecca napr. &#8220;akademii&#8221;, Rasiei&#8221;, Racyi&#8221;, &#8220;dla ich&#8221;, adnak niekatoryja paślavajennyja vydaŭcy ŭ emihracyi pisali heta jak &#8220;akademiji&#8221;, Rasieji&#8221;, &#8220;racyji&#8221;, &#8220;dla jich&#8221;, i niekatoryja ŭ Biełarusi ličać heta słušnym.</p>
+<p>Pa-druhoje, niekatoryja ŭ Biełarusi nastojvajuć na tym, kab &#8220;abnavić&#8221; łacinku z metaj zrabić jaje bolš prydatnaj dziela sučasnych patrebaŭ, albo spraścić jaje. U suviazi z hetym isnuje davoli aktyŭnaja hrupa, jakaja damahajecca zamieny litary &#8220;ŭ&#8221; na litaru &#8220;w&#8221; (maŭlaŭ jana j tak nie ŭžyvajecca ad kanca 1930-ch). Ichnim arhumentam było toje, što litary &#8220;ŭ&#8221; nie było ŭ standartnaj kamputarnaj tablicy znakaŭ, a heta ŭskładniała vydavieckuju dziejnaść, ihd. Adnak taki arhument adpaŭ paśla pajaŭleńnia šryftoŭ &#8220;unicode&#8221; i internetnaha kadavańnia utf-8. Ciapier chutčej za ŭsio vaš browser adlustroŭvaje ŭsie znaki biełaruskaj łacinki: <strong>Ćć-Čč-Łł-Ńń-Śś-Šš-Ŭŭ-Žž-Źź</strong>.</p>
+<p>Akramia taho, kali b pravilnaje adlustravańnie litary &#8220;ŭ&#8221; nie było mahčymym, možna paŭsiul pisać &#8220;u&#8221;, bo mienavita hetaja litara pierachodzić u biełaruskaj movie ŭ &#8220;ŭ&#8221; paśla hałosnych (akramia niekatorych vyklučeńniaŭ u zapazyčanych słovach).</p>
+<p>Niekatoryja prapanujuć adyjści ad litary &#8220;ł&#8221;, što mieła b spraścić i zrabić bolš adnalitaj pieradaču miakkaści zyčnych, chacia nie da kanca jasna, jak tady prapanujuć pieradavać roźnicu pamiž napr. &#8220;stoł&#8221; i &#8220;stol&#8221;. Prapanujecca taksama pisać litaru &#8220;g&#8221; zamiest &#8220;h&#8221; va ŭsich biełaruskich słovach niezaležna ad roźnicy ŭ vymaŭleńni dvuch hukaŭ jakija hetyja litary ciapier aznačajuć - u kirylicy heta litary &#8220;ґ&#8221; dy &#8220;г&#8221;.</p>
+<p>Najbolš aryhinalnaj idejaj źjaŭlajecca, vierahodna, prapanova zamianić spałučeńnie &#8220;ch&#8221; u biełaruskaj łacincy kiryličnaj litaraj &#8220;x&#8221;, bo padobnaja da jaje łacinskaja litara &#8220;iks&#8221; u biełaruskaj łacincy - za vyklučeńniem niekatorych zamiežnych nazvaŭ ułasnych - i tak nie ŭžyvajecca.</p>
+<p>Viadoma, padobnyja razychodžańni i &#8220;aryhinalnyja jdei&#8221; chutčej za ŭsio adpaduć sami saboj jak tolki (i kali) budzie apublikavanaja dastatkovaja kolkaść tekstaŭ biełaruskaj łacinkaj akreślenaj versii, što, takim čynam, praktyčna adradziła b jaje publičny ŭžytak - i adnačasova stałasia b faktam isnavańnia peŭnaha standartu, jak heta adbyłosia na pačatku XX st. Na siońnia ž možna paraić prytrymvacca &#8220;klasyčnaj&#8221; (&#8221;Našaniŭska-taraškievičnaj&#8221; biez &#8220;w&#8221;) versii łacinki; prynamsi hetak robić aŭtar.</p>
+<p>{mospagebreak title=Fanaberyja ci nieabchodnaść?} Kažučy ab vykarystańni j praktyčnych vyhodach ad łacinki, varta zhadać pieradusim toje, što jana moža (i navat pavinna) być vykarystanaja dziela pieradačy biełaruskich imionaŭ, nazvaŭ i słovaŭ, kali nieabchodna zrabić heta łacinskimi litarami, naprykład u inšamoŭnym tekście. Naturalna, što palaki, čechi, słavaki, charvaty, słavency, niemcy, francuzy, hišpancy i naohuł usie tyja, chto maje svaju nacyjanalnuju versiju łacinskaha alfabetu nikoli nie transliterujuć svaich nazvaŭ i imionaŭ, skažam, na anhielskuju movu, zhodna ź niejkaj tam &#8220;systemaj trasliteracyi Kanhresu ZŠA&#8221; - a zaŭždy pisuć ich tak, jak jany pišucca łacinskimi litarami na svajoj movie niezaležna ad taho, ci jość tam dyjakrytyčnyja znaki, ci ich niama. I kali biełarusy (u čym, spadziajusia, pierakonvaje hety tekst) majuć ułasnuju tradycyju j systemu łacinki, to j jany pavodle tych samych pryncypaŭ całkam mohuć i pavinny dziejničać hetakža. Naprykład BNF daŭno prytrymvajecca takoj praktyki pieradačy biełaruskich imionaŭ i nazvaŭ va ŭsich (nakolki aŭtaru viadoma) svaich dakumentach, vydavanych na zamiežnych movach.</p>
+<p>Aficyjnaje vykarystańnie łacinki ŭ Biełarusi dla takich metaŭ mahło b stacca pieršym krokam da jaje aficyjnaha viartańnia/pryznańnia. Druhim krokam mahło b stacca pryznańnie łacinki ŭ jakaści paralelnaj adicyjna-dapuščalnaj systemy piśmovaści naohuł, kab tyja, chto chacieŭ by joj karystacca mieli takoje prava, a školnaja prahrama znajomiła b vučniaŭ u škołach z pryncypami bielaruskaj łacinki. Chacia, nakolki viadoma aŭtaru, łacinku aficyjna nichto j nie zabaraniaŭ, dapuščeńnie biełaruskaj łacinki ŭ školnyja prahramy a taksama pryznańnie zakonnaj siły za dakumentami, napisanymi biełaruskaj łacinkaj, vierahodna vymahaje pryniaćcia niejkaha jurydyčnaha aktu. A što da karyści, jakuju na šyrejšuju perspektyvu mahła b adčuć Biełaruś ad pryznańnia łacinki, dyk bližejšaje znajomstva nasielnictva z łacinkaj dapamoža biełarusam vyvučać eŭrapiejskija movy, kantaktavacca z rehijonami Eŭrapiejskaha Źviazu, spraścić dostup i pryśpiešyć znajomstva z usiaśvietnymi infarmacyjnymi płyniami, takim čynam usiebakova pryčyniajučysia da raźvićcia zdolnaści Biełarusaŭ być pamostam pamiž Eŭropaj i Rasiejaj, u šyrokim sensie zamacoŭvajučy svaju eŭrapiejskuju tojesnaść, ihd.</p>
+<p>Zhodna z bolš radykalnymi, čym u aŭtara artykułu pierakanańniami, arhumenty, vykładzienyja Kanstancyjaj Skirmunt u 1928 h. (hl. vyšej) zastajucca nadalej aktualnymi.</p>
+<p>Pajaŭlajucca niekatoryja syhnały, što navat pad režymam aficyjnaj łukašenkaŭskaj re-rusyfikacyi ŭzmacniajecca tendencyja, mahčyma, što i ŭ strukturach, nabližanych da ŭłady, da abmiežavanaha pryznavańnia łacinki: dziela metaŭ mižnarodnaha napisańnia biełaruskich imionaŭ i nazvaŭ. Zhodna ź infaracyjaj z knihi &#8220;Беларускія iмёны&#8221; (Минск 2001, словарь белорусских имен, представляющий их написание как кириллицей так и [&#8221;классической&#8221;] латинкой), respublikanskaja tapanimičnaja kamisija pry Nacyjanalnaj akademii navuk Biełarusi, supolna z kartahrafičnym hieahrafičnym fondam rychtuje słoŭnik nazvaŭ nasielenych punktaŭ, u jakim (niekatoraje?) łacinkavaje napisańnie biełaruskich nazvaŭ budzie pradstaŭlenaje pobač z kiryličnym. Adnak dahetul słoŭnik hety nie apublikavany, zastajucca niekatoryja sumnievy adnosna taho, jakoje kankretna napisańnie łacinskim alfabetam tam budzie padadzienaje, bo naprykład na niekatorych mapach, vydadzienych u Bielarusi ŭ siaredzinie 1990-ch hadoŭ, nazvy byli napisanyja nie biełaruskaj łacinkaj, a dziŭnaj systemaj łacinskich litaraŭ, padabranaj, vierahodna, samimi vydaŭcami.</p>
+<p>Pakul što ciažka pradbačyć, jakoje staŭleńnie da dvuch sposabaŭ biełaruskaj piśmovaści moža skłaścisia ŭ budučyni. Aŭtar adnak chacieŭ by spadziavacca, što i dla bielaruskaj łacinki mohuć pryjści lepšyja časy. U jakaści pieradumovy, adnak, nieabchodna damahčysia bolš śvietłych perspektyvaŭ dla samoj bielaruskaj movy jak takoj - i dla Biełarusi naohuł.</p>
+<p>Mikoła Pačkajeŭ</p>
+<p><em>Pierakład z <a href="http://www.cus.cam.ac.uk/%7Enp214/lacinru.htm">rasiejskaj</a></em>.
+</p>
+			
+<div class="date"> </span></div>     
+
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://lacinka.org/?page_id=45"
+    dc:identifier="http://lacinka.org/?page_id=45"
+    dc:title="Biełaruskaja łacinka"
+    trackback:ping="http://lacinka.org/wp-trackback.php?p=45" />
+</rdf:RDF>	-->
+	
+
+<!-- You can start editing here. -->
+
+<p><a href='http://lacinka.org/?feed=rss2&amp;p=45'><abbr title="Really Simple Syndication">RSS</abbr> feed</a> 
+| <a href="http://lacinka.org/wp-trackback.php?p=45">Trackback <acronym title=\"Uniform Resource Identifier\">URI</acronym></a>
+</p>
+
+
+<div class="#commentlist">
+</div>
+<div id="addcomment" class="comment">
+<a id="addcommentanchor" name="addcommentanchor"></a>
+<form action="http://lacinka.org/wp-comments-post.php" method="post" id="commentform">
+<div class="add">
+	<div id="reroot" style="display: none;">
+		<small><a href="javascript:reRoot()">
+			Naciśni, kab skasavać „kamentar”.
+		</a></small>
+	</div>
+	<small>
+		<b>Imia</b> (abaviazkova)	</small>
+	<div>
+		<input type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1" />
+	</div>
+	<small>
+		<b>E-mail</b> (Abaviazkova - nia budzie bačny inšym)	</small>
+	<div>
+		<input type="text" name="email" id="email" value="" size="28" tabindex="2" />
+	</div>
+	<small>
+		<b><acronym title="Uniform Resource Identifier">URI</acronym></b>	</small>
+	<div style="margin-bottom: 4px;">
+		<input type="text" name="url" id="url" value="" size="28" tabindex="3" />	
+	</div>
+
+	<small>
+		<b>Tvoj kamentar</b> (<a href="javascript:changeCommentSize(-80);">źmienš</a> | <a href="javascript:changeCommentSize(80)">pabolš</a>)
+	</small>
+<div style="margin: 4px 0px 4px 0px;"><small>
+  <input type="checkbox" value="" id="ShowPreview" onclick="ShowPreviewBox(this.checked)"><label for="ShowPreview">&nbsp;Kanvertuj u łacinku (<a href="#">Što heta takoje, i jak pracuje?</a>)</label></small>
+</div>
+	<div style="width: 80%;">
+		<textarea name="comment" id="comment" cols="45" rows="4" tabindex="4"
+onchange="UpdatePreviewBox(this.value)" onfocus="UpdatePreviewBox(this.value)" onkeyup="UpdatePreviewBox(this.value)" onkeypress="UpdatePreviewBox(this.value)"
+></textarea>
+	</div>
+	<div style="width: 80%; margin-bottom: 6px;"><small>
+		Dazvolenyja tagi: 
+		&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; 	</small></div>
+<div id="PreviewBox" style="display: none; width: 100%; margin: 0px 0px 4px 0px;">
+  <small>Papiaredni prahlad:
+  <div id="PreviewText" style="border: 1px solid #e8e8e8; background-color: #fcfcfc; padding: 3px 6px 4px 6px; margin: 4px 0px 8px 0px; color: #606060;">
+  </div></small>
+</div>
+
+	<div>
+		<input type="hidden" name="comment_post_ID" value="45" />
+		<input type="hidden" name="redirect_to" value="/index.php?page_id=45?page_id=79" />
+		<input onclick="if(typeof(onAddComment) == 'function') { if (ShowPreview.checked) { ReplaceEnteredText(comment); } onAddComment(); } else { alert('ERROR:\nIt looks like the website administrator hasn\'t activated the Brians Threaded Comments plugin from the plugin page'); };" name="addcommentbutton" type="button" id="addcommentbutton" value="Naciśni mianie!" />
+	</div>
+</div>
+<input type='hidden' id='comment_reply_ID' name='comment_reply_ID' value='0' />
+
+	<p style="clear: both;" class="subscribe-to-comments">
+        <input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+        <label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+</form>
+</div>
+
+
+
+		
+<!--unutranaja reklama-->
+
+				<div class="center"></div>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+
+<table style="width: 100%; text-align: left;" border="0" cellpadding="2"
+cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<FONT SIZE="-1"><h2>Ludzi pra łacinku</h2><a href="http://lacinka.org/?p=10">Cichaje kanańnie kirylicy</a><br /><a href="http://lacinka.org/?p=25">Illa Hłyboŭski pra łacinku</a><br /><a href="http://lacinka.org/?p=24">Źmicier Saŭka pra łacinku</a><br /><a href="http://lacinka.org/?p=21">N.R.M. karystajecca łacinkaj</a><br /><a href="http://lacinka.org/?p=20">Nieabchodnaje urehulavańnie artahrafii</a><br /><a href="http://lacinka.org/?p=17">Pryhožy estetyčny eksperyment</a><br /><a href="http://lacinka.org/?p=23">Skažam łacincy — tak!</a><br /></font>
+</td>
+<td style="vertical-align: top;"><FONT SIZE="-1"><h2>Karystajemsia łacinkaj</h2>
+<a href="http://lacinka.org/?p=9">Jak lohka i prosta pisać łacinkaj</a><br /><a href="http://lacinka.org/?p=14">Łacinizatary ŭ siecivie</a><br /><a href="http://lacinka.org/?p=16">Moŭnyja tagi i biełaruskaja łacinka</a><br /><a href="http://lacinka.org/?p=31">Pišam łacinkaj z UniRedam</a><br /></font>
+<br>
+</td>
+</tr>
+</tbody>
+</table></font>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+	
+			
+				
+			</div></div>
+			
+			<div id="right">
+<div id="rightmenu"><li><a href="http://lacinka.org/?cat=5" title="Biełarusy pra łacinku">Biełarusy pra łacinku</a>
+</li>
+<li><a href="http://lacinka.org/?cat=2" title="Pra dziejnaść arhanizacyi">Padziei</a>
+</li>
+<li><a href="http://lacinka.org/?cat=4" title="Jak karystacca łacinkaj. Parady. Lakalizacyi. ">Praktykum</a>
+</li>
+<li><a href="http://lacinka.org/?cat=7" title="Usio što adbyvajecca ŭ łacincy i z łacinkaj siońnia. Łacinka i žyćcio.">Tendencyi</a>
+</li>
+</div>
+
+<div id="searchform"><form id="searchform" method="get"  class="search" action=""><p><input type="text" class="text" name="s" id="s" size="10" /><input type="submit" class="button"  name="submit" value="šukaj" />
+</p></form></div>
+				
+<div class="rightarticle">
+			
+<h2>Rekamendujem</h2>
+
+<ul>
+<li>Ese Mikałaja Pačkajeva <a href="?page_id=45">Biełaruskaja łacinka</a></li></ul>
+
+
+<div style="text-align: center;">
+
+<a href="http://lacinka.org/?page_id=103"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EO" src="http://lacinka.org/images/eo.png"></a> 
+
+<a href="http://lacinka.org/?page_id=82"><img style="border: 0px solid; width: 16px; height: 11px;" alt="ES" src="http://lacinka.org/images/es.png"></a> 
+
+<a href="http://lacinka.org/?page_id=32"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="DE" src="http://lacinka.org/images/de.png"></a> 
+
+<a href="http://lacinka.org/?page_id=81"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="FR" src="http://lacinka.org/images/fr.png"></a>
+
+<a href="http://lacinka.org/?page_id=30"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EN" src="http://lacinka.org/images/gb.png"></a>
+
+<a href="http://lacinka.org/?page_id=29"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="PL" src="http://lacinka.org/images/pl.png"></a>
+
+<a href="http://lacinka.org/?page_id=28"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="RU" src="http://lacinka.org/images/ru.png"></a>
+
+<a href="http://lacinka.org/?page_id=26"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="UA" src="http://lacinka.org/images/ua.png"></a>
+
+</div>
+
+
+<h2>Tendencyi</h2>
+<ul><a href="http://lacinka.org/?p=102">I karystacca niazručna, i vykinuć škada</a><br /><a href="http://lacinka.org/?p=36">Mapa Biełarusi</a><br /><a href="http://lacinka.org/?p=37">Pisati po-svojomu</a><br /> </ul>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>		
+
+<h2></h2>
+<ul><a href="http://lacinka.org/?page_id=112" title="Staronka z banerami sajtu dla raźmiaščeńnia">Banery Łacinki</a> Staronka z banerami sajtu dla raźmiaščeńnia<br />
+<a href="http://community.livejournal.com/lacinka/" rel="me" title="Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal">Łacinka ŭ Livejournal</a> Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal<br />
+ </ul>
+
+		</div><p style="border-top: #CCCCCC 1px dashed"></p>			
+				
+			</div>
+		</div>	
+		<div id="links">
+			<p></p>		
+
+	</div></div></div>
+
+	<div id="footer">Copyright &copy; 2007 <strong><a href="http://lacinka.org">Łacinka.org</a></strong> | <a href="http://lacinka.org/?feed=rss2">RSS Feed</a> | Powered by <a href="http://wordpress.org/" title="Staronka stvoranaja pry dapamozie semantyčnaj persanalnaj platformy dla publikacyjaŭ u siecivie WordPress."><abbr title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</abbr></a> | Design: <a href="http://www.solucija.com/">Solucija</a>, Ported by <a href="http://www.gfxedit.com/" title="Theme by GFXedit.com"><abbr title="Theme by GFXedit.com">GFXedit.com</abbr></a>
+</div>
+</body>	
+</html>

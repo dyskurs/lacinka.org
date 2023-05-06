@@ -1,0 +1,1030 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
+<title>Łacinka.org &raquo; Krama</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.0.5" /> <!-- leave this for stats -->
+<meta name="description" content="Biełaruskaja łacinka"/>
+<meta name="keywords" content="lacinka, unicode, mova, bielaruskaja"/>
+<style type="text/css" media="screen">
+@import url( http://lacinka.org/wp-content/themes/internet-jobs/style.css );
+</style>
+<meta name="copyright" content="Łacinka.org" />
+<meta name="Author" content="Zołak (zolak@slacinka.org)" />
+<meta name="wp-theme" content="Sreejith R - GFXedit.com" />
+<meta name="generator" content="WordPress 2.0.5" />
+<meta name="robots" content="index,follow" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://lacinka.org/?feed=rss2" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://lacinka.org/?feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://lacinka.org/?feed=atom" />
+<link rel="pingback" href="http://lacinka.org/xmlrpc.php" />
+	<link rel='archives' title='červień 2007' href='http://lacinka.org/?m=200706' />
+	<link rel='archives' title='travień 2007' href='http://lacinka.org/?m=200705' />
+	<link rel='archives' title='sakavik 2007' href='http://lacinka.org/?m=200703' />
+	<link rel='archives' title='studzień 2007' href='http://lacinka.org/?m=200701' />
+	<link rel='archives' title='śniežań 2006' href='http://lacinka.org/?m=200612' />
+	<link rel='archives' title='kastryčnik 2006' href='http://lacinka.org/?m=200610' />
+	<link rel='archives' title='lipień 2006' href='http://lacinka.org/?m=200607' />
+	<link rel='archives' title='luty 2006' href='http://lacinka.org/?m=200602' />
+	<link rel='archives' title='lipień 2005' href='http://lacinka.org/?m=200507' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lacinka.org/xmlrpc.php?rsd" />
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("content");
+			addComment.parentNode.removeChild(addComment);
+			content.appendChild(addComment);
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://lacinka.org/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	width: 					100%;	
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+/*
+#addcomment small, #addcomment div
+{
+	padding:				3px;
+}
+*/
+#commentform textarea {
+	width: 97%;
+}
+</style>
+<style type="text/css" media="screen">
+div#shoppingcart{
+ float: right;
+/* height: 200px; */
+ width: 148px;
+ margin: 0px;
+ padding: 0px;
+ margin-left: 5px;
+/* margin-right: -100px; */
+ }
+ 
+div#shoppingcart img{
+ position: absolute; 
+ top: 5px;
+ left: 5px;
+ }
+ 
+div#shoppingcart div{
+ font-size: 9pt;
+ border: 1px solid #999999;
+ background-color: #efefef;
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#shoppingcart div strong{
+ font-size: 11pt;
+ }
+
+div#sideshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ padding-top: 4px;
+ }
+ 
+div#sideshoppingcart div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+div#widgetshoppingcart{
+ }
+
+div#widgetshoppingcart div{
+ height: 100%;
+ width: 100%;
+ text-align: left;
+ padding: 6px;
+ }
+ 
+div#widgetshoppingcarts div h2{
+ margin-left: -1ex;
+ display: inline;
+ }
+
+td{
+ font-size: 11pt;
+ vertical-align: top;
+ }
+
+table.productcart{
+ border: 1px solid #999999;
+ width: 100%;
+ margin-bottom: 10px;
+ }
+
+table.productcart tr td{
+ padding-bottom: 5px;
+ font-size: 8pt;
+ }
+
+table.productcart tr.firstrow td{
+ font-weight:bold;
+ background-color: #e5e5e5;
+ }
+
+table.productcart tr.oddrow td{
+ background-color: #f0f0f0;
+ }
+ 
+table.productcart tr td.firstcol{
+ width: 40%;
+ } 
+
+form.adjustform{
+ display: inline;
+ }
+
+
+
+
+table.productdisplay{
+/* margin-top: 10px; */
+ margin-bottom: 20px;
+ border-collapse: collapse;
+ }
+
+table.productdisplay tr td{
+ vertical-align: top;
+ padding-bottom: 5px;
+ }
+
+
+table.productdisplay tr td.imagecol{
+ padding-right: 5px;
+ margin-right: 5px;
+ border: 0px solid #ffffff;
+ }
+ 
+table.productdisplay tr td.imagecol img{
+/* width: 300px; */
+border: 0px solid #ffffff;
+ }
+
+table.productdisplay tr td.textcol{
+ padding: 0px;
+ padding-bottom: 10px;
+ margin: 0px;
+ }
+ 
+ 
+ 
+ 
+ul.tandclist li{
+ list-style-type:lower-alpha;
+ } 
+ 
+ul.tandclist li{
+ list-style-type: circle;
+ } 
+ 
+ul.linklist li{
+ font-weight:bold;
+ } 
+ 
+strong.special{
+ color: #DD0000;
+ }
+ 
+a.termsandconds
+ {
+ text-decoration: underline;
+ }
+
+span.miniarrow{
+ display: block;
+/* border: 1px solid black; */
+ vertical-align: top !important;
+ }
+
+img.miniarrow{
+/* position: relative; */
+/* border: 1px solid black; */
+ margin-right: 4px;
+ }
+
+img.catimage{
+ float:left;
+ position: relative;
+ top: -3px;
+ margin-right: 2pt;
+ }
+
+strong.cattitles{
+ display: block;
+ position: relative;
+/* margin-bottom: -15px; */
+ }
+
+strong.prodtitles{
+ display: block;
+ margin-bottom: -15px;
+ }
+
+table.mainpagetable{
+ margin-left: 0px;
+ }
+
+table.mainpagetable tr td{
+ padding-left: 0px;
+ }
+
+strong.title{
+ font-size: 12.5pt;
+ }
+
+div.producttext{
+ font-size: 10pt;
+ }
+
+a.categorylink{
+ font-size: 8pt;
+ /*border: 1px solid red;*/
+ }
+
+span.pricedisplay{
+ white-space: nowrap;
+ }
+ 
+td.totals{
+ vertical-align: bottom;
+ }
+ 
+table.cattable{
+ padding: 0px;
+ margin: 0px;
+ border-collapse: collapse;
+/* border: 1px solid black; */
+ }
+ 
+table.cattable tr td{
+ padding: 0px;
+/* border: 1px solid black; */
+ }
+ 
+ td.catfirstcol{
+ padding-right: 3px;
+ }
+
+form#specials{
+ display: inline;
+ }
+ 
+span.oldprice{
+ text-decoration: line-through;
+ }
+div#categorydisplay{
+ display: block;
+ }
+ 
+div#branddisplay{
+ display: none;
+ }
+ 
+span.additional_description{
+ display: none;
+ }
+ 
+a.additional_description_link{
+ display: inline;
+ }
+ 
+td.prodgroupmidline{
+ border-right: 1px solid black !important;
+ padding-right: 3px;
+ }
+ 
+#loadingindicator{
+ visibility: hidden; 
+ font-size: 7pt;
+ font-weight: normal;
+ }
+
+#loadingindicator img{
+ position: relative;
+ top: 3px;
+ margin-left: 6px;
+/*  visibility: hidden; */
+  border: none !important;
+ }
+ 
+/* e-commerce fix for K2 */
+table.productdisplay tr td img {
+ max-width: none;
+ }
+ 
+ 
+div.product_footer{
+ position: relative;
+ padding: 0px !important;
+ width: 100%;
+ border-top: 1px dashed #cccccc;
+/*  border-top: 1px dashed #cccccc; */
+ height: 35px;
+ }
+ 
+div.product_footer strong{
+ display: block;
+ font-size: 7pt;
+ font-weight: normal;
+ }
+ 
+div.product_average_vote{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 50%;
+ float: left;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+div.product_user_vote{
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ width: 30%;
+ margin: 0px !important;
+ height: inherit;
+ }
+ 
+span.vote_total{
+ position: relative;
+ top: -3px;
+ left: 2px;
+ font-size: 7pt;
+ }
+ </style>
+ <link href='./wp-content/plugins/wp-shopping-cart/product_rater.css' rel="stylesheet" type="text/css" />
+<script language='JavaScript' type='text/javascript'>
+// Copyright (c) 2005 Timothy R. Morgan
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+// mini/ajax.js - http://timmorgan.org/mini
+
+function $(e){if(typeof e=='string')e=document.getElementById(e);return e};
+function collect(a,f){var n=[];for(var i=0;i<a.length;i++){var v=f(a[i]);if(v!=null)n.push(v)}return n};
+
+ajax={};
+ajax.x=function(){try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){return new XMLHttpRequest()}}};
+ajax.serialize=function(f){var g=function(n){return f.getElementsByTagName(n)};var nv=function(e){if(e.name)return encodeURIComponent(e.name)+'='+encodeURIComponent(e.value);else return ''};var i=collect(g('input'),function(i){if((i.type!='radio'&&i.type!='checkbox')||i.checked)return nv(i)});var s=collect(g('select'),nv);var t=collect(g('textarea'),nv);return i.concat(s).concat(t).join('&');};
+ajax.send=function(u,f,m,a){var x=ajax.x();x.open(m,u,true);x.onreadystatechange=function(){if(x.readyState==4)f(x.responseText)};if(m=='POST')x.setRequestHeader('Content-type','application/x-www-form-urlencoded');x.send(a)};
+ajax.get=function(url,func){ajax.send(url,func,'GET')};
+ajax.gets=function(url){var x=ajax.x();x.open('GET',url,false);x.send(null);return x.responseText};
+ajax.post=function(url,func,args){ajax.send(url,func,'POST',args)};
+ajax.update=function(url,elm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.get(url,f)};
+ajax.submit=function(url,elm,frm){var e=$(elm);var f=function(r){e.innerHTML=r};ajax.post(url,f,ajax.serialize(frm))};
+
+var testsuccess = 0;
+var lnid = new Array();
+function categorylist(url)
+  {
+  self.location = url;
+  }
+  
+var getresults=function(results)
+  {
+  document.getElementById('shoppingcartcontents').innerHTML = results;
+  document.getElementById('loadingindicator').style.visibility = 'hidden';
+  }
+
+function submitform(prodid)
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&prodid="+prodid+"");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function emptycart()
+  {
+  ajax.post("index.php",getresults,"ajax=true&user=true&emptycart=true");
+  document.getElementById('loadingimage').src = './wp-content/plugins/wp-shopping-cart/images/indicator.gif';
+  document.getElementById('loadingindicator').style.visibility = 'visible';
+  }
+
+function show_additional_description(id)
+  {
+  currentstate = document.getElementById(id).style.display;
+  document.getElementById(id).style.display = 'inline';
+  if(currentstate != 'inline')
+    {
+    document.getElementById(id).style.display = 'inline';
+    }
+    else
+      {
+      document.getElementById(id).style.display = 'none';
+      }
+  return false;
+  }
+
+function prodgroupswitch(state)
+  {
+  if(state == 'brands')
+    {
+    document.getElementById('categorydisplay').style.display = 'none';
+    document.getElementById('branddisplay').style.display = 'block';
+    }
+    else if(state == 'categories')
+      {
+      document.getElementById('branddisplay').style.display = 'none';
+      document.getElementById('categorydisplay').style.display = 'block';
+      }
+  return false;
+  }
+  
+  
+var apply_rating=function(results)
+  {
+  outarr = results.split(",");
+  //alert(results);
+  for(i=1;i<=outarr[1];i++)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/gold-star.gif";
+    document.getElementById(id).style.background = "url(./wp-content/plugins/wp-shopping-cart/images/gold-star.gif)";
+    }
+    
+  for(i=5;i>outarr[1];i--)
+    {
+    id = outarr[0]+"and"+i+"_link";
+    //document.getElementById(id).src = "./wp-content/plugins/wp-shopping-cart/images/grey-star.gif";
+    document.getElementById(id).style.background = "#c4c4b8";
+    }
+  lnid[outarr[0]] = 1; 
+    
+  rating_id = 'rating_'+outarr[0]+'_text';
+  document.getElementById(rating_id).innerHTML = "Your Rating:";
+//   switch(votetext)
+//     {
+//     case "No Votes":
+//     votestr = "1 Vote";
+//     break;
+//     
+//     case "1 Vote":
+//     votestr = "2 Votes";
+//     break;
+//     
+//     default:
+//     votestr = (parseInt(votetext[0])+1) + " Votes";
+//     break;
+//     }
+//     
+//   element.innerHTML = votestr;
+  }
+  
+function rate_item(prodid,rating)
+  {
+  ajax.post("index.php",apply_rating,"ajax=true&rate_item=true&product_id="+prodid+"&rating="+rating+"");
+  }
+</script>
+	<style type="text/css" media="screen">
+	img.comvatar-default {
+		width: 16px;
+		height: 16px;
+	}
+	</style>
+
+<script language="JavaScript"><!--
+
+  function PseudotextToLacin(InputText)
+  {
+    // var InputText = InputElement.value;
+    var ResultText = InputText;
+
+    var ConvertionTable = new Array(
+      new Array("c'", String.fromCharCode(0x0107)),
+      new Array("cz", String.fromCharCode(0x010D)),
+      new Array("l/", String.fromCharCode(0x0142)),
+      new Array("n'", String.fromCharCode(0x0144)),
+      new Array("s'", String.fromCharCode(0x015B)),
+      new Array("sz", String.fromCharCode(0x0161)),
+      new Array("u/", String.fromCharCode(0x016D)),
+      new Array("z'", String.fromCharCode(0x017A)),
+      new Array("z^", String.fromCharCode(0x017E)),
+      new Array("z*", String.fromCharCode(0x017E)),
+
+      new Array("C'", String.fromCharCode(0x0106)),
+      new Array("Cz", String.fromCharCode(0x010C)),
+      new Array("L/", String.fromCharCode(0x0141)),
+      new Array("N'", String.fromCharCode(0x0143)),
+      new Array("S'", String.fromCharCode(0x015A)),
+      new Array("Sz", String.fromCharCode(0x0160)),
+      new Array("U/", String.fromCharCode(0x016C)),
+      new Array("Z'", String.fromCharCode(0x0179)),
+      new Array("Z^", String.fromCharCode(0x017D)),
+      new Array("Z*", String.fromCharCode(0x017D))
+    );
+
+    var i;
+
+    for (i = 0; i < ConvertionTable.length; i++)
+    {
+      while (ResultText.indexOf(ConvertionTable[i][0]) >= 0)
+      {
+        ResultText = ResultText.replace(ConvertionTable[i][0], ConvertionTable[i][1]);
+      }
+    }
+
+    // InputElement.value = ;
+    // return true;
+    return ResultText;
+  }
+
+  function ShowPreviewBox(Show)
+  {
+    if (Show)
+    {
+      PreviewBox.style.display = "block";
+    }
+    else
+    {
+      PreviewBox.style.display = "none";
+    }
+  }
+
+  function PlainTextToHTML(Text)
+  {
+    var HTMLText = Text;
+    while (HTMLText.indexOf(String.fromCharCode(0x0A)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0A), '<br>');
+    while (HTMLText.indexOf(String.fromCharCode(0x0D)) >= 0)
+      HTMLText = HTMLText.replace(String.fromCharCode(0x0D), '');
+
+    return HTMLText;
+  }
+
+  function UpdatePreviewBox(Text)
+  {
+    // PreviewText.innerText = PseudotextToLacin(Text);
+    PreviewText.innerHTML = PlainTextToHTML(PseudotextToLacin(Text));
+  }
+
+  function ReplaceEnteredText(Element)
+  {
+    Element.value = PseudotextToLacin(Element.value);
+  }
+
+//-->
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1268613-2";
+urchinTracker();
+</script>
+</head><body>
+	<div id="header">
+		<div id="hmenu">
+		<a href="index.php">Hałoŭnaja</a><a href="?page_id=49"><img src="http://lacinka.org/images/cd.png" alt="Krama" />Krama</a><a href="http://lacinka.org/?page_id=75">Našyja prajekty</a><a href="?page_id=79">Pra nas</a><a href="?page_id=46">Kantakt</a>		</div>
+		<div id="logo">
+                        <div style="float: left; margin: -2px 0 0 10px;">
+
+                                <h1 title="Łacinka.org"><a href="http://lacinka.org"><img src="http://lacinka.org/wp-content/themes/internet-jobs/logo_transparent_sized.gif" alt="Łacinka.org" width="140" height="30" border="0"></a></h1>
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="main">
+		<div id="articles">
+			<div id="content">
+				  
+	         <h2 id="post-49"><a href="http://lacinka.org/?page_id=49" rel="bookmark" title="Krama">Krama</a></h2>
+		
+			<div id='shoppingcart'><div id='shoppingcartcontents'><strong>Košyk</strong><br/><br />Tvoj košyk pusty.<br /><a href='http://lacinka.org/?page_id=49'>Naviedaj kramu</a></div></div><p> <div class="wrap">
+  <table><tr><td colspan='2'><a href='' onclick='return prodgroupswitch("categories");'>Kateheoryi</a></td></tr><tr><td colspan='2'><div id='categorydisplay'><a class='categorylink' href='http://lacinka.org/?page_id=49&amp;category=2'>Muzyka</a><br /></div></td></tr></table><br /><strong class='cattitles'>Category: Muzyka<span id='loadingindicator'><img id='loadingimage' src='./wp-content/plugins/wp-shopping-cart/images/indicator.gif' alt='Loading' title='Loading' /> Aktualizacyja...</span></strong><br /><table class='productdisplay'>    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/bn.jpg' title='B:N: Žyvie rock-n-roll' alt='B:N: Žyvie rock-n-roll' /></td>      <td class='textcol'><form name='1' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(2);return false;' ><div class='producttext'><strong>B:N: Žyvie rock-n-roll</strong><br />Druhi CD hurtu ź Biarozy. Biełaruski rock u najlepšym vydańni.<br /><a href='#' class='additional_description_link' onclick='return show_additional_description("additionaldescription2");'>Bolej infarmacyi</a><span class='additional_description' id='additionaldescription2'><br />Vydaviec: Łacinka.org</span><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='2' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/4_cd-iq48_varjaty.jpg' title='IQ-48 Varjaty' alt='IQ-48 Varjaty' /></td>      <td class='textcol'><form name='2' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(4);return false;' ><div class='producttext'><strong>IQ-48 Varjaty</strong><br />Debiutancki albom najbolš zvarjaciełaha ź biełaruskich rock hurtoŭ. <br />
+Nu chto ž spałučaje rap z saksafonam? Tolki jany.<br />
+<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='4' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/5_cd-kasia-akustyka.jpg' title='Kasia Kamockaja. Akustyka' alt='Kasia Kamockaja. Akustyka' /></td>      <td class='textcol'><form name='3' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(5);return false;' ><div class='producttext'><strong>Kasia Kamockaja. Akustyka</strong><br />Vydatnaje vykanańnie najbolšych hitoŭ Kasi Kamockiaj pad hitaru Słavy Kornia dy vijalančel Julii Hłušyckaj.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='5' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/6_cd-kasia-najlepsaje.jpg' title='  Kasia Kamockaja. Najlepšaje' alt='  Kasia Kamockaja. Najlepšaje' /></td>      <td class='textcol'><form name='4' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(6);return false;' ><div class='producttext'><strong>  Kasia Kamockaja. Najlepšaje</strong><br />Zborka hitoŭ Kasi Kamockiaj u aryhinalnych vykanańniach.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='6' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/7_cd-krambambula.jpg' title='Krambambula – Zastolny Albom' alt='Krambambula – Zastolny Albom' /></td>      <td class='textcol'><form name='5' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(7);return false;' ><div class='producttext'><strong>Krambambula – Zastolny Albom</strong><br />Lavon Volski i kampanija z suśvietnym biasiednym repertuaram.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='7' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/8_cd-krambambula-pautara.jpg' title='Krambambula 1,5' alt='Krambambula 1,5' /></td>      <td class='textcol'><form name='6' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(8);return false;' ><div class='producttext'><strong>Krambambula 1,5</strong><br />Praciah Zastolnaha albomu<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='8' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/9_cd-narodny_albom.jpg' title='Supolny prajekt: Narodny Albom' alt='Supolny prajekt: Narodny Albom' /></td>      <td class='textcol'><form name='7' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(9);return false;' ><div class='producttext'><strong>Supolny prajekt: Narodny Albom</strong><br />Pieršy i mierkavańniem mnohich najlepšy supolny prajekt biełaruskich muzykaŭ.<br />
+Abaviazkovaja prahrama dla ŭsich<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='9' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/10_cd-nrm_dk.jpg' title='N.R.M. Dom kultury' alt='N.R.M. Dom kultury' /></td>      <td class='textcol'><form name='8' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(10);return false;' ><div class='producttext'><strong>N.R.M. Dom kultury</strong><br />Kancepcyjny albom najpapularniejšych biełaruskich rockmenaŭ. Pamiž pieśniami satyryčnyja perlinki-scenki.<br />
+<BR><BR>Varta naviedać:<br />
+<a href="http://nrm.com.pl"><img src="http://nrm.com.pl/images/nasz-link.gif" width="88" height="31" alt="Ambasada N.R.M." title="Ambasada N.R.M." /></a><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='10' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/11_cd-nrm-try_carapachi.jpg' title='N.R.M. Try Čarapachi' alt='N.R.M. Try Čarapachi' /></td>      <td class='textcol'><form name='9' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(11);return false;' ><div class='producttext'><strong>N.R.M. Try Čarapachi</strong><br />Najbolšy hit N.R.M. u atačeńni krychu mienšych hitoŭ.<br />
+<BR><BR>Varta naviedać:<br />
+<a href="http://nrm.com.pl"><img src="http://nrm.com.pl/images/nasz-link.gif" width="88" height="31" alt="Ambasada N.R.M." title="Ambasada N.R.M." /></a><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='11' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/12_cd-partyzanskaja_shkola.jpg' title='Supolny prajekt: Partyzanckaja Škoła' alt='Supolny prajekt: Partyzanckaja Škoła' /></td>      <td class='textcol'><form name='10' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(12);return false;' ><div class='producttext'><strong>Supolny prajekt: Partyzanckaja Škoła</strong><br />Treci albom začynienaha ŭładami mienskaha kołasaŭskaha liceju. <br />
+Ź dziaciej pavyrastali prefesijnyja muzyki.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='12' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/13_cd-tanha_z_ruzaj.jpg' title='WZ Orkiestra i Źmicier Vajciuškievič. Tanha z ružaj ' alt='WZ Orkiestra i Źmicier Vajciuškievič. Tanha z ružaj ' /></td>      <td class='textcol'><form name='11' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(13);return false;' ><div class='producttext'><strong>WZ Orkiestra i Źmicier Vajciuškievič. Tanha z ružaj </strong><br />Klimatyčnaja paezja Niklajeva w vykanańni najlepšaha biełaruskaha vakalista.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='13' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/14_cd-todar-balady.jpg' title='WZ Orkiestra. Bałady' alt='WZ Orkiestra. Bałady' /></td>      <td class='textcol'><form name='12' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(14);return false;' ><div class='producttext'><strong>WZ Orkiestra. Bałady</strong><br />Pieršy albom WZ Orkiestry pad kiraŭnictvam Todara.<br />
+Folkavy nastroj najvyšejšaj jakaści.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='14' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/15_cd-todar-ck.jpg' title='Źmicier Vajciuškievič – Cacačnaja Krama' alt='Źmicier Vajciuškievič – Cacačnaja Krama' /></td>      <td class='textcol'><form name='13' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(15);return false;' ><div class='producttext'><strong>Źmicier Vajciuškievič – Cacačnaja Krama</strong><br />Najpapularniejšy albom Todara<br />
+<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='15' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/16_cd-todar-majakouski.jpg' title='Źmicier Vajciuškievič – Majakoŭski' alt='Źmicier Vajciuškievič – Majakoŭski' /></td>      <td class='textcol'><form name='14' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(16);return false;' ><div class='producttext'><strong>Źmicier Vajciuškievič – Majakoŭski</strong><br />Poezija Majakoŭskaha z muzykaj Vajciuškieviča. Pa-rasiejsku, ale heta vysokaja paezija i vysokaja muzyka.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='16' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/17_cd-todar-paraviny.jpg' title='Źmicier Vajciuškievič. Paraviny hodu' alt='Źmicier Vajciuškievič. Paraviny hodu' /></td>      <td class='textcol'><form name='15' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(17);return false;' ><div class='producttext'><strong>Źmicier Vajciuškievič. Paraviny hodu</strong><br />Čarhovy klimatyčny albom Todara.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='17' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/18_cd-todar-paravoz.jpg' title='Źmicier Vajciŭškievič. Paravoz kachańnia' alt='Źmicier Vajciŭškievič. Paravoz kachańnia' /></td>      <td class='textcol'><form name='16' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(18);return false;' ><div class='producttext'><strong>Źmicier Vajciŭškievič. Paravoz kachańnia</strong><br />Eratyčnyja vieršy Ryhora Baradulina ŭ vykanańni Casanovy biełaruskaj estrady.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='18' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/19_cd-zet-radzima_com.jpg' title='Zet. Radzima.com' alt='Zet. Radzima.com' /></td>      <td class='textcol'><form name='17' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(19);return false;' ><div class='producttext'><strong>Zet. Radzima.com</strong><br />Druhi albom najbolš zasakrečanaj kamandy ź Białorusi.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='19' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/20_cd-zet-z-novym-hodam.jpg' title='Zet. Z Novym Hodam.' alt='Zet. Z Novym Hodam.' /></td>      <td class='textcol'><form name='18' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(20);return false;' ><div class='producttext'><strong>Zet. Z Novym Hodam.</strong><br />Debiut zamaskavanych muzykaŭ. Viadoma tolki, što Lavon Volski ničoha supolnaha ź imi nia maje. ;)<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='20' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/21_nrm-spravazdaca.jpg' title='N.R.M. Spravazdača' alt='N.R.M. Spravazdača' /></td>      <td class='textcol'><form name='19' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(21);return false;' ><div class='producttext'><strong>N.R.M. Spravazdača</strong><br />Pa 3 najlepšyja pieśni z dahetulešnich albomaŭ, i dźvie navinki ad fłahmaha biełaruskaha rocku.<br />
+<BR><BR>Varta naviedać:<br />
+<a href="http://nrm.com.pl"><img src="http://nrm.com.pl/images/nasz-link.gif" width="88" height="31" alt="Ambasada N.R.M." title="Ambasada N.R.M." /></a><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='21' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/24_cpb-2004-2005.jpg' title='ČpB — Najlepšaje 2004–2005' alt='ČpB — Najlepšaje 2004–2005' /></td>      <td class='textcol'><form name='20' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(24);return false;' ><div class='producttext'><strong>ČpB — Najlepšaje 2004–2005</strong><br />Najlepšyja pieśni hurta 2004–2005 hadoŭ.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='24' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/25_janaradziusiatut2.jpg' title='Ja naradziŭsia tut' alt='Ja naradziŭsia tut' /></td>      <td class='textcol'><form name='21' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(25);return false;' ><div class='producttext'><strong>Ja naradziŭsia tut</strong><br />Supolny muzyčny prajekt, zapisany ŭ 2000 hodzie.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='25' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/26_troica-siem.jpg' title='Troica. Siem' alt='Troica. Siem' /></td>      <td class='textcol'><form name='22' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(26);return false;' ><div class='producttext'><strong>Troica. Siem</strong><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='26' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/27_tarpac-usiobudzie.jpg' title='Tarpač. Usio budzie' alt='Tarpač. Usio budzie' /></td>      <td class='textcol'><form name='23' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(27);return false;' ><div class='producttext'><strong>Tarpač. Usio budzie</strong><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='27' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/28_petepaff-pahlyblennie.jpg' title='Pete Paff. Pahłybleńnie' alt='Pete Paff. Pahłybleńnie' /></td>      <td class='textcol'><form name='24' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(28);return false;' ><div class='producttext'><strong>Pete Paff. Pahłybleńnie</strong><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='28' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/tavmauzer_radasc_220.jpg' title='Tav. Mauzer : Radaść' alt='Tav. Mauzer : Radaść' /></td>      <td class='textcol'><form name='25' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(29);return false;' ><div class='producttext'><strong>Tav. Mauzer : Radaść</strong><br />Pieršy albom chłopcaŭ z Mahilova.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='29' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/bn_nie_tryvaj.jpg' title=':B:N: Nie Tryvaj' alt=':B:N: Nie Tryvaj' /></td>      <td class='textcol'><form name='26' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(30);return false;' ><div class='producttext'><strong>:B:N: Nie Tryvaj</strong><br />Pieršy albom hurtu ź Biarozy.<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='30' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/nrm_06.jpg' title='NRM 06' alt='NRM 06' /></td>      <td class='textcol'><form name='27' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(31);return false;' ><div class='producttext'><strong>NRM 06</strong><br />Doŭhačakany albom lehendy biełaruskaj rock-sceny.<br />
+<BR><BR>Varta naviedać:<br />
+<a href="http://nrm.com.pl"><img src="http://nrm.com.pl/images/nasz-link.gif" width="88" height="31" alt="Ambasada N.R.M." title="Ambasada N.R.M." /></a><br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='31' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+    <tr>      <td class='imagecol'><img src='http://lacinka.org/wp-content/plugins/wp-shopping-cart/images/01-lalalala-maly.jpg' title='NRM ŁaŁaŁaŁa' alt='NRM ŁaŁaŁaŁa' /></td>      <td class='textcol'><form name='28' method='POST' action='http://lacinka.org/?page_id=49&amp;category=2' onsubmit='submitform(32);return false;' ><div class='producttext'><strong>NRM ŁaŁaŁaŁa</strong><br />Ličbavaje pieravydańnie pieršaha albomu lehiendarnaj kamandy. Da kržełki dałučanyja ŭsie teksty pieśniaŭ, napisanyja łacinkaj.<br />
+<BR><BR>Varta naviedać:<br />
+<a href="http://nrm.com.pl"><img src="http://nrm.com.pl/images/nasz-link.gif" width="88" height="31" alt="Ambasada N.R.M." title="Ambasada N.R.M." /></a><br />
+<br />Cana: <span class='pricedisplay'>30.00 PLN</span><br /><input type='hidden' name='item' value='32' /><input type='submit' name='Buy' value='Vaźmi ŭ košyk'  /></div></form>      </td>
+    </tr>
+</table></div>
+
+</p>
+			
+<div class="date"> </span></div>     
+
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://lacinka.org/?page_id=49"
+    dc:identifier="http://lacinka.org/?page_id=49"
+    dc:title="Krama"
+    trackback:ping="http://lacinka.org/wp-trackback.php?p=49" />
+</rdf:RDF>	-->
+	
+
+<!-- You can start editing here. -->
+
+<p><a href='http://lacinka.org/?feed=rss2&amp;p=49'><abbr title="Really Simple Syndication">RSS</abbr> feed</a> 
+</p>
+
+
+<div class="#commentlist">
+</div>
+
+
+
+		
+<!--unutranaja reklama-->
+
+				<div class="center"></div>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+
+<table style="width: 100%; text-align: left;" border="0" cellpadding="2"
+cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<FONT SIZE="-1"><h2>Ludzi pra łacinku</h2><a href="http://lacinka.org/?p=10">Cichaje kanańnie kirylicy</a><br /><a href="http://lacinka.org/?p=25">Illa Hłyboŭski pra łacinku</a><br /><a href="http://lacinka.org/?p=24">Źmicier Saŭka pra łacinku</a><br /><a href="http://lacinka.org/?p=21">N.R.M. karystajecca łacinkaj</a><br /><a href="http://lacinka.org/?p=20">Nieabchodnaje urehulavańnie artahrafii</a><br /><a href="http://lacinka.org/?p=17">Pryhožy estetyčny eksperyment</a><br /><a href="http://lacinka.org/?p=23">Skažam łacincy — tak!</a><br /></font>
+</td>
+<td style="vertical-align: top;"><FONT SIZE="-1"><h2>Karystajemsia łacinkaj</h2>
+<a href="http://lacinka.org/?p=9">Jak lohka i prosta pisać łacinkaj</a><br /><a href="http://lacinka.org/?p=14">Łacinizatary ŭ siecivie</a><br /><a href="http://lacinka.org/?p=16">Moŭnyja tagi i biełaruskaja łacinka</a><br /><a href="http://lacinka.org/?p=31">Pišam łacinkaj z UniRedam</a><br /></font>
+<br>
+</td>
+</tr>
+</tbody>
+</table></font>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>
+	
+			
+				
+			</div></div>
+			
+			<div id="right">
+<div id="rightmenu"><li><a href="http://lacinka.org/?cat=25" title="Pabač usie dopisy ŭ katehoryi 'Abjavy'">Abjavy</a>
+</li>
+<li><a href="http://lacinka.org/?cat=5" title="Biełarusy pra łacinku">Biełarusy pra łacinku</a>
+</li>
+<li><a href="http://lacinka.org/?cat=2" title="Pra dziejnaść arhanizacyi">Padziei</a>
+</li>
+<li><a href="http://lacinka.org/?cat=4" title="Jak karystacca łacinkaj. Parady. Lakalizacyi. ">Praktykum</a>
+</li>
+<li><a href="http://lacinka.org/?cat=7" title="Usio što adbyvajecca ŭ łacincy i z łacinkaj siońnia. Łacinka i žyćcio.">Tendencyi</a>
+</li>
+</div>
+
+<div id="searchform"><form id="searchform" method="get"  class="search" action=""><p><input type="text" class="text" name="s" id="s" size="10" /><input type="submit" class="button"  name="submit" value="šukaj" />
+</p></form></div>
+				
+<div class="rightarticle">
+			
+<h2>Rekamendujem</h2>
+
+<ul>
+<li>Ese Mikałaja Pačkajeva <a href="?page_id=45">Biełaruskaja łacinka</a></li></ul>
+
+
+<div style="text-align: center;">
+
+<a href="http://lacinka.org/?page_id=103"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EO" src="http://lacinka.org/images/eo.png"></a> 
+
+<a href="http://lacinka.org/?page_id=82"><img style="border: 0px solid; width: 16px; height: 11px;" alt="ES" src="http://lacinka.org/images/es.png"></a> 
+
+<a href="http://lacinka.org/?page_id=32"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="DE" src="http://lacinka.org/images/de.png"></a> 
+
+<a href="http://lacinka.org/?page_id=81"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="FR" src="http://lacinka.org/images/fr.png"></a>
+
+<a href="http://lacinka.org/?page_id=30"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="EN" src="http://lacinka.org/images/gb.png"></a>
+
+<a href="http://lacinka.org/?page_id=29"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="PL" src="http://lacinka.org/images/pl.png"></a>
+
+<a href="http://lacinka.org/?page_id=28"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="RU" src="http://lacinka.org/images/ru.png"></a>
+
+<a href="http://lacinka.org/?page_id=26"><img style="border: 0px solid ; width: 16px; height: 11px;" alt="UA" src="http://lacinka.org/images/ua.png"></a>
+
+</div>
+
+
+<h2>Tendencyi</h2>
+<ul><a href="http://lacinka.org/?p=102">I karystacca niazručna, i vykinuć škada</a><br /><a href="http://lacinka.org/?p=36">Mapa Biełarusi</a><br /><a href="http://lacinka.org/?p=115">Niama patreby refarmavać našuju łacinku</a><br /><a href="http://lacinka.org/?p=37">Pisati po-svojomu</a><br /> </ul>
+
+<p style="border-top: #CCCCCC 1px dashed"></p>		
+
+<h2></h2>
+<ul><a href="http://lacinka.org/?page_id=112" title="Staronka z banerami sajtu dla raźmiaščeńnia">Banery Łacinki</a> Staronka z banerami sajtu dla raźmiaščeńnia<br />
+<a href="http://community.livejournal.com/lacinka/" rel="me" title="Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal">Łacinka ŭ Livejournal</a> Forum prychilnikaŭ łacinki ŭ papularnaj blogavaj systemie Livejournal<br />
+ </ul>
+
+		</div><p style="border-top: #CCCCCC 1px dashed"></p>			
+				
+			</div>
+		</div>	
+		<div id="links">
+			<p></p>		
+
+	</div></div></div>
+
+	<div id="footer">Copyright &copy; 2007 <strong><a href="http://lacinka.org">Łacinka.org</a></strong> | <a href="http://lacinka.org/?feed=rss2">RSS Feed</a> | Powered by <a href="http://wordpress.org/" title="Staronka stvoranaja pry dapamozie semantyčnaj persanalnaj platformy dla publikacyjaŭ u siecivie WordPress."><abbr title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</abbr></a> | Design: <a href="http://www.solucija.com/">Solucija</a>, Ported by <a href="http://www.gfxedit.com/" title="Theme by GFXedit.com"><abbr title="Theme by GFXedit.com">GFXedit.com</abbr></a>
+</div>
+</body>	
+</html>
